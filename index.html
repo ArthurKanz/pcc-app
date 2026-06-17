@@ -1,0 +1,1202 @@
+<!doctype html><script type="application/json" id="cowork-artifact-meta">
+{
+  "name": "Kanza Pcc3 Command Centre",
+  "schemaVersion": 1,
+  "description": "PCC 3.0 unified command-centre shell. A single navigable page: a sticky Overview/Decide header (30-second read — the book is cash-self-sustaining, the binding constraint is concentration; Health 58/100; key-metrics strip incl. the capital-cycle phase) plus a nav into all SEVEN layers, each rendered verbatim in an isolated srcdoc iframe (Ledger, Governance, Income, Allocator & Health, Understand, Seasonality & Capital-Cycle Engine, Research). Read-only, subordinate to KCP-IPS-2026-001. The Seasonality engine is date/indicator self-computing; the other panels are nightly snapshots — the individually-tracked artifacts remain the live versions."
+}
+</script>
+<html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1">
+<title>Kanza Portfolio Command Centre 3.0</title>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="theme-color" content="#990F3D">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="PCC 3.0">
+<link rel="apple-touch-icon" href="./icon-192.png">
+<link rel=preconnect href="https://fonts.googleapis.com"><link rel=preconnect href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel=stylesheet><style>
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:"Inter","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Source Serif 4",Georgia,"Times New Roman",serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:"tnum"}.dim{color:#66605C}
+.top{position:sticky;top:0;z-index:20;background:#FFF1E5;border-bottom:1px solid #E0D3C2;padding:11px 24px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.brand{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#990F3D;font-weight:600}.brand b{font-family:"Source Serif 4",Georgia,serif;color:#33302E;font-size:17px;letter-spacing:0;text-transform:none;display:block;margin-top:1px;font-weight:600}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#66605C;border:1px solid #CFC3B4;border-radius:2px;padding:3px 9px}
+.nav{position:sticky;top:55px;z-index:19;background:#FFF1E5;border-bottom:2px solid #33302E;display:flex;gap:2px;padding:0 16px;overflow-x:auto}
+.nv{flex:0 0 auto;background:transparent;border:0;border-bottom:3px solid transparent;padding:10px 14px 9px;text-align:left;cursor:pointer;color:#66605C;min-width:140px;margin-bottom:-2px}
+.nv:hover{color:#33302E}.nv.on{border-bottom-color:#990F3D;color:#33302E}
+.nvt{display:block;font-size:13px;font-weight:600}.nvs{display:block;font-size:9.5px;color:#897F76;margin-top:1px}
+.stage{max-width:1240px;margin:0 auto;padding:8px 16px 50px}
+.fwrap{display:none}.fwrap.on{display:block}
+iframe{width:100%;border:0;background:#FFF1E5;display:block;height:88vh;border:1px solid #E0D3C2;border-radius:3px}
+#ov{display:none}#ov.on{display:block;padding:18px 6px}
+.ovgrid{display:grid;grid-template-columns:1fr 300px;gap:0;border-top:3px solid #33302E;border-bottom:1px solid #E0D3C2}
+.ohero{padding-top:4px;min-width:0}
+.q4{display:grid;grid-template-columns:1fr 1fr}.qq{padding:14px 18px 14px 0}.qq:nth-child(odd){border-right:1px solid #E0D3C2;padding-right:18px}.qq:nth-child(n+3){border-top:1px solid #E0D3C2}
+.ql{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:#990F3D;font-weight:600;margin-bottom:5px}.qv{font-size:13px;color:#3a3631;line-height:1.5}
+.ohealth{border-left:1px solid #E0D3C2;padding:18px 0 18px 22px;text-align:center;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.hbig{font-family:"Source Serif 4",Georgia,serif;font-size:64px;font-weight:700;color:#B05F00;line-height:1}.hbig span{font-size:20px;color:#897F76;font-weight:600}.hlab{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#66605C;margin-top:4px;font-weight:600}
+.hsub{font-size:11px;color:#66605C;margin-top:12px;line-height:1.5;text-align:left}
+.jump{margin-top:16px;background:transparent;border:1px solid #990F3D;color:#990F3D;border-radius:2px;padding:8px;font-weight:600;font-size:11.5px;cursor:pointer}.jump:hover{background:#990F3D;color:#FFF1E5}
+.kstrip{display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid #E0D3C2;margin-top:0}
+.k{padding:13px 14px;min-width:0}.k+.k{border-left:1px solid #E0D3C2}.kl{font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:#66605C;font-weight:600}.kv{font-family:"Source Serif 4",Georgia,serif;font-size:20px;font-weight:600;margin-top:4px;overflow-wrap:break-word;line-height:1.1}.kv.teal{color:#0D7680}.kv.amber{color:#B05F00}.kv.down{color:#990F3D}.kv.blue{color:#0F5499}.ks{font-size:9.5px;color:#897F76;margin-top:2px;overflow-wrap:break-word}
+.ovnote{border-left:3px solid #990F3D;background:#FBE8D8;border-radius:2px;padding:11px 15px;color:#5c544c;font-size:11.5px;margin-top:18px;line-height:1.6}
+.otab{width:34px;height:5px;background:#990F3D;margin:2px 0 10px}.oeye{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#897F76;font-weight:600}.ohead{font-family:"Source Serif 4",Georgia,serif;font-size:30px;font-weight:600;letter-spacing:-.015em;line-height:1.12;margin:6px 0 18px;max-width:32ch;color:#33302E}.seq{margin-top:12px}.seq .si{display:flex;gap:11px;padding:7px 0;border-top:1px solid #E0D3C2;font-size:12px;color:#3a3631}.seq .sn{font-family:"Source Serif 4",Georgia,serif;font-weight:700;color:#990F3D;font-size:14px;min-width:16px}.osrc{color:#8A8076;font-size:10px;margin-top:11px}
+@media(max-width:1100px){.kstrip{grid-template-columns:repeat(3,1fr)}.k:nth-child(3n+1){border-left:0}.k:nth-child(n+4){border-top:1px solid #E0D3C2}}
+@media(max-width:900px){.ovgrid{grid-template-columns:1fr}.ohealth{border-left:0;border-top:1px solid #E0D3C2;padding-left:0}.kstrip{grid-template-columns:1fr 1fr}.k:nth-child(odd){border-left:0}}
+</style></head><body>
+<div class=top><div class=brand>Kanza Capital Partners · Portfolio Command Centre 3.0<b class=serif>Capital Allocation Operating System</b></div><div class=ro>● Read-only · never trades · subordinate to KCP-IPS-2026-001</div></div>
+<div class=nav><button class="nv on" data-k="ov" onclick="show('ov')"><span class=nvt>Overview</span><span class=nvs>The 30-second decide read</span></button><button class=nv data-k="ledger" onclick="show('ledger')"><span class=nvt>Ledger</span><span class=nvs>Balance sheet &amp; transactions</span></button><button class=nv data-k="gov" onclick="show('gov')"><span class=nvt>Governance</span><span class=nvs>Constitution &amp; decision monitor</span></button><button class=nv data-k="income" onclick="show('income')"><span class=nvt>Income</span><span class=nvs>Income architecture</span></button><button class=nv data-k="attr" onclick="show('attr')"><span class=nvt>Allocator</span><span class=nvs>Alpha, opportunity-cost &amp; health</span></button><button class=nv data-k="understand" onclick="show('understand')"><span class=nvt>Understand</span><span class=nvs>Market intelligence &amp; heatmap</span></button><button class=nv data-k="seasonality" onclick="show('seasonality')"><span class=nvt style="color:#0F5499">Cycle Engine</span><span class=nvs>Seasonality &amp; capital-cycle</span></button><button class=nv data-k="research" onclick="show('research')"><span class=nvt style="color:#593380">Research</span><span class=nvs>Analogues · AI shadow · scoreboard</span></button></div>
+<div class=stage>
+ <div id=ov class=on>
+<div class=otab></div>
+<div class=oeye>Portfolio Command Centre · the decide read · subordinate to KCP-IPS-2026-001</div>
+<h1 class=ohead>The book is cash-self-sustaining — the binding constraint is concentration, not the overdraft</h1>
+<div class=ovgrid>
+ <div class=ohero>
+  <div style="font-size:13px;color:#3a3631;line-height:1.5">Net cash income (≈30.3m/mo) covers all-in burn ≈2.4×, leaving ≈11.5m/mo to reinvest even after the OD carry — so the 75m floor is an independence target, not survival. The TZS 543m overdraft is a leveraged-CRDB acquisition facility (it funds a ~514m, 190k-share book), not a leak. The real risk left is concentration: ~30% CRDB, 95% TZS.</div>
+  <div class=seq>
+   <div class=si><div class=sn>1</div><div><b>Manage concentration.</b> CRDB sits at 30.6% — just over the 30% cap — and the book is 95% TZS. Diversifying the bank factor (NMB) and currency is the one structural risk left.</div></div>
+   <div class=si><div class=sn>2</div><div><b>Run the cycle engine.</b> The new capital-cycle engine reads <b>late Re-rating (52%)</b> with capital flow 69/100 (risk-on, maturing) — the window to plan harvests and the OD-book review at the cycle top.</div></div>
+   <div class=si><div class=sn>3</div><div><b>Harvest, then retire the OD.</b> The overdraft funds the CRDB book, so retire it from the first CRDB trim at the seasonal/cycle top — not before.</div></div>
+  </div>
+  <div style="font-size:11.5px;color:#6B6259;margin-top:13px;line-height:1.5"><b style="color:#0D7680">What's working:</b> the duration-lock (+115.7m/yr) and the 2025 CRDB deep-value accumulation (+312.4m vs the iIncome alternative). Signals only — execution remains yours (§3.5).</div>
+ </div>
+ <div class=ohealth>
+  <div class=hbig>58<span>/100</span></div><div class=hlab>Portfolio Health · Fair</div>
+  <div class=hsub>Drag: concentration (95% TZS, bank-heavy). Supports: income now covers burn ≈2.4× · locked 15.49% coupons · constructive macro (64/100). Income reclassified drag→support (56→58).</div>
+  <button class=jump onclick="show('attr')">Open Allocator &amp; Health →</button>
+ </div>
+</div>
+<div class=kstrip>
+ <div class=k><div class=kl>Net worth</div><div class=kv>TZS 4.01bn</div><div class=ks>no property — rented</div></div>
+ <div class=k><div class=kl>Productive capital (net of OD)</div><div class=kv>3.88bn</div><div class=ks>PCR 96.6%</div></div>
+ <div class=k><div class=kl>Net cash income</div><div class="kv teal"><!--V:income-->≈30.3m/mo<!--/V:income--></div><div class=ks>covers burn ≈2.4×</div></div>
+ <div class=k><div class=kl>CRDB concentration</div><div class="kv amber"><!--V:crdb-->30.6%<!--/V:crdb--></div><div class=ks>net-PC · the binding flag</div></div>
+ <div class=k><div class=kl>Capital-cycle phase</div><div class="kv blue">Late Re-rating</div><div class=ks>52% · capital flow 69/100</div></div>
+ <div class=k><div class=kl>Overdraft</div><div class="kv down">−543m</div><div class=ks>funds the ~514m CRDB book</div></div>
+</div>
+<div class=ovnote>This is the 30-second read. Each layer below is a <b>nightly snapshot</b> of its artifact, in the FT visual vocabulary: the <b>Ledger</b> is the single source of truth; <b>Governance</b> tracks the Constitution and the iGrowth decision; <b>Income</b> separates headline from net and shows the coverage; <b>Allocator</b> scores decisions against their alternatives; <b>Understand</b> reads the DSE tape (re-baked each night); the <b>Cycle Engine</b> computes the capital-cycle phase from BoT/NBS/DSE data (date/indicator self-computing); <b>Research</b> is a sparring partner, never a directive. For the always-live view, open the individual artifact. Read-only throughout — the system never trades.</div>
+<div class=osrc>Snapshot as at 17 Jun 2026 · panels re-baked nightly · the Cycle Engine self-computes · the individually-tracked artifacts are the live versions.</div>
+</div>
+<!--F:ledger--><div class=fwrap data-k="ledger"><iframe loading="lazy" onload="fit(this)" srcdoc="&lt;!doctype html&gt;&lt;script type=&quot;application/json&quot; id=&quot;cowork-artifact-meta&quot;&gt;
+{
+  &quot;name&quot;: &quot;Kanza Pcc3 Ledger&quot;,
+  &quot;schemaVersion&quot;: 1,
+  &quot;description&quot;: &quot;PCC 3.0 · Step 1 — Transaction Ledger &amp; Balance Sheet (single source of truth), FT design language. Real data as at 16 Jun 2026. Reframed: the ABSA overdraft is presented as a leveraged-CRDB acquisition facility (543m drawn funded a deliberate ~514m, 190k-share CRDB book = 130k cum-dividend capture + 60k tactical sleeve), CRDB shown as three decisions, plus an expenditure/coverage line (net income 30.3m/mo covers all-in burn &lt;=12-13m/mo ~2.4x, ~11.5m/mo reinvestable surplus, so the 75m floor is an independence target not survival). CRDB FY-dividend locked at the official TZS 90/share (declared 14 Apr 2026). Capital stack, governance flags (CRDB concentration 30.6% the binding constraint; OD as strategy), completeness reads. Read-only; subordinate to KCP-IPS-2026-001.&quot;,
+  &quot;mcpTools&quot;: [],
+  &quot;mcpServerNames&quot;: []
+}
+&lt;/script&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta name=viewport content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;PCC 3.0 · Ledger &amp;amp; Balance Sheet&lt;/title&gt;&lt;link rel=preconnect href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=preconnect href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap&quot; rel=stylesheet&gt;&lt;style&gt;
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:&quot;Inter&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 26px 64px}
+.serif{font-family:&quot;Source Serif 4&quot;,Georgia,&quot;Times New Roman&quot;,serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:&quot;tnum&quot;}
+.dim{color:#6B6259}.sm{font-size:11px}.r{text-align:right}.teal{color:#0D7680}.down{color:#990F3D}
+.tab{width:32px;height:5px;background:#990F3D;margin-bottom:11px}
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#897F76;font-weight:600}
+h1{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:27px;margin:5px 0 6px;letter-spacing:-.012em;line-height:1.12;max-width:34ch}
+.dek{color:#6B6259;font-size:13px;max-width:78ch}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#897F76;border:1px solid #D9CBB8;border-radius:2px;padding:3px 8px}
+h2{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin:34px 0 1px;letter-spacing:-.005em;line-height:1.2;max-width:56ch}
+.cat{color:#897F76;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
+.kbar{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:20px;border-top:1px solid #33302E;padding-top:14px}
+.kbar.b2{border-top:0;margin-top:18px}
+.kpi .l{font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600}.kpi .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:24px;font-weight:600;margin-top:5px;line-height:1}.kpi .s{font-size:10px;color:#897F76;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600;border-bottom:1px solid #33302E;padding:7px 8px}td{padding:7px 8px;border-bottom:1px solid #EADBC8}tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.03em;padding:2px 7px;border-radius:2px;color:#FFF1E5}
+.sq{display:inline-block;width:10px;height:10px;border-radius:1px;margin-right:7px;vertical-align:middle}
+.stack{display:flex;height:34px;width:100%;overflow:hidden;border-radius:1px}.stack span{display:block;height:100%}
+.slgnd{display:flex;flex-wrap:wrap;gap:7px 24px;margin-top:12px;font-size:11.5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.cmcal{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}.cm{text-align:center}.cmbox{height:34px;border-radius:1px;display:flex;align-items:center;justify-content:center;font-size:9.5px;color:#FFF1E5;font-weight:600}
+.gov{padding:9px 0;border-bottom:1px solid #EADBC8}.gov:last-child{border:none}
+.ig{display:grid;grid-template-columns:repeat(5,1fr);gap:26px;margin-top:2px}
+.note{border-left:3px solid #0D7680;padding:10px 15px;color:#33302E;font-size:11.5px;margin-top:16px;background:#E7EFED}
+.src{color:#8A8076;font-size:10px;margin-top:9px}
+@media(max-width:820px){.two,.kbar,.ig{grid-template-columns:1fr 1fr;gap:18px}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=wrap&gt;
+&lt;header&gt;&lt;div&gt;&lt;div class=tab&gt;&lt;/div&gt;&lt;div class=eyebrow&gt;Kanza Capital · PCC 3.0 · Step 1 — Ledger&lt;/div&gt;&lt;h1 class=serif&gt;96.6% of net worth is working — and the overdraft is a leveraged CRDB position, not a leak&lt;/h1&gt;&lt;div class=dek&gt;Single source of truth as at 16 Jun 2026. Almost nothing sits idle (PCR 96.6%). The TZS 543m overdraft @14% is reframed here for what it is: a deliberate acquisition facility that financed a ~514m, 190k-share CRDB book. The binding constraint is concentration (CRDB 30.6%), not income — net income covers all-in burn ≈2.4×.&lt;/div&gt;&lt;/div&gt;&lt;div class=ro&gt;● Read-only&lt;/div&gt;&lt;/header&gt;
+
+&lt;div class=kbar&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;PC — net of OD&lt;/div&gt;&lt;div class=v&gt;TZS 3.87bn&lt;/div&gt;&lt;div class=s&gt;gross 4.43bn − OD 0.54bn&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Overdraft (post-settle)&lt;/div&gt;&lt;div class=&quot;v down&quot;&gt;−543.3m&lt;/div&gt;&lt;div class=s&gt;funds the ~514m CRDB book&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;CRDB concentration&lt;/div&gt;&lt;div class=v style=&quot;color:#B05F00&quot;&gt;30.6%&lt;/div&gt;&lt;div class=s&gt;net-PC · hard cap 30 · the binding flag&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Productive-Capital Ratio&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;96.6%&lt;/div&gt;&lt;div class=s&gt;PC-net ÷ net worth&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;kbar b2&quot;&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Net worth (rented — no property)&lt;/div&gt;&lt;div class=v&gt;TZS 4.01bn&lt;/div&gt;&lt;div class=s&gt;ex H2 USD rent&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Gross investments&lt;/div&gt;&lt;div class=v&gt;TZS 4.43bn&lt;/div&gt;&lt;div class=s&gt;6 sleeves&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Net income vs all-in burn&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;≈2.4× cover&lt;/div&gt;&lt;div class=s&gt;30.3m/mo vs ≤12–13m/mo&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Reinvestable surplus&lt;/div&gt;&lt;div class=v&gt;≈11.5m/mo&lt;/div&gt;&lt;div class=s&gt;after the OD carry · self-sustaining&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 class=serif&gt;CRDB is three decisions — and the overdraft is the facility that bought two of them&lt;/h2&gt;&lt;div class=cat&gt;CRDB book decomposition · same 464,469 shares, re-cut by decision &amp;amp; funding&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Decision&lt;/th&gt;&lt;th class=r&gt;Shares&lt;/th&gt;&lt;th class=r&gt;Avg cost&lt;/th&gt;&lt;th&gt;Funding&lt;/th&gt;&lt;th&gt;Read&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Legacy core&lt;/b&gt; &lt;span class=&#x27;dim sm&#x27;&gt;· 2025 deep-value lots&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;~274,469&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;~1,110–1,240&lt;/td&gt;&lt;td class=dim&gt;equity-funded&lt;/td&gt;&lt;td&gt;The alpha: +312.4m vs the iIncome ghost &lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;WINNING&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Cum-dividend capture&lt;/b&gt; &lt;span class=&#x27;dim sm&#x27;&gt;· 2026&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;130,000&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;~2,748&lt;/td&gt;&lt;td class=dim&gt;OD-funded&lt;/td&gt;&lt;td&gt;Div TZS 90/sh = ~11.7m booked &amp;amp; swept to OD → TR −3.9% vs px −7.1% &lt;span class=tag style=&#x27;background:#0F5499&#x27;&gt;DIV BOOKED&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Tactical sleeve&lt;/b&gt; &lt;span class=&#x27;dim sm&#x27;&gt;· 40k + 20k pooled&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;60,000&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;~2,613&lt;/td&gt;&lt;td class=dim&gt;OD-funded&lt;/td&gt;&lt;td&gt;Clears the ~16% carry hurdle; held into the up-leg &lt;span class=tag style=&#x27;background:#897F76&#x27;&gt;TOO FRESH&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;OD-funded book (the facility)&lt;/b&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;&lt;b&gt;~190,000&lt;/b&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=dim&gt;≈514m drawn&lt;/td&gt;&lt;td&gt;&lt;b&gt;≈514m financed ≈ the 543m OD drawn&lt;/b&gt; — the facility is a CRDB position, not a leak&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=src&gt;The same 464,469-share CRDB holding, re-cut by decision and funding source. The 2025 legacy core carries the realised alpha; the 2026 OD-funded lots are recent accumulation, scored net of the ~16% carry and reviewed at the seasonal/cycle top.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Eight entries reconcile the book — two CRDB lots and the iGrowth switch are the OD-funded actions&lt;/h2&gt;&lt;div class=cat&gt;Transaction ledger · source: contract notes, iTrust app, Koyfin lot ledger&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Instrument&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th class=r&gt;Qty&lt;/th&gt;&lt;th class=r&gt;Price&lt;/th&gt;&lt;th class=r&gt;Net (TZS)&lt;/th&gt;&lt;th&gt;Source / notes&lt;/th&gt;&lt;th&gt;State&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;&lt;td class=mono&gt;2026-06-16&lt;/td&gt;&lt;td&gt;&lt;b&gt;CRDB&lt;/b&gt;&lt;/td&gt;&lt;td&gt;BUY · tactical&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;20,000&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;2,540&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;51,917,320&lt;/td&gt;&lt;td class=dim&gt;E.A Capital #347257 · ABSA OD-funded&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=mono&gt;2026-06-16&lt;/td&gt;&lt;td&gt;&lt;b&gt;iIncome&lt;/b&gt;&lt;/td&gt;&lt;td&gt;REDEEM → iGrowth&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;604,895,437&lt;/td&gt;&lt;td class=dim&gt;iTrust · allotted 16 Jun, T+3&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=mono&gt;2026-06-16&lt;/td&gt;&lt;td&gt;&lt;b&gt;iGrowth&lt;/b&gt;&lt;/td&gt;&lt;td&gt;SUBSCRIBE · switch&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;604,895,437&lt;/td&gt;&lt;td class=dim&gt;iTrust · NAV from 16 Jun&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=mono&gt;~2026-06&lt;/td&gt;&lt;td&gt;&lt;b&gt;iIncome&lt;/b&gt;&lt;/td&gt;&lt;td&gt;SUBSCRIBE · from USD&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;50,000,000&lt;/td&gt;&lt;td class=dim&gt;$19,267.82 @ ~2,595&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=mono&gt;2026-04-10&lt;/td&gt;&lt;td&gt;&lt;b&gt;ABSA OD&lt;/b&gt;&lt;/td&gt;&lt;td&gt;FEE · 1% arrangement&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;1%&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;7,000,000&lt;/td&gt;&lt;td class=dim&gt;700m × 1% at facility start&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=mono&gt;prior&lt;/td&gt;&lt;td&gt;&lt;b&gt;CRDB&lt;/b&gt;&lt;/td&gt;&lt;td&gt;BUY · core (12 lots)&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;444,469&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;1,767.50&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;785,597,219&lt;/td&gt;&lt;td class=dim&gt;Koyfin lot ledger · Sep 25–May 26 (incl. 130k cum-div + 40k tactical)&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=mono&gt;2026-01/02&lt;/td&gt;&lt;td&gt;&lt;b&gt;VODA&lt;/b&gt;&lt;/td&gt;&lt;td&gt;BUY · Lever-8 (2 lots)&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;10,677&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;883.41&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;9,432,169&lt;/td&gt;&lt;td class=dim&gt;Jan 5,000@910 · Feb 5,677@860&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td class=mono&gt;prior&lt;/td&gt;&lt;td&gt;&lt;b&gt;Sov. bonds&lt;/b&gt;&lt;/td&gt;&lt;td&gt;BUY · 5 lines&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;15.49%&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;2,578,000,000&lt;/td&gt;&lt;td class=dim&gt;bond schedule seed&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#B05F00&#x27;&gt;Incomplete&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2 class=serif&gt;Bonds anchor the book at 58%; CRDB is the concentration to watch at 27%&lt;/h2&gt;&lt;div class=cat&gt;Capital stack · part-to-whole · % of gross productive capital (TZS 4.43bn)&lt;/div&gt;
+&lt;div class=stack&gt;
+ &lt;span style=&quot;width:58.18%;background:#0F5499&quot;&gt;&lt;/span&gt;
+ &lt;span style=&quot;width:26.84%;background:#0D7680&quot;&gt;&lt;/span&gt;
+ &lt;span style=&quot;width:13.65%;background:#990F3D&quot;&gt;&lt;/span&gt;
+ &lt;span style=&quot;width:1.15%;background:#B05F00&quot;&gt;&lt;/span&gt;
+ &lt;span style=&quot;width:0.18%;background:#897F76&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=slgnd&gt;
+ &lt;span&gt;&lt;span class=sq style=&quot;background:#0F5499&quot;&gt;&lt;/span&gt;Sovereign bonds &lt;b class=mono&gt;58%&lt;/b&gt; &lt;span class=dim&gt;· 2,578,000,000 · 399.3m/yr&lt;/span&gt;&lt;/span&gt;
+ &lt;span&gt;&lt;span class=sq style=&quot;background:#0D7680&quot;&gt;&lt;/span&gt;CRDB equity &lt;b class=mono&gt;27%&lt;/b&gt; &lt;span class=dim&gt;· 464,469 @2,560 = 1,189,040,640 · 34.2m/yr&lt;/span&gt;&lt;/span&gt;
+ &lt;span&gt;&lt;span class=sq style=&quot;background:#990F3D&quot;&gt;&lt;/span&gt;iGrowth &lt;b class=mono&gt;14%&lt;/b&gt; &lt;span class=dim&gt;· 604,895,437 · Ratified-Pending&lt;/span&gt;&lt;/span&gt;
+ &lt;span&gt;&lt;span class=sq style=&quot;background:#B05F00&quot;&gt;&lt;/span&gt;iCash &lt;b class=mono&gt;1%&lt;/b&gt; &lt;span class=dim&gt;· 50,953,714&lt;/span&gt;&lt;/span&gt;
+ &lt;span&gt;&lt;span class=sq style=&quot;background:#897F76&quot;&gt;&lt;/span&gt;VODA &lt;b class=mono&gt;0.2%&lt;/b&gt; &lt;span class=dim&gt;· 10,677 @740 = 7,900,980 · −16.2%&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=two style=&quot;margin-top:30px&quot;&gt;
+ &lt;div&gt;&lt;h2 class=serif style=&quot;margin-top:0&quot;&gt;Liquidity is thin against a 543m overdraft&lt;/h2&gt;&lt;div class=cat&gt;Cash &amp;amp; liabilities · TZS&lt;/div&gt;
+  &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Account&lt;/th&gt;&lt;th class=r&gt;TZS&lt;/th&gt;&lt;th&gt;State&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+  &lt;tr&gt;&lt;td&gt;CRDB bank &lt;span class=&#x27;dim sm&#x27;&gt;· liquidity&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;32,556,890&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;ABSA USD ($6,716) &lt;span class=&#x27;dim sm&#x27;&gt;· FX reserve&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;17,596,811&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;UNFCU savings ($23,718) &lt;span class=&#x27;dim sm&#x27;&gt;· offshore&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;62,141,998&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;UNFCU current ($7,466) &lt;span class=&#x27;dim sm&#x27;&gt;· offshore&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;19,560,920&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Moshi ops &lt;span class=&#x27;dim sm&#x27;&gt;· excl. PC&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;5,449,627&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;Known&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;ABSA OD &lt;span class=&#x27;dim sm&#x27;&gt;· 700m limit → 10 Apr 27&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono down&#x27;&gt;−491,353,374&lt;/td&gt;&lt;td class=dim&gt;Known&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;…after tactical settles (18 Jun)&lt;/td&gt;&lt;td class=&#x27;r mono down&#x27;&gt;−543,270,694&lt;/td&gt;&lt;td class=dim&gt;Sched.&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;ABSA Visa Infinite &lt;span class=&#x27;dim sm&#x27;&gt;· 15m limit&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono down&#x27;&gt;−702,011&lt;/td&gt;&lt;td class=dim&gt;Known&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;USD rent (Jul–Dec) &lt;span class=&#x27;dim sm&#x27;&gt;· $2,300/mo&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono down&#x27;&gt;−36,156,000&lt;/td&gt;&lt;td class=dim&gt;Fwd&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;h2 class=serif style=&quot;margin-top:0&quot;&gt;Coupons cluster in March &amp;amp; September — four months pay nothing&lt;/h2&gt;&lt;div class=cat&gt;Coupon receipts · change over time · TZS m&lt;/div&gt;
+  &lt;div class=cmcal id=cal&gt;&lt;/div&gt;
+  &lt;div class=src&gt;Red = the zero-coupon months (Jan · Jun · Jul · Dec) — §7.3 gaps to repair first. Coupons sweep into the OD, so the facility is partly self-liquidating; Aug + Sep ≈ 164m draws it toward ~379m.&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Concentration is the binding flag — the overdraft is a strategy, scored on coverage&lt;/h2&gt;&lt;div class=cat&gt;What the ledger surfaces&lt;/div&gt;
+&lt;div&gt;
+ &lt;div class=gov&gt;&lt;span class=sq style=&#x27;background:#B05F00&#x27;&gt;&lt;/span&gt;&lt;b&gt;CRDB single-issuer (Art. 13)&lt;/b&gt; &amp;nbsp;&lt;span class=mono style=&#x27;font-size:12px&#x27;&gt;30.6% net-of-OD PC · soft 25 / hard 30&lt;/span&gt;&lt;div class=&#x27;dim sm&#x27; style=&quot;margin-top:3px&quot;&gt;Over the 30% hard cap — Technical + Temporary with explicit tactical leeway. &lt;b&gt;The binding constraint&lt;/b&gt; (with 95% TZS / single-currency). Falls as the OD is retired or CRDB is trimmed.&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=gov&gt;&lt;span class=sq style=&#x27;background:#0D7680&#x27;&gt;&lt;/span&gt;&lt;b&gt;ABSA overdraft — leveraged-CRDB facility&lt;/b&gt; &amp;nbsp;&lt;span class=mono style=&#x27;font-size:12px&#x27;&gt;TZS 543m @14% · funds ~514m CRDB · coverage ≈5.7×&lt;/span&gt;&lt;div class=&#x27;dim sm&#x27; style=&quot;margin-top:3px&quot;&gt;Not a generic drag: it financed the 130k cum-div + 60k tactical CRDB book. Interest-coverage = contracted income ~433m ÷ OD interest ~76m ≈ 5.7× (above the 4× compel line). Scored against the ~16% carry hurdle; reviewed at the cycle/seasonal top.&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=gov&gt;&lt;span class=sq style=&#x27;background:#0D7680&#x27;&gt;&lt;/span&gt;&lt;b&gt;Income vs burn&lt;/b&gt; &amp;nbsp;&lt;span class=mono style=&#x27;font-size:12px&#x27;&gt;30.3m/mo net vs ≤12–13m/mo burn · ≈2.4× · ~11.5m/mo surplus&lt;/span&gt;&lt;div class=&#x27;dim sm&#x27; style=&quot;margin-top:3px&quot;&gt;The book is cash-self-sustaining even after the OD carry. The 75m floor is an &lt;b&gt;independence target&lt;/b&gt;, not a survival line.&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=gov&gt;&lt;span class=sq style=&#x27;background:#B05F00&#x27;&gt;&lt;/span&gt;&lt;b&gt;iGrowth scheme&lt;/b&gt; &amp;nbsp;&lt;span class=mono style=&#x27;font-size:12px&#x27;&gt;14% · Ratified-Pending&lt;/span&gt;&lt;div class=&#x27;dim sm&#x27; style=&quot;margin-top:3px&quot;&gt;Inside the 0–15% Policy band; Schedule A amendment pending.&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=gov&gt;&lt;span class=sq style=&#x27;background:#B05F00&#x27;&gt;&lt;/span&gt;&lt;b&gt;Currency policy (Art. 11)&lt;/b&gt; &amp;nbsp;&lt;span class=mono style=&#x27;font-size:12px&#x27;&gt;Hard-currency ≈ 99m · ~2.4% of NW&lt;/span&gt;&lt;div class=&#x27;dim sm&#x27; style=&quot;margin-top:3px&quot;&gt;Build-window opens only when reserves &amp;gt;4.5mo; they are 4.4mo.&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Data is complete where it counts — bonds and dividends are the gaps&lt;/h2&gt;&lt;div class=cat&gt;Completeness, shown separately — no blended score&lt;/div&gt;
+&lt;div class=ig&gt;
+ &lt;div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Equity ledger&lt;/div&gt;&lt;div class=mono style=&#x27;font-size:16px&#x27;&gt;95%&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Bond ledger&lt;/div&gt;&lt;div class=mono style=&#x27;font-size:16px;color:#B05F00&#x27;&gt;40%&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Dividend history&lt;/div&gt;&lt;div class=mono style=&#x27;font-size:16px;color:#B05F00&#x27;&gt;30%&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Tactical journal&lt;/div&gt;&lt;div class=mono style=&#x27;font-size:16px&#x27;&gt;100%&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Net-worth assets&lt;/div&gt;&lt;div class=mono style=&#x27;font-size:16px&#x27;&gt;95%&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=note&gt;&lt;b&gt;Balance sheet closed — reconciliations resolved (16 Jun).&lt;/b&gt; ABSA &quot;Premier&quot; is the OD facility (not a separate asset); limits govern on net-of-OD PC → CRDB 30.6%; no property — you rent ($2,300/mo H2), hedged by the offshore USD sleeve (≈$37.9k ≈ 16 months of rent). Net worth ≈ 4.01bn · PC net-of-OD 3.87bn → PCR ≈ 96.6%. CRDB FY-dividend locked at the official TZS 90/share (declared 14 Apr 2026).&lt;/div&gt;
+
+&lt;script&gt;
+var POS=&#x27;#0D7680&#x27;,NEG=&#x27;#990F3D&#x27;;
+var cal=[[&#x27;Jan&#x27;,0],[&#x27;Feb&#x27;,47.6],[&#x27;Mar&#x27;,116.2],[&#x27;Apr&#x27;,26.6],[&#x27;May&#x27;,9.3],[&#x27;Jun&#x27;,0],[&#x27;Jul&#x27;,0],[&#x27;Aug&#x27;,47.6],[&#x27;Sep&#x27;,116.2],[&#x27;Oct&#x27;,26.6],[&#x27;Nov&#x27;,9.3],[&#x27;Dec&#x27;,0]];
+var mx=116.2;
+document.getElementById(&#x27;cal&#x27;).innerHTML=cal.map(function(m){var v=m[1];
+ if(v===0)return &quot;&lt;div class=cm&gt;&lt;div class=cmbox style=&#x27;background:#F4DFD0;color:#990F3D&#x27;&gt;0&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27; style=&#x27;margin-top:3px&#x27;&gt;&quot;+m[0]+&quot;&lt;/div&gt;&lt;/div&gt;&quot;;
+ var t=0.22+0.78*(v/mx);return &quot;&lt;div class=cm&gt;&lt;div class=cmbox style=&#x27;background:rgba(13,118,128,&quot;+t.toFixed(2)+&quot;)&#x27;&gt;&quot;+v+&quot;&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27; style=&#x27;margin-top:3px&#x27;&gt;&quot;+m[0]+&quot;&lt;/div&gt;&lt;/div&gt;&quot;;
+}).join(&#x27;&#x27;);
+&lt;/script&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div><!--/F:ledger-->
+<!--F:gov--><div class=fwrap data-k="gov"><iframe loading="lazy" onload="fit(this)" srcdoc="&lt;!doctype html&gt;&lt;script type=&quot;application/json&quot; id=&quot;cowork-artifact-meta&quot;&gt;
+{
+  &quot;name&quot;: &quot;Kanza Pcc3 Govattr&quot;,
+  &quot;schemaVersion&quot;: 1,
+  &quot;description&quot;: &quot;PCC 3.0 · Steps 2 &amp; 4. Constitutional Hierarchy (L1 Constitution → L2 Schedules → L3 Policy Register → L4 Decisions, with the no-override rule); Capital Allocation Policy Register (sleeve roles + bands vs current weights, traffic-lit, iGrowth Ratified-Pending); the flagship iGrowth Decision Monitor (actual 604.9m→iGrowth vs ghost 604.9m→iIncome from the 16 Jun switch, self-computing decision alpha, opens &#x27;Too Fresh To Judge&#x27;); the Allocation Memo Registry (thesis on record with 90/180/365-day reviews); and the Decision Pipeline (Idea/Under Review/Approved/Executed). Read-only; subordinate to KCP-IPS-2026-001.&quot;,
+  &quot;mcpTools&quot;: [],
+  &quot;mcpServerNames&quot;: []
+}
+&lt;/script&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta name=viewport content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;PCC 3.0 · Governance &amp;amp; Decision Attribution&lt;/title&gt;&lt;link rel=preconnect href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=preconnect href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap&quot; rel=stylesheet&gt;&lt;style&gt;
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:&quot;Inter&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 26px 64px}
+.serif{font-family:&quot;Source Serif 4&quot;,Georgia,&quot;Times New Roman&quot;,serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:&quot;tnum&quot;}
+.dim{color:#6B6259}.sm{font-size:11px}.r{text-align:right}.teal{color:#0D7680}.down{color:#990F3D}
+.tab{width:32px;height:5px;background:#990F3D;margin-bottom:11px}
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#897F76;font-weight:600}
+h1{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:27px;margin:5px 0 6px;letter-spacing:-.012em;line-height:1.12;max-width:32ch}
+.dek{color:#6B6259;font-size:13px;max-width:74ch}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#897F76;border:1px solid #D9CBB8;border-radius:2px;padding:3px 8px}
+h2{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin:34px 0 1px;letter-spacing:-.005em;line-height:1.2;max-width:56ch}
+.cat{color:#897F76;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
+.hier{display:flex;flex-direction:column;gap:5px}.lv{display:flex;align-items:center;gap:10px;border-left:3px solid;padding:8px 13px;background:#FBEEE1}
+.lv .n{color:#897F76;font-size:10px;letter-spacing:.06em;text-transform:uppercase;width:58px}.arrowd{color:#C9BBA9;text-align:center;font-size:11px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px}.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+.kpi .l{font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600}.kpi .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:22px;font-weight:600;margin-top:4px;line-height:1}.kpi .s{font-size:10px;color:#897F76;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600;border-bottom:1px solid #33302E;padding:7px 8px}td{padding:7px 8px;border-bottom:1px solid #EADBC8}tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:2px;color:#FFF1E5}
+.memo .row{display:grid;grid-template-columns:130px 1fr;gap:6px 14px;padding:5px 0;border-bottom:1px solid #EADBC8;font-size:12.5px}.memo .row:last-child{border:none}.memo .k{color:#897F76;font-size:10px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;padding-top:2px}
+.pipe{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.pch{font-size:10px;letter-spacing:.05em;text-transform:uppercase;font-weight:700;border-bottom:2px solid;padding-bottom:6px;margin-bottom:8px}
+.pi{padding:7px 0 8px;border-bottom:1px solid #EADBC8;font-size:11.5px}
+.note{border-left:3px solid #897F76;padding:9px 14px;color:#5c544c;font-size:11.5px;margin-top:12px;background:#F4ECE2}
+.fresh{display:inline-block;background:#B05F00;color:#FFF1E5;border-radius:2px;font-size:10px;font-weight:700;letter-spacing:.04em;padding:3px 9px}
+.brow{display:grid;grid-template-columns:200px 1fr 92px;gap:12px;align-items:center;padding:5px 0}
+.src{color:#8A8076;font-size:10px;margin-top:9px}
+svg{display:block}
+@media(max-width:820px){.two,.three,.pipe{grid-template-columns:1fr;gap:18px}.brow{grid-template-columns:1fr}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=wrap&gt;
+&lt;header&gt;&lt;div&gt;&lt;div class=tab&gt;&lt;/div&gt;&lt;div class=eyebrow&gt;Kanza Capital · PCC 3.0 · Steps 2 &amp;amp; 4 — Governance&lt;/div&gt;&lt;h1 class=serif&gt;Only iGrowth sits outside policy — and the switch is too fresh to judge&lt;/h1&gt;&lt;div class=dek&gt;Every sleeve is inside its band except iGrowth, which is Ratified-Pending against the Constitution&#x27;s 5% scheme cap. The 16 Jun iIncome→iGrowth switch is days old; its decision alpha accrues from here.&lt;/div&gt;&lt;/div&gt;&lt;div class=ro&gt;● Read-only&lt;/div&gt;&lt;/header&gt;
+
+&lt;h2 class=serif&gt;Authority flows down — a Policy band cannot override the Constitution&lt;/h2&gt;&lt;div class=cat&gt;Constitutional hierarchy · binding order&lt;/div&gt;
+&lt;div class=hier&gt;
+ &lt;div class=lv style=&quot;border-left-color:#0D7680&quot;&gt;&lt;span class=n&gt;Level 1&lt;/span&gt;&lt;div&gt;&lt;b&gt;Constitution&lt;/b&gt; (KCP-IPS-2026-001) — governs all&lt;/div&gt;&lt;/div&gt;&lt;div class=arrowd&gt;▼&lt;/div&gt;
+ &lt;div class=lv style=&quot;border-left-color:#0F5499&quot;&gt;&lt;span class=n&gt;Level 2&lt;/span&gt;&lt;div&gt;&lt;b&gt;Schedules&lt;/b&gt; — current numbers; amendable by Committee resolution&lt;/div&gt;&lt;/div&gt;&lt;div class=arrowd&gt;▼&lt;/div&gt;
+ &lt;div class=lv style=&quot;border-left-color:#B05F00&quot;&gt;&lt;span class=n&gt;Level 3&lt;/span&gt;&lt;div&gt;&lt;b&gt;Policy Register&lt;/b&gt; — sleeve bands (below)&lt;/div&gt;&lt;/div&gt;&lt;div class=arrowd&gt;▼&lt;/div&gt;
+ &lt;div class=lv style=&quot;border-left-color:#897F76&quot;&gt;&lt;span class=n&gt;Level 4&lt;/span&gt;&lt;div&gt;&lt;b&gt;Allocation decisions&lt;/b&gt; — the trades&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=src&gt;A band may not override a constitutional limit unless a ratified Schedule amendment exists. iGrowth is inside its 0–15% band but over the 5% scheme cap → Ratified-Pending until Schedule A is minuted.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Every sleeve is inside its band — only iGrowth is pending and USD is below target&lt;/h2&gt;&lt;div class=cat&gt;Policy Register · bullet / range plot · current weight vs band · % of gross-PC&lt;/div&gt;
+&lt;div id=reg&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;The iGrowth switch is days old — alpha accrues from 16 Jun, too fresh to judge&lt;/h2&gt;&lt;div class=cat&gt;Decision Monitor · line + surplus/deficit area, actual (iGrowth) vs ghost (iIncome), rebased to the switch&lt;/div&gt;
+&lt;div style=&quot;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px&quot;&gt;&lt;div&gt;Switched &lt;b class=mono&gt;TZS 604,895,437&lt;/b&gt; from iIncome → iGrowth on &lt;b&gt;16 Jun 2026&lt;/b&gt;&lt;/div&gt;&lt;span class=fresh&gt;● TOO FRESH TO JUDGE&lt;/span&gt;&lt;/div&gt;
+&lt;div class=three&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Actual · 604.9m → iGrowth&lt;/div&gt;&lt;div class=v id=actv&gt;&lt;/div&gt;&lt;div class=s id=acts&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Ghost · 604.9m → iIncome&lt;/div&gt;&lt;div class=v id=ghv&gt;&lt;/div&gt;&lt;div class=s id=ghs&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Decision alpha&lt;/div&gt;&lt;div class=v id=alpha&gt;+0.0%&lt;/div&gt;&lt;div class=s id=alphas&gt;0 days · accrues daily&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;svg id=dm viewBox=&quot;0 0 760 280&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; role=img style=&quot;margin-top:12px&quot;&gt;&lt;/svg&gt;
+&lt;div class=src&gt;Source: iTrust NAV series. Path-dependent and noisy early; the ghost assumes the alternative was held static. NMB transmission β ≈ 0.40 · corr ≈ 0.00 · confidence LOW · reviews 90 / 180 / 365d. NAVs from iTrust Funds, 16-Jun (iGrowth 212.21 / iIncome 121.10). Net of the 14% OD carry the bar is higher for any OD-funded leg.&lt;/div&gt;
+
+&lt;div class=two style=&quot;margin-top:22px&quot;&gt;
+ &lt;div&gt;&lt;h2 class=serif style=&quot;margin-top:0&quot;&gt;The thesis on record, with its review dates&lt;/h2&gt;&lt;div class=cat&gt;Allocation Memo Registry&lt;/div&gt;
+  &lt;div class=memo&gt;
+   &lt;div class=row&gt;&lt;div class=k&gt;Decision&lt;/div&gt;&lt;div&gt;&lt;b&gt;iIncome → iGrowth switch&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=row&gt;&lt;div class=k&gt;Date · capital&lt;/div&gt;&lt;div&gt;16 Jun 2026 · TZS 604,895,437&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=row&gt;&lt;div class=k&gt;Alt. rejected&lt;/div&gt;&lt;div&gt;Remain in iIncome (~13% carry, capital stable)&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=row&gt;&lt;div class=k&gt;Thesis&lt;/div&gt;&lt;div&gt;NMB-driven NAV acceleration ahead of the 1:10 split and a banking re-rating.&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=row&gt;&lt;div class=k&gt;Success criteria&lt;/div&gt;&lt;div&gt;Positive decision alpha net of carry by the 180-day review.&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=row&gt;&lt;div class=k&gt;Review dates&lt;/div&gt;&lt;div class=mono&gt;14 Sep 26 · 13 Dec 26 · 16 Jun 27&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;h2 class=serif style=&quot;margin-top:0&quot;&gt;One idea executed; OD-retirement is the approved next step&lt;/h2&gt;&lt;div class=cat&gt;Decision Pipeline&lt;/div&gt;
+  &lt;div class=pipe&gt;
+   &lt;div&gt;&lt;div class=pch style=&#x27;border-color:#897F76;color:#897F76&#x27;&gt;Idea&lt;/div&gt;&lt;div class=pi&gt;&lt;b&gt;CRDB L-1 trim&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;await 2,930 (110% FV)&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+   &lt;div&gt;&lt;div class=pch style=&#x27;border-color:#B05F00;color:#B05F00&#x27;&gt;Review&lt;/div&gt;&lt;div class=pi&gt;&lt;b&gt;NMB direct&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;open &amp;gt;13,366&lt;/div&gt;&lt;/div&gt;&lt;div class=pi&gt;&lt;b&gt;Bond term-lock&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;auctions ≥15%&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+   &lt;div&gt;&lt;div class=pch style=&#x27;border-color:#0F5499;color:#0F5499&#x27;&gt;Approved&lt;/div&gt;&lt;div class=pi&gt;&lt;b&gt;Overdraft retire&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;from first CRDB trim&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+   &lt;div&gt;&lt;div class=pch style=&#x27;border-color:#0D7680;color:#0D7680&#x27;&gt;Executed&lt;/div&gt;&lt;div class=pi&gt;&lt;b&gt;CRDB tactical&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;20,000 @2,540 · 16 Jun&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+var POS=&#x27;#0D7680&#x27;,NEG=&#x27;#990F3D&#x27;,OX=&#x27;#0F5499&#x27;,MAND=&#x27;#B05F00&#x27;,SLATE=&#x27;#33302E&#x27;,GRID=&#x27;#EADBC8&#x27;,TXT=&#x27;#6B6259&#x27;,BAND=&#x27;#E0D0BC&#x27;;
+function f0(x){return Math.round(x).toLocaleString(&#x27;en-US&#x27;);}
+(function(){
+ var rows=[
+  {n:&#x27;Sovereign bonds&#x27;,lo:50,hi:70,cur:58.3,st:&#x27;OK&#x27;,c:POS},
+  {n:&#x27;Bank equity (CRDB; +NMB)&#x27;,lo:20,hi:40,cur:26.8,st:&#x27;OK&#x27;,c:POS},
+  {n:&#x27;iGrowth&#x27;,lo:0,hi:15,cur:13.7,st:&#x27;RATIFY-PEND&#x27;,c:MAND},
+  {n:&#x27;iIncome&#x27;,lo:0,hi:20,cur:0.0,st:&#x27;OK&#x27;,c:POS},
+  {n:&#x27;iCash&#x27;,lo:0,hi:10,cur:1.2,st:&#x27;OK&#x27;,c:POS},
+  {n:&#x27;Tactical sleeve&#x27;,lo:0,hi:10,cur:1.2,st:&#x27;OK&#x27;,c:POS},
+  {n:&#x27;USD / offshore&#x27;,lo:3,hi:5,cur:2.2,st:&#x27;WATCH&#x27;,c:MAND}
+ ];
+ var axMax=75,x0=4,x1=556;
+ function X(v){return x0+(v/axMax)*(x1-x0);}
+ var html=rows.map(function(r){
+  var h=22,s=&quot;&lt;svg width=&#x27;100%&#x27; viewBox=&#x27;0 0 560 &quot;+h+&quot;&#x27; preserveAspectRatio=&#x27;none&#x27; height=&#x27;&quot;+h+&quot;&#x27;&gt;&quot;;
+  s+=&quot;&lt;line x1=&#x27;&quot;+x0+&quot;&#x27; y1=&#x27;&quot;+(h/2)+&quot;&#x27; x2=&#x27;&quot;+x1+&quot;&#x27; y2=&#x27;&quot;+(h/2)+&quot;&#x27; stroke=&#x27;&quot;+GRID+&quot;&#x27;/&gt;&quot;;
+  s+=&quot;&lt;rect x=&#x27;&quot;+X(r.lo).toFixed(1)+&quot;&#x27; y=&#x27;5&#x27; width=&#x27;&quot;+(X(r.hi)-X(r.lo)).toFixed(1)+&quot;&#x27; height=&#x27;&quot;+(h-10)+&quot;&#x27; fill=&#x27;&quot;+BAND+&quot;&#x27;/&gt;&quot;;
+  var cx=X(r.cur);s+=&quot;&lt;rect x=&#x27;&quot;+(cx-2).toFixed(1)+&quot;&#x27; y=&#x27;2&#x27; width=&#x27;4&#x27; height=&#x27;&quot;+(h-4)+&quot;&#x27; fill=&#x27;&quot;+r.c+&quot;&#x27;/&gt;&lt;/svg&gt;&quot;;
+  var stc=r.st===&#x27;OK&#x27;?POS:MAND;
+  return &quot;&lt;div class=brow&gt;&lt;div&gt;&lt;b&gt;&quot;+r.n+&quot;&lt;/b&gt; &lt;span class=&#x27;dim sm&#x27;&gt;band &quot;+r.lo+&quot;–&quot;+r.hi+&quot;%&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&quot;+s+&quot;&lt;/div&gt;&lt;div class=r&gt;&lt;span class=mono style=&#x27;font-weight:600&#x27;&gt;&quot;+r.cur.toFixed(1)+&quot;%&lt;/span&gt; &lt;span class=tag style=&#x27;background:&quot;+stc+&quot;;margin-left:4px&#x27;&gt;&quot;+r.st+&quot;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;;
+ }).join(&#x27;&#x27;);
+ document.getElementById(&#x27;reg&#x27;).innerHTML=html+&quot;&lt;div class=src&gt;Grey = policy band · coloured tick = current weight. Axis 0–75% of gross productive capital. Source: PCC ledger weights.&lt;/div&gt;&quot;;
+})();
+(function(){
+ var ig_anchor=212.2146, ii_anchor=121.1032, sv=604895437, ig_units=2850395.01, ii_units=4994875.75;
+ var ig=[175.2904,175.9896,178.2901,179.1576,181.1202,183.4168,185.6541,188.1581,190.5986,192.4923,195.2433,196.5129,198.5974,200.5557,202.2275,204.0129,204.4855,204.4832,206.0202,206.4211,208.9203,208.9822,206.9107,207.6026,206.5712,204.9067,204.4783,204.1299,204.9261,203.872,201.8421,202.0476,204.0714,204.6359,205.1296,204.4735,204.5906,204.0117,203.5738,203.032,202.2951,202.1412,201.9302,201.5769,201.7493,202.422,202.5755,201.5041,201.8139,201.7502,201.462,201.325,200.0678,200.9231,200.6469,201.0815,200.1176,199.5754,199.0097,198.9214,199.1147,198.3896,197.792,196.6096,196.3909,196.2975,197.2345,197.2127,197.148,197.0172,197.1441,196.8953,196.5514,197.351,200.5618,201.5666,205.8977,207.5184,207.4783,207.0174,207.3366,209.4138,208.8917,209.6723,208.8426,209.0899,209.2374,209.3232,212.1316,212.2146];
+ var ii=[115.6682,115.7057,115.7436,115.7799,115.8161,115.9274,115.9653,116.0025,116.0397,116.0768,116.1899,116.2268,116.2648,116.3023,116.3406,116.4685,116.5062,116.5438,116.5816,116.6808,116.798,116.837,116.8758,116.9148,116.9525,117.0692,117.1081,117.147,117.1858,117.2247,117.3411,117.3799,117.4186,117.4574,117.4961,117.6124,117.6511,117.6896,117.7272,117.7658,117.8813,117.9188,117.9576,117.9951,118.2259,118.2644,118.3024,118.4209,118.4607,118.499,118.5373,118.576,118.6914,118.7299,118.769,118.8087,118.8478,118.9652,119.0038,119.0424,119.0802,119.2375,119.2767,119.3129,119.3515,119.39,119.5051,119.5436,119.5821,119.6208,119.6594,119.7755,119.811,119.8491,119.8873,119.9251,120.039,120.1378,120.2147,120.2531,120.3684,120.4105,120.6771,120.7175,120.7578,120.8994,120.9395,121.003,121.0628,121.1032];
+ var igL=ig[ig.length-1],iiL=ii[ii.length-1];
+ var actRet=igL/ig_anchor-1,ghRet=iiL/ii_anchor-1,alpha=actRet-ghRet;
+ document.getElementById(&#x27;actv&#x27;).textContent=&#x27;TZS &#x27;+f0(sv*(1+actRet));
+ document.getElementById(&#x27;acts&#x27;).textContent=ig_units.toLocaleString()+&#x27; u @ &#x27;+ig_anchor.toFixed(2)+&#x27; · &#x27;+(actRet*100).toFixed(2)+&#x27;%&#x27;;
+ document.getElementById(&#x27;ghv&#x27;).textContent=&#x27;TZS &#x27;+f0(sv*(1+ghRet));
+ document.getElementById(&#x27;ghs&#x27;).textContent=ii_units.toLocaleString()+&#x27; u @ &#x27;+ii_anchor.toFixed(2)+&#x27; · &#x27;+(ghRet*100).toFixed(2)+&#x27;%&#x27;;
+ var al=document.getElementById(&#x27;alpha&#x27;);al.textContent=(alpha&gt;=0?&#x27;+&#x27;:&#x27;&#x27;)+(alpha*100).toFixed(2)+&#x27;%&#x27;;al.style.color=Math.abs(alpha)&lt;0.002?SLATE:(alpha&gt;0?POS:NEG);
+ document.getElementById(&#x27;alphas&#x27;).textContent=(alpha&gt;=0?&#x27;+&#x27;:&#x27;&#x27;)+f0(alpha*sv)+&#x27; TZS · 0 days · accrues&#x27;;
+ var A=ig.map(function(v){return 100*v/ig_anchor;}),B=ii.map(function(v){return 100*v/ii_anchor;});
+ var N=A.length,all=A.concat(B),mn=Math.floor(Math.min.apply(null,all)/2)*2,mx=Math.ceil(Math.max.apply(null,all)/2)*2;
+ var x0=44,x1=716,yb=240,yt=20;
+ function X(i){return x0+i*(x1-x0)/(N-1);}
+ function Y(v){return yb-((v-mn)/(mx-mn))*(yb-yt);}
+ var s=&#x27;&#x27;;
+ [mn,Math.round((mn+mx)/2),mx].forEach(function(g){var y=Y(g);s+=&quot;&lt;line x1=&#x27;&quot;+x0+&quot;&#x27; y1=&#x27;&quot;+y+&quot;&#x27; x2=&#x27;&quot;+x1+&quot;&#x27; y2=&#x27;&quot;+y+&quot;&#x27; stroke=&#x27;&quot;+GRID+&quot;&#x27;/&gt;&quot;;s+=&quot;&lt;text x=&#x27;&quot;+(x0-6)+&quot;&#x27; y=&#x27;&quot;+(y+3)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;9.5&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+g+&quot;&lt;/text&gt;&quot;;});
+ var up=&#x27;&#x27;,lo=&#x27;&#x27;;
+ for(var i=0;i&lt;N;i++)up+=(i?&#x27;L&#x27;:&#x27;M&#x27;)+X(i).toFixed(1)+&#x27;,&#x27;+Y(A[i]).toFixed(1)+&#x27; &#x27;;
+ for(var j=N-1;j&gt;=0;j--)lo+=&#x27;L&#x27;+X(j).toFixed(1)+&#x27;,&#x27;+Y(B[j]).toFixed(1)+&#x27; &#x27;;
+ s+=&quot;&lt;path d=&#x27;&quot;+up+lo+&quot;Z&#x27; fill=&#x27;rgba(13,118,128,0.12)&#x27;/&gt;&quot;;
+ function line(a,c,w){var d=&#x27;&#x27;;for(var i=0;i&lt;N;i++)d+=(i?&#x27;L&#x27;:&#x27;M&#x27;)+X(i).toFixed(1)+&#x27;,&#x27;+Y(a[i]).toFixed(1)+&#x27; &#x27;;return &quot;&lt;path d=&#x27;&quot;+d+&quot;&#x27; fill=&#x27;none&#x27; stroke=&#x27;&quot;+c+&quot;&#x27; stroke-width=&#x27;&quot;+w+&quot;&#x27;/&gt;&quot;;}
+ s+=line(B,OX,1.6)+line(A,POS,1.9);
+ s+=&quot;&lt;text x=&#x27;&quot;+(X(N-1)-2)+&quot;&#x27; y=&#x27;&quot;+(Y(A[N-1])-5)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;10&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+POS+&quot;&#x27;&gt;iGrowth (actual)&lt;/text&gt;&quot;;
+ s+=&quot;&lt;text x=&#x27;&quot;+(X(N-1)-2)+&quot;&#x27; y=&#x27;&quot;+(Y(B[N-1])+13)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;10&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+OX+&quot;&#x27;&gt;iIncome (ghost)&lt;/text&gt;&quot;;
+ var lbls=[&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;];
+ for(var k=0;k&lt;lbls.length;k++){var xi=X(Math.round(k*(N-1)/(lbls.length-1)));s+=&quot;&lt;text x=&#x27;&quot;+xi.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(yb+15)+&quot;&#x27; text-anchor=&#x27;middle&#x27; font-size=&#x27;10&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+lbls[k]+&quot;&lt;/text&gt;&quot;;}
+ s+=&quot;&lt;line x1=&#x27;&quot;+x0+&quot;&#x27; y1=&#x27;&quot;+yb+&quot;&#x27; x2=&#x27;&quot;+x1+&quot;&#x27; y2=&#x27;&quot;+yb+&quot;&#x27; stroke=&#x27;&quot;+SLATE+&quot;&#x27; stroke-width=&#x27;1.2&#x27;/&gt;&quot;;
+ document.getElementById(&#x27;dm&#x27;).innerHTML=s;
+})();
+&lt;/script&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div><!--/F:gov-->
+<!--F:income--><div class=fwrap data-k="income"><iframe loading="lazy" onload="fit(this)" srcdoc="&lt;!doctype html&gt;&lt;script type=&quot;application/json&quot; id=&quot;cowork-artifact-meta&quot;&gt;
+{
+  &quot;name&quot;: &quot;Kanza Pcc3 Income&quot;,
+  &quot;schemaVersion&quot;: 1,
+  &quot;description&quot;: &quot;PCC 3.0 · Step 9 — Income Architecture (the mission variable), reframed. The book is already cash-self-sustaining: net cash income 30.3m/mo (gross 36.6m less 14% OD carry 6.3m) covers all-in burn &lt;=12-13m/mo about 2.4x, leaving ~11.5m/mo reinvestable even after the OD carry. So the 75m floor is an independence target, not a survival line. Income composition (coupons 399m + CRDB div 34m + iCash 6m - OD 76m = net 364m/yr), the coupon calendar with the four zero-months, the two income levers, and a probability engine to the independence target (P(75m): 30% by 2028, 75% by 2029/2030; expected ~2029; MEDIUM). Read-only; subordinate to KCP-IPS-2026-001.&quot;,
+  &quot;mcpTools&quot;: [],
+  &quot;mcpServerNames&quot;: []
+}
+&lt;/script&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta name=viewport content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;PCC 3.0 · Income Architecture&lt;/title&gt;&lt;link rel=preconnect href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=preconnect href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap&quot; rel=stylesheet&gt;&lt;style&gt;
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:&quot;Inter&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 26px 64px}
+.serif{font-family:&quot;Source Serif 4&quot;,Georgia,&quot;Times New Roman&quot;,serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:&quot;tnum&quot;}
+.dim{color:#6B6259}.sm{font-size:11px}.r{text-align:right}.teal{color:#0D7680}.down{color:#990F3D}
+.tab{width:32px;height:5px;background:#990F3D;margin-bottom:11px}
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#897F76;font-weight:600}
+h1{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:27px;margin:5px 0 6px;letter-spacing:-.012em;line-height:1.12;max-width:34ch}
+.dek{color:#6B6259;font-size:13px;max-width:74ch}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#897F76;border:1px solid #D9CBB8;border-radius:2px;padding:3px 8px;white-space:nowrap}
+h2{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin:34px 0 1px;letter-spacing:-.005em;line-height:1.2;max-width:50ch}
+.cat{color:#897F76;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.kbar{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:20px;border-top:1px solid #33302E;padding-top:14px}
+.kpi .l{font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600}.kpi .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:26px;font-weight:600;margin-top:5px;line-height:1}.kpi .s{font-size:10.5px;color:#897F76;margin-top:4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}td{padding:6px 2px;border-bottom:1px solid #EADBC8}tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:2px;color:#FFF1E5}.dot{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:7px;vertical-align:middle}
+.cmcal{display:grid;grid-template-columns:repeat(12,1fr);gap:4px}.cm{text-align:center}.cmbox{height:30px;border-radius:1px;display:flex;align-items:center;justify-content:center;font-size:9px;color:#FFF1E5;font-weight:600}
+.lev{border-left:3px solid #0D7680;padding:10px 15px;color:#33302E;font-size:12px;margin-top:14px;background:#E7EFED}
+.cov{border-left:3px solid #0D7680;background:#E7EFED;border-radius:2px;padding:12px 16px;margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.cov .l{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#6B6259;font-weight:600}.cov .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:21px;font-weight:600;margin-top:3px;line-height:1}.cov .s{font-size:10px;color:#897F76;margin-top:3px}
+.src{color:#8A8076;font-size:10px;margin-top:9px}
+svg{display:block;width:100%;height:auto}
+@media(max-width:820px){.two,.kbar{grid-template-columns:1fr 1fr;gap:20px}.cov{grid-template-columns:1fr 1fr}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=wrap&gt;
+&lt;header&gt;&lt;div&gt;&lt;div class=tab&gt;&lt;/div&gt;&lt;div class=eyebrow&gt;Kanza Capital · PCC 3.0 · Income&lt;/div&gt;&lt;h1 class=serif&gt;The book is already cash-self-sustaining — income covers burn ≈2.4×&lt;/h1&gt;&lt;div class=dek&gt;Net cash income is &lt;b&gt;30.3m/mo&lt;/b&gt; (gross 36.6m less the 14% OD carry of 6.3m). All-in burn never tops ≤12–13m/mo, so income covers it ≈2.4× and leaves ≈11.5m/mo to reinvest — even after the carry. The 75m floor is therefore an &lt;b&gt;independence target, not a survival line&lt;/b&gt;.&lt;/div&gt;&lt;/div&gt;&lt;div class=ro&gt;● Read-only&lt;/div&gt;&lt;/header&gt;
+
+&lt;div class=kbar&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Net cash income&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;30.3m&lt;span style=&quot;font-size:14px;color:#897F76&quot;&gt;/mo&lt;/span&gt;&lt;/div&gt;&lt;div class=s&gt;covers all-in burn ≈2.4×&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;All-in burn&lt;/div&gt;&lt;div class=v&gt;≤12–13m&lt;span style=&quot;font-size:14px;color:#897F76&quot;&gt;/mo&lt;/span&gt;&lt;/div&gt;&lt;div class=s&gt;rent + living + ops&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Reinvestable surplus&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;≈+11.5m&lt;span style=&quot;font-size:14px;color:#897F76&quot;&gt;/mo&lt;/span&gt;&lt;/div&gt;&lt;div class=s&gt;after the OD carry · self-sustaining&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Independence target (75m)&lt;/div&gt;&lt;div class=v&gt;~2029&lt;/div&gt;&lt;div class=s&gt;aspirational floor · 75% by 2030&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=cov&gt;
+ &lt;div&gt;&lt;div class=l&gt;Gross income&lt;/div&gt;&lt;div class=v&gt;36.6m/mo&lt;/div&gt;&lt;div class=s&gt;coupons + div + iCash&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=l&gt;less OD carry (14%)&lt;/div&gt;&lt;div class=&quot;v down&quot;&gt;−6.3m/mo&lt;/div&gt;&lt;div class=s&gt;funds the CRDB book&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=l&gt;Net income&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;30.3m/mo&lt;/div&gt;&lt;div class=s&gt;≈2.4× burn&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=l&gt;Coverage ratio&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;≈2.4×&lt;/div&gt;&lt;div class=s&gt;30.3m ÷ ≤12–13m&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Net income is 364m/yr after the OD carry — gross 440m, carry 76m&lt;/h2&gt;&lt;div class=cat&gt;Income composition · waterfall · TZS m / year&lt;/div&gt;
+&lt;svg id=wf viewBox=&quot;0 0 640 290&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; role=img&gt;&lt;/svg&gt;
+&lt;div class=src&gt;Source: PCC ledger — sovereign coupons, CRDB dividend, iCash carry, ABSA OD interest. The OD carry funds the leveraged CRDB book, so it is an investment cost, not a leak.&lt;/div&gt;
+&lt;div class=lev&gt;&lt;b&gt;Two levers, in order of impact.&lt;/b&gt; ① &lt;b&gt;Retire the OD&lt;/b&gt; → +6.3m/mo at once (and removes the 7m/yr fee) — but only once the CRDB book it funds is harvested at the cycle/seasonal top, since it is the acquisition facility. ② &lt;b&gt;Phase-II conversion&lt;/b&gt; — harvest the appreciating equity book into bonds and dividend stock; this is what carries income from ~36m toward the 75m independence target over 2027–29.&lt;/div&gt;
+
+&lt;div class=two style=&quot;margin-top:26px&quot;&gt;
+ &lt;div&gt;&lt;h2 class=serif style=&quot;margin-top:0&quot;&gt;Coupons cluster in March &amp;amp; September — four months pay nothing&lt;/h2&gt;&lt;div class=cat&gt;Coupon receipts · change over time · TZS m&lt;/div&gt;
+  &lt;div class=cmcal id=cal&gt;&lt;/div&gt;
+  &lt;div class=src&gt;Red = the zero-coupon months (Jan · Jun · Jul · Dec) — the §7.3 calendar gaps to repair first.&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;h2 class=serif style=&quot;margin-top:0&quot;&gt;Contracted income is 364m net of the OD, not the 440m gross&lt;/h2&gt;&lt;div class=cat&gt;Annual run-rate · TZS&lt;/div&gt;
+  &lt;table&gt;&lt;tbody&gt;
+  &lt;tr&gt;&lt;td&gt;Sovereign coupons (15.49%)&lt;/td&gt;&lt;td class=&#x27;r mono teal&#x27;&gt;+399.3m&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;CRDB dividends (TZS 90/sh, official)&lt;/td&gt;&lt;td class=&#x27;r mono teal&#x27;&gt;+34.2m&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;iCash carry (~12%)&lt;/td&gt;&lt;td class=&#x27;r mono teal&#x27;&gt;+6.1m&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;iGrowth (growth — no income)&lt;/td&gt;&lt;td class=&#x27;r mono dim&#x27;&gt;0&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Gross cash income&lt;/b&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;&lt;b&gt;439.7m&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;less OD interest (14%)&lt;/td&gt;&lt;td class=&#x27;r mono down&#x27;&gt;−76.1m&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;b&gt;Net cash income&lt;/b&gt;&lt;/td&gt;&lt;td class=&#x27;r mono teal&#x27;&gt;&lt;b&gt;363.6m&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 class=serif&gt;The base case clears the 75m independence target by ~2029 — 75% probable by 2030&lt;/h2&gt;&lt;div class=cat&gt;Income to the target · fan / projection cone · TZS m/mo (y capped at 200; Bull exits the top)&lt;/div&gt;
+&lt;svg id=fan viewBox=&quot;0 0 760 320&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; role=img&gt;&lt;/svg&gt;
+&lt;div class=two style=&quot;margin-top:12px&quot;&gt;
+ &lt;table style=&quot;font-size:12.5px&quot;&gt;&lt;tbody&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;span class=dot style=&#x27;background:#0D7680&#x27;&gt;&lt;/span&gt;Bull &lt;span class=dim&gt;(30%)&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;75m by ~2028&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;span class=dot style=&#x27;background:#0F5499&#x27;&gt;&lt;/span&gt;Base &lt;span class=dim&gt;(45%)&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;75m by ~2029&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;span class=dot style=&#x27;background:#B05F00&#x27;&gt;&lt;/span&gt;Bear &lt;span class=dim&gt;(20%)&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;75m by ~2032&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;&lt;span class=dot style=&#x27;background:#990F3D&#x27;&gt;&lt;/span&gt;Stress &lt;span class=dim&gt;(5%)&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;beyond horizon&lt;/td&gt;&lt;/tr&gt;
+ &lt;/tbody&gt;&lt;/table&gt;
+ &lt;table style=&quot;font-size:12.5px&quot;&gt;&lt;tbody&gt;
+  &lt;tr&gt;&lt;td&gt;P(75m by 2028)&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;30%&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;P(75m by 2029)&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;75%&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;P(75m by 2030)&lt;/td&gt;&lt;td class=&#x27;r mono teal&#x27;&gt;75%&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Confidence&lt;/td&gt;&lt;td class=&#x27;r&#x27;&gt;&lt;span class=tag style=&#x27;background:#B05F00&#x27;&gt;MEDIUM&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+ &lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=src&gt;Source: PCC scenario model — corpus compounds at the scenario rate + ~150m/yr contributions; cash-yield glides 10%→14% as Phase-II conversion proceeds. A probability frame, not a forecast — and an independence target, since the book already covers burn ≈2.4×.&lt;/div&gt;
+
+&lt;script&gt;
+var POS=&#x27;#0D7680&#x27;,NEG=&#x27;#990F3D&#x27;,OX=&#x27;#0F5499&#x27;,MAND=&#x27;#B05F00&#x27;,SLATE=&#x27;#33302E&#x27;,GRID=&#x27;#E6D9C9&#x27;,TXT=&#x27;#6B6259&#x27;;
+// coupon calendar
+var cal=[[&#x27;Jan&#x27;,0],[&#x27;Feb&#x27;,47.6],[&#x27;Mar&#x27;,116.2],[&#x27;Apr&#x27;,26.6],[&#x27;May&#x27;,9.3],[&#x27;Jun&#x27;,0],[&#x27;Jul&#x27;,0],[&#x27;Aug&#x27;,47.6],[&#x27;Sep&#x27;,116.2],[&#x27;Oct&#x27;,26.6],[&#x27;Nov&#x27;,9.3],[&#x27;Dec&#x27;,0]];
+var cmx=116.2;
+document.getElementById(&#x27;cal&#x27;).innerHTML=cal.map(function(m){var v=m[1];
+ if(v===0)return &quot;&lt;div class=cm&gt;&lt;div class=cmbox style=&#x27;background:#F4DFD0;color:#990F3D&#x27;&gt;0&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27; style=&#x27;margin-top:3px&#x27;&gt;&quot;+m[0]+&quot;&lt;/div&gt;&lt;/div&gt;&quot;;
+ var t=0.22+0.78*(v/cmx);return &quot;&lt;div class=cm&gt;&lt;div class=cmbox style=&#x27;background:rgba(13,118,128,&quot;+t.toFixed(2)+&quot;)&#x27;&gt;&quot;+v+&quot;&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27; style=&#x27;margin-top:3px&#x27;&gt;&quot;+m[0]+&quot;&lt;/div&gt;&lt;/div&gt;&quot;;
+}).join(&#x27;&#x27;);
+// waterfall
+(function(){
+ var segs=[{l:&#x27;Coupons&#x27;,v:399.3,t:&#x27;r&#x27;},{l:&#x27;CRDB div&#x27;,v:34.2,t:&#x27;r&#x27;},{l:&#x27;iCash&#x27;,v:6.1,t:&#x27;r&#x27;},{l:&#x27;Gross&#x27;,v:439.7,t:&#x27;g&#x27;},{l:&#x27;OD interest&#x27;,v:-76.1,t:&#x27;f&#x27;},{l:&#x27;Net&#x27;,v:363.6,t:&#x27;n&#x27;}];
+ var W=640,x0=46,x1=628,yb=244,yt=28,maxV=460,n=segs.length,gap=18,bw=((x1-x0)-(n-1)*gap)/n;
+ function Y(v){return yb-v*((yb-yt)/maxV);}
+ var s=&#x27;&#x27;;
+ [0,100,200,300,400].forEach(function(g){var y=Y(g);s+=&quot;&lt;line x1=&#x27;&quot;+x0+&quot;&#x27; y1=&#x27;&quot;+y+&quot;&#x27; x2=&#x27;&quot;+x1+&quot;&#x27; y2=&#x27;&quot;+y+&quot;&#x27; stroke=&#x27;&quot;+GRID+&quot;&#x27;/&gt;&quot;;s+=&quot;&lt;text x=&#x27;&quot;+(x0-6)+&quot;&#x27; y=&#x27;&quot;+(y+3)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;9.5&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+g+&quot;&lt;/text&gt;&quot;;});
+ var run=0,prevY=null;
+ for(var i=0;i&lt;n;i++){var seg=segs[i],x=x0+i*(bw+gap),top,bot,col;
+  if(seg.t===&#x27;r&#x27;){top=run+seg.v;bot=run;run=top;col=POS;}
+  else if(seg.t===&#x27;f&#x27;){top=run;bot=run+seg.v;run=bot;col=NEG;}
+  else {top=seg.v;bot=0;col=(seg.t===&#x27;n&#x27;)?POS:SLATE;run=seg.v;}
+  var yT=Y(top),yB=Y(bot),ry=Math.min(yT,yB),h=Math.abs(yB-yT);
+  if(prevY!==null)s+=&quot;&lt;line x1=&#x27;&quot;+(x-gap)+&quot;&#x27; y1=&#x27;&quot;+prevY+&quot;&#x27; x2=&#x27;&quot;+x+&quot;&#x27; y2=&#x27;&quot;+prevY+&quot;&#x27; stroke=&#x27;#C9BBA9&#x27; stroke-width=&#x27;1&#x27; stroke-dasharray=&#x27;2,2&#x27;/&gt;&quot;;
+  s+=&quot;&lt;rect x=&#x27;&quot;+x.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+ry.toFixed(1)+&quot;&#x27; width=&#x27;&quot;+bw.toFixed(1)+&quot;&#x27; height=&#x27;&quot;+Math.max(h,1).toFixed(1)+&quot;&#x27; fill=&#x27;&quot;+col+&quot;&#x27;/&gt;&quot;;
+  var lab=(seg.t===&#x27;g&#x27;||seg.t===&#x27;n&#x27;)?seg.v.toFixed(1):(seg.v&gt;=0?&#x27;+&#x27;:&#x27;&#x27;)+seg.v;
+  s+=&quot;&lt;text x=&#x27;&quot;+(x+bw/2).toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(ry-5).toFixed(1)+&quot;&#x27; text-anchor=&#x27;middle&#x27; font-size=&#x27;11.5&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+col+&quot;&#x27;&gt;&quot;+lab+&quot;&lt;/text&gt;&quot;;
+  s+=&quot;&lt;text x=&#x27;&quot;+(x+bw/2).toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(yb+15).toFixed(1)+&quot;&#x27; text-anchor=&#x27;middle&#x27; font-size=&#x27;10&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+seg.l+&quot;&lt;/text&gt;&quot;;
+  prevY=Y(seg.t===&#x27;f&#x27;?bot:top);
+ }
+ s+=&quot;&lt;line x1=&#x27;&quot;+x0+&quot;&#x27; y1=&#x27;&quot;+yb+&quot;&#x27; x2=&#x27;&quot;+x1+&quot;&#x27; y2=&#x27;&quot;+yb+&quot;&#x27; stroke=&#x27;&quot;+SLATE+&quot;&#x27; stroke-width=&#x27;1.2&#x27;/&gt;&quot;;
+ document.getElementById(&#x27;wf&#x27;).innerHTML=s;
+})();
+// fan
+(function(){
+ var paths={Bull:[36.8,40.6,44.7,49.2,53.9,59.0,64.6,70.5,76.9,83.7,91.1,99.0,106.0,112.2,118.7,125.6,132.9,140.6,148.6,157.1,166.1,175.6,185.6,196.1,207.2,218.9,231.3,244.4,258.1,272.7,288.0,304.2,321.4,339.4,358.5,378.7,400.0,422.4,446.2,471.3,497.8],
+  Base:[36.8,39.5,42.4,45.3,48.5,51.7,55.1,58.6,62.3,66.2,70.2,74.4,77.7,80.2,82.8,85.4,88.1,90.9,93.7,96.7,99.6,102.7,105.8,109.0,112.3,115.6,119.1,122.6,126.2,130.0,133.8,137.7,141.7,145.8,150.0,154.3,158.7,163.3,168.0,172.7,177.7],
+  Bear:[36.8,38.8,40.9,43.0,45.1,47.3,49.5,51.8,54.2,56.6,59.1,61.6,63.3,64.3,65.3,66.3,67.3,68.4,69.4,70.4,71.5,72.5,73.6,74.7,75.7,76.8,77.9,79.0,80.1,81.2,82.3,83.4,84.6,85.7,86.8,88.0,89.1,90.3,91.5,92.6,93.8],
+  Stress:[36.8,37.7,38.5,39.3,40.1,40.8,41.6,42.4,43.1,43.8,44.6,45.3,45.4,45.0,44.6,44.3,43.9,43.6,43.3,43.0,42.7,42.5,42.2,42.0,41.8,41.6,41.4,41.2,41.0,40.9,40.7,40.6,40.5,40.4,40.3,40.2,40.1,40.0,40.0,39.9,39.9]};
+ var x0=44,x1=716,yb=276,yt=20,cap=200,N=paths.Base.length;
+ function X(i){return x0+i*(x1-x0)/(N-1);}
+ function Y(v){v=Math.min(v,cap);return yb-(v/cap)*(yb-yt);}
+ var s=&#x27;&#x27;;
+ [0,50,75,100,150,200].forEach(function(g){var y=Y(g);var dash=(g===75||g===100)?&quot; stroke-dasharray=&#x27;4,3&#x27;&quot;:&quot;&quot;;var col=(g===75)?NEG:(g===100?&#x27;#B9AD9D&#x27;:GRID);s+=&quot;&lt;line x1=&#x27;&quot;+x0+&quot;&#x27; y1=&#x27;&quot;+y+&quot;&#x27; x2=&#x27;&quot;+x1+&quot;&#x27; y2=&#x27;&quot;+y+&quot;&#x27; stroke=&#x27;&quot;+col+&quot;&#x27;&quot;+dash+&quot;/&gt;&quot;;s+=&quot;&lt;text x=&#x27;&quot;+(x0-6)+&quot;&#x27; y=&#x27;&quot;+(y+3)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;9.5&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+g+&quot;&lt;/text&gt;&quot;;});
+ s+=&quot;&lt;text x=&#x27;&quot;+x1+&quot;&#x27; y=&#x27;&quot;+(Y(75)-4)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;10.5&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+NEG+&quot;&#x27;&gt;Independence 75m&lt;/text&gt;&quot;;
+ s+=&quot;&lt;text x=&#x27;&quot;+x1+&quot;&#x27; y=&#x27;&quot;+(Y(100)-4)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;10&#x27; fill=&#x27;#8a8079&#x27;&gt;Ceiling 100m&lt;/text&gt;&quot;;
+ var up=&#x27;&#x27;,lo=&#x27;&#x27;;
+ for(var i=0;i&lt;N;i++)up+=(i?&#x27;L&#x27;:&#x27;M&#x27;)+X(i).toFixed(1)+&#x27;,&#x27;+Y(paths.Bull[i]).toFixed(1)+&#x27; &#x27;;
+ for(var j=N-1;j&gt;=0;j--)lo+=&#x27;L&#x27;+X(j).toFixed(1)+&#x27;,&#x27;+Y(paths.Stress[j]).toFixed(1)+&#x27; &#x27;;
+ s+=&quot;&lt;path d=&#x27;&quot;+up+lo+&quot;Z&#x27; fill=&#x27;rgba(13,118,128,0.09)&#x27;/&gt;&quot;;
+ function line(a,c,w){var d=&#x27;&#x27;;for(var i=0;i&lt;N;i++)d+=(i?&#x27;L&#x27;:&#x27;M&#x27;)+X(i).toFixed(1)+&#x27;,&#x27;+Y(a[i]).toFixed(1)+&#x27; &#x27;;return &quot;&lt;path d=&#x27;&quot;+d+&quot;&#x27; fill=&#x27;none&#x27; stroke=&#x27;&quot;+c+&quot;&#x27; stroke-width=&#x27;&quot;+w+&quot;&#x27;/&gt;&quot;;}
+ s+=line(paths.Bull,POS,1.2)+line(paths.Bear,MAND,1.2)+line(paths.Stress,NEG,1.2)+line(paths.Base,OX,2.4);
+ var yrs=[&quot;&#x27;26&quot;,&quot;&#x27;28&quot;,&quot;&#x27;30&quot;,&quot;&#x27;32&quot;,&quot;&#x27;34&quot;,&quot;&#x27;36&quot;];
+ for(var k=0;k&lt;yrs.length;k++){var xi=X(k*8);s+=&quot;&lt;text x=&#x27;&quot;+xi.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(yb+15)+&quot;&#x27; text-anchor=&#x27;middle&#x27; font-size=&#x27;10&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+yrs[k]+&quot;&lt;/text&gt;&quot;;}
+ s+=&quot;&lt;text x=&#x27;&quot;+(X(N-1)-2)+&quot;&#x27; y=&#x27;&quot;+(Y(Math.min(paths.Base[N-1],cap))+4)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;10.5&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+OX+&quot;&#x27;&gt;Base&lt;/text&gt;&quot;;
+ s+=&quot;&lt;text x=&#x27;&quot;+(X(N-1)-2)+&quot;&#x27; y=&#x27;&quot;+(Y(Math.min(paths.Bear[N-1],cap))+13)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;10&#x27; fill=&#x27;&quot;+MAND+&quot;&#x27;&gt;Bear&lt;/text&gt;&quot;;
+ s+=&quot;&lt;text x=&#x27;&quot;+(X(N-1)-2)+&quot;&#x27; y=&#x27;&quot;+(Y(paths.Stress[N-1])+13)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;10&#x27; fill=&#x27;&quot;+NEG+&quot;&#x27;&gt;Stress&lt;/text&gt;&quot;;
+ s+=&quot;&lt;text x=&#x27;&quot;+X(20)+&quot;&#x27; y=&#x27;&quot;+(Y(cap)+12)+&quot;&#x27; text-anchor=&#x27;middle&#x27; font-size=&#x27;10&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+POS+&quot;&#x27;&gt;Bull ↑ exits top (→ 498m)&lt;/text&gt;&quot;;
+ s+=&quot;&lt;line x1=&#x27;&quot;+x0+&quot;&#x27; y1=&#x27;&quot;+yb+&quot;&#x27; x2=&#x27;&quot;+x1+&quot;&#x27; y2=&#x27;&quot;+yb+&quot;&#x27; stroke=&#x27;&quot;+SLATE+&quot;&#x27; stroke-width=&#x27;1.2&#x27;/&gt;&quot;;
+ document.getElementById(&#x27;fan&#x27;).innerHTML=s;
+})();
+&lt;/script&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div><!--/F:income-->
+<!--F:attr--><div class=fwrap data-k="attr"><iframe loading="lazy" onload="fit(this)" srcdoc="&lt;!doctype html&gt;&lt;script type=&quot;application/json&quot; id=&quot;cowork-artifact-meta&quot;&gt;
+{
+  &quot;name&quot;: &quot;Kanza Pcc3 Allocator Health&quot;,
+  &quot;schemaVersion&quot;: 1,
+  &quot;description&quot;: &quot;PCC 3.0 · Steps 5-6 &amp; 10. Portfolio Health Score (58/100, fair) with its six components shown separately (compliance 55, income stability 73 — reclassified from drag to support now that net income covers burn ~2.4x, diversification 42, liquidity 52, forecast 60, macro 64). Opportunity-Cost Ledger — CRDB now decomposed into three decisions (2025 legacy deep-value core +312.4m WINNING; 2026 cum-div capture, dividend booked, total-return -3.9% vs price -7.1%; OD-funded tactical sleeve, too fresh) plus duration-lock +115.7m/yr (WINNING), iIncome-&gt;iGrowth switch and VODA. The OD reframed as a leveraged-CRDB acquisition facility, not a generic drag. Read-only; subordinate to KCP-IPS-2026-001.&quot;,
+  &quot;mcpTools&quot;: [],
+  &quot;mcpServerNames&quot;: []
+}
+&lt;/script&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta name=viewport content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;PCC 3.0 · Allocator Alpha &amp;amp; Health&lt;/title&gt;&lt;link rel=preconnect href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=preconnect href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap&quot; rel=stylesheet&gt;&lt;style&gt;
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:&quot;Inter&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 26px 64px}
+.serif{font-family:&quot;Source Serif 4&quot;,Georgia,&quot;Times New Roman&quot;,serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:&quot;tnum&quot;}
+.dim{color:#6B6259}.sm{font-size:11px}.r{text-align:right}.teal{color:#0D7680}
+.tab{width:32px;height:5px;background:#990F3D;margin-bottom:11px}
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#897F76;font-weight:600}
+h1{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:27px;margin:5px 0 6px;letter-spacing:-.012em;line-height:1.12;max-width:32ch}
+.dek{color:#6B6259;font-size:13px;max-width:74ch}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#897F76;border:1px solid #D9CBB8;border-radius:2px;padding:3px 8px}
+h2{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin:34px 0 1px;letter-spacing:-.005em;line-height:1.2;max-width:56ch}
+.cat{color:#897F76;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
+.two{display:grid;grid-template-columns:200px 1fr;gap:30px;align-items:start}
+.hscore{text-align:center}.hscore .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:72px;font-weight:700;line-height:1;color:#B05F00}.hscore .s{font-size:11px;color:#6B6259;margin-top:2px;letter-spacing:.06em;text-transform:uppercase}
+.hc{margin-bottom:12px}.hcl{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}.hbar{height:9px;background:#EADBC8;border-radius:1px;overflow:hidden}.hbar span{display:block;height:100%}
+.kbar{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:18px;border-top:1px solid #33302E;padding-top:14px}.kpi .l{font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600}.kpi .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:24px;font-weight:600;margin-top:5px;line-height:1}.kpi .s{font-size:10px;color:#897F76;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600;border-bottom:1px solid #33302E;padding:7px 8px}td{padding:8px;border-bottom:1px solid #EADBC8;vertical-align:top}tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px;color:#FFF1E5;white-space:nowrap}
+.note{border-left:3px solid #0D7680;padding:10px 15px;color:#33302E;font-size:11.5px;margin-top:14px;background:#E7EFED}
+.src{color:#8A8076;font-size:10px;margin-top:9px}
+svg{display:block}
+@media(max-width:820px){.two,.kbar{grid-template-columns:1fr;gap:18px}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=wrap&gt;
+&lt;header&gt;&lt;div&gt;&lt;div class=tab&gt;&lt;/div&gt;&lt;div class=eyebrow&gt;Kanza Capital · PCC 3.0 · Steps 5–6 &amp;amp; 10 — Allocator&lt;/div&gt;&lt;h1 class=serif&gt;Two clean wins carry the book — the duration-lock and the 2025 CRDB conviction&lt;/h1&gt;&lt;div class=dek&gt;Decision returns, not market returns. +312.4m of realised alpha from the 2025 CRDB deep-value accumulation and +115.7m/yr run-rate from the duration-lock; everything else is small or too fresh to score. Health sits at 58/100 — the one real drag is concentration (≈30% CRDB, 95% TZS); income is now scored as support, not strain, since net income covers burn ≈2.4×.&lt;/div&gt;&lt;/div&gt;&lt;div class=ro&gt;● Read-only&lt;/div&gt;&lt;/header&gt;
+
+&lt;h2 class=serif&gt;Health is 58/100 — concentration is the one real drag; income is support, not strain&lt;/h2&gt;&lt;div class=cat&gt;Portfolio Health Score · six components, shown separately&lt;/div&gt;
+&lt;div class=two&gt;
+ &lt;div class=hscore&gt;&lt;div class=v&gt;58&lt;/div&gt;&lt;div class=s&gt;/ 100 · Fair&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27; style=&quot;margin-top:10px;text-align:left&quot;&gt;Weighted: compliance 25 · income 20 · diversification 15 · liquidity 15 · macro 15 · forecast 10.&lt;/div&gt;&lt;/div&gt;
+ &lt;div id=comp&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=src&gt;Source: PCC governance + macro regime model. Income reclassified from drag to support (net income covers burn ≈2.4×). The binding constraint is now what it always was — single-issuer / single-currency concentration.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;CRDB is three decisions, not one — the 2025 core is the alpha; the 2026 book is fresh&lt;/h2&gt;&lt;div class=cat&gt;Opportunity-Cost ledger · decision alpha vs the alternative · diverging, TZS m&lt;/div&gt;
+&lt;svg id=oc viewBox=&quot;0 0 760 240&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; role=img&gt;&lt;/svg&gt;
+&lt;table style=&quot;margin-top:12px&quot;&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Decision&lt;/th&gt;&lt;th&gt;Alternative rejected&lt;/th&gt;&lt;th class=r&gt;Decision alpha&lt;/th&gt;&lt;th&gt;Status&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;CRDB legacy core · ~274k sh @ ~1,110–1,240 (2025)&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;The deep-value accumulation: +44.3% vs the iIncome ghost&#x27;s +4.5% over identical periods → +312.4m. This is the conviction that earned the alpha.&lt;/div&gt;&lt;/td&gt;&lt;td class=dim&gt;hold capital in iIncome&lt;/td&gt;&lt;td class=&#x27;r mono&#x27; style=&#x27;color:#0D7680&#x27;&gt;+312.4m&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;WINNING&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Duration-lock · bonds 2,578m @15.49%&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Locked the long coupon before yields compressed — the cleanest run-rate win.&lt;/div&gt;&lt;/td&gt;&lt;td class=dim&gt;reinvest @ ~11%&lt;/td&gt;&lt;td class=&#x27;r mono&#x27; style=&#x27;color:#0D7680&#x27;&gt;+115.7m/yr&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680&#x27;&gt;WINNING&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;CRDB cum-div capture · 130k sh (2026, OD-funded)&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Bought to capture the dividend: the ~11.7m payout (DPS TZS 90, official — declared 14 Apr 2026) was booked early June and swept to the OD. On a total-return basis the lot is −3.9%, not the −7.1% price line.&lt;/div&gt;&lt;/td&gt;&lt;td class=dim&gt;forgo the dividend&lt;/td&gt;&lt;td class=&#x27;r mono dim&#x27;&gt;TR −3.9% · px −7.1%&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0F5499&#x27;&gt;CONTEXT · DIV BOOKED&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;CRDB tactical sleeve · 60k sh @ ~2,613 (40k+20k, OD-funded)&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Pooled tactical lots near 2,560; must clear the ~16% OD-carry hurdle. Scored net of carry; held into the seasonal up-leg, reviewed at the Q3 top.&lt;/div&gt;&lt;/td&gt;&lt;td class=dim&gt;hold cash&lt;/td&gt;&lt;td class=&#x27;r mono dim&#x27;&gt;~0% gross&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#897F76&#x27;&gt;TOO FRESH&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;iIncome → iGrowth · 604.9m&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Days old; accrues in the Decision Monitor.&lt;/div&gt;&lt;/td&gt;&lt;td class=dim&gt;remain in iIncome&lt;/td&gt;&lt;td class=&#x27;r mono dim&#x27;&gt;0.0% · 0 d&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#897F76&#x27;&gt;TOO FRESH&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;VODA · 10,677 sh @ avg 883&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Lever-8 buy (Jan 910 / Feb 860), now 740. Tiny (~7.9m); below thesis.&lt;/div&gt;&lt;/td&gt;&lt;td class=dim&gt;hold cash&lt;/td&gt;&lt;td class=&#x27;r mono&#x27; style=&#x27;color:#990F3D&#x27;&gt;−1.53m (−16.2%)&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#B05F00&#x27;&gt;LOSING · SMALL&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2 class=serif&gt;The allocator&#x27;s scorecard: +312.4m realised, +116m/yr run-rate&lt;/h2&gt;&lt;div class=cat&gt;Lifetime Allocator Alpha&lt;/div&gt;
+&lt;div class=kbar&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Realised-to-date alpha&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;+312.4m&lt;/div&gt;&lt;div class=s&gt;CRDB legacy core vs iIncome ghost · lot-dated · HIGH confidence&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Run-rate alpha (clean)&lt;/div&gt;&lt;div class=&quot;v teal&quot;&gt;+115.7m/yr&lt;/div&gt;&lt;div class=s&gt;duration-lock vs reinvesting at 11%&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Pending / drag&lt;/div&gt;&lt;div class=v style=&quot;color:#897F76&quot;&gt;3 fresh · −1.5m&lt;/div&gt;&lt;div class=s&gt;cum-div, tactical &amp;amp; iGrowth fresh · VODA small loss&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=note&gt;&lt;b&gt;The OD is a strategy, not a drain.&lt;/b&gt; The 543m drawn financed a deliberate ~514m CRDB book — the 130k cum-dividend capture plus the 60k tactical sleeve — so it reads as a leveraged-CRDB acquisition facility, scored against the ~16% carry. The realised alpha is carried by the 2025 deep-value legacy core; the 2026 OD-funded lots are recent accumulation, held into the seasonal up-leg and reviewed at the Q3 top, not the original thesis.&lt;/div&gt;
+
+&lt;script&gt;
+var POS=&#x27;#0D7680&#x27;,NEG=&#x27;#990F3D&#x27;,MAND=&#x27;#B05F00&#x27;,OX=&#x27;#0F5499&#x27;,SLATE=&#x27;#33302E&#x27;,GRID=&#x27;#EADBC8&#x27;,TXT=&#x27;#6B6259&#x27;;
+(function(){
+ var c=[[&#x27;Constitutional compliance&#x27;,55,&#x27;25%&#x27;],[&#x27;Income stability&#x27;,73,&#x27;20%&#x27;],[&#x27;Macro environment&#x27;,64,&#x27;15%&#x27;],[&#x27;Forecast confidence&#x27;,60,&#x27;10%&#x27;],[&#x27;Liquidity&#x27;,52,&#x27;15%&#x27;],[&#x27;Diversification&#x27;,42,&#x27;15%&#x27;]];
+ function col(v){return v&lt;50?NEG:(v&lt;60?MAND:POS);}
+ document.getElementById(&#x27;comp&#x27;).innerHTML=c.map(function(r){return &quot;&lt;div class=hc&gt;&lt;div class=hcl&gt;&lt;span&gt;&quot;+r[0]+&quot;&lt;/span&gt;&lt;span class=mono&gt;&quot;+r[1]+&quot; &lt;span class=dim&gt;·&quot;+r[2]+&quot;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class=hbar&gt;&lt;span style=&#x27;width:&quot;+r[1]+&quot;%;background:&quot;+col(r[1])+&quot;&#x27;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&quot;;}).join(&#x27;&#x27;);
+})();
+(function(){
+ var items=[{l:&#x27;CRDB legacy core&#x27;,v:312.4,rr:false},{l:&#x27;Duration-lock&#x27;,v:115.7,rr:true},{l:&#x27;CRDB cum-div&#x27;,v:0,rr:false},{l:&#x27;CRDB tactical&#x27;,v:0,rr:false},{l:&#x27;iGrowth switch&#x27;,v:0,rr:false},{l:&#x27;VODA&#x27;,v:-1.53,rr:false}];
+ var labW=128,x0=labW,x1=720,yt=14,rowH=30,maxV=320;
+ function X(v){return x0+(v-(-20))/(maxV+20)*(x1-x0);}
+ var s=&#x27;&#x27;;
+ [0,100,200,300].forEach(function(g){var x=X(g);s+=&quot;&lt;line x1=&#x27;&quot;+x.toFixed(1)+&quot;&#x27; y1=&#x27;&quot;+yt+&quot;&#x27; x2=&#x27;&quot;+x.toFixed(1)+&quot;&#x27; y2=&#x27;&quot;+(yt+items.length*rowH)+&quot;&#x27; stroke=&#x27;&quot;+(g===0?SLATE:GRID)+&quot;&#x27; stroke-width=&#x27;&quot;+(g===0?1.2:1)+&quot;&#x27;/&gt;&quot;;s+=&quot;&lt;text x=&#x27;&quot;+x.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(yt+items.length*rowH+13)+&quot;&#x27; text-anchor=&#x27;middle&#x27; font-size=&#x27;9.5&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+g+&quot;&lt;/text&gt;&quot;;});
+ var xz=X(0);
+ items.forEach(function(it,i){var y=yt+i*rowH,cy=y+rowH/2,xv=X(it.v),col=it.v&gt;0?POS:(it.v&lt;0?NEG:&#x27;#B6AA99&#x27;);
+  var bx=Math.min(xv,xz),bw=Math.max(Math.abs(xv-xz),it.v===0?2:1);
+  s+=&quot;&lt;text x=&#x27;&quot;+(labW-8)+&quot;&#x27; y=&#x27;&quot;+(cy+4)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;11&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+SLATE+&quot;&#x27;&gt;&quot;+it.l+&quot;&lt;/text&gt;&quot;;
+  s+=&quot;&lt;rect x=&#x27;&quot;+bx.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(cy-8)+&quot;&#x27; width=&#x27;&quot;+bw.toFixed(1)+&quot;&#x27; height=&#x27;16&#x27; fill=&#x27;&quot;+col+&quot;&#x27;/&gt;&quot;;
+  var lab=(it.v&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+it.v+(it.rr?&#x27;m/yr&#x27;:&#x27;m&#x27;);if(it.v===0)lab=&#x27;~0 (fresh)&#x27;;
+  var tx=it.v&gt;=0?xv+6:xv-6,anc=it.v&gt;=0?&#x27;start&#x27;:&#x27;end&#x27;;
+  s+=&quot;&lt;text x=&#x27;&quot;+tx.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(cy+4)+&quot;&#x27; text-anchor=&#x27;&quot;+anc+&quot;&#x27; font-size=&#x27;11&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+col+&quot;&#x27;&gt;&quot;+lab+&quot;&lt;/text&gt;&quot;;
+ });
+ s+=&quot;&lt;text x=&#x27;&quot;+x0+&quot;&#x27; y=&#x27;&quot;+(yt+items.length*rowH+30)+&quot;&#x27; font-size=&#x27;10&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;Decision alpha, TZS m (Duration-lock is run-rate /yr). Source: PCC opportunity-cost ledger.&lt;/text&gt;&quot;;
+ document.getElementById(&#x27;oc&#x27;).innerHTML=s;
+})();
+&lt;/script&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div><!--/F:attr-->
+<!--F:understand--><div class=fwrap data-k="understand"><iframe loading="lazy" onload="fit(this)" srcdoc="&lt;!doctype html&gt;&lt;script type=&quot;application/json&quot; id=&quot;cowork-artifact-meta&quot;&gt;
+{
+  &quot;name&quot;: &quot;Kanza Pcc3 Understand&quot;,
+  &quot;schemaVersion&quot;: 1,
+  &quot;description&quot;: &quot;PCC 3.0 Understand layer (Steps 12-14): DSE market-context strip (TSI/DSEI/Banks indices, 12 Jun), the DSE banking heatmap (CRDB/NMB/NBC/DCB/KCB with momentum &amp; relative-strength cells honestly flagged Accruing until ~4-6 weeks of daily-report data logs), and Market Intelligence cards (event→driver→evidence→implication→confidence) on the CRDB pullback, NMB block print, and VODA. Real DSE data; thin series flagged rather than fabricated.&quot;,
+  &quot;mcpTools&quot;: [
+    &quot;mcp__Claude_in_Chrome__navigate&quot;,
+    &quot;mcp__Claude_in_Chrome__get_page_text&quot;
+  ],
+  &quot;mcpServerNames&quot;: [
+    &quot;Claude_in_Chrome&quot;,
+    &quot;Claude_in_Chrome&quot;
+  ]
+}
+&lt;/script&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta name=viewport content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;PCC 3.0 · Understand — Market Intelligence&lt;/title&gt;&lt;link rel=preconnect href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=preconnect href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap&quot; rel=stylesheet&gt;&lt;style&gt;
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:&quot;Inter&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 26px 64px}
+.serif{font-family:&quot;Source Serif 4&quot;,Georgia,&quot;Times New Roman&quot;,serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:&quot;tnum&quot;}
+.dim{color:#6B6259}.sm{font-size:11px}.r{text-align:right}
+.tab{width:32px;height:5px;background:#990F3D;margin-bottom:11px}
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#897F76;font-weight:600}
+h1{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:27px;margin:5px 0 6px;letter-spacing:-.012em;line-height:1.12;max-width:34ch}
+.lead{font-size:14px;color:#33302E;max-width:80ch;line-height:1.45;margin-top:2px}
+.asof{font-size:11px;color:#897F76;margin-top:9px}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#897F76;border:1px solid #D9CBB8;border-radius:2px;padding:3px 8px;white-space:nowrap}
+h2{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin:34px 0 1px;letter-spacing:-.005em;line-height:1.2;max-width:54ch}
+.cat{color:#897F76;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:14px}
+.idx{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;border-top:1px solid #33302E;padding-top:14px}
+.ic .nm{font-size:11px;color:#6B6259}.ic .val{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:26px;font-weight:600;margin:4px 0 1px;line-height:1}
+.ic .chg{font-size:12.5px;font-weight:600}.ic .nt{font-size:10.5px;color:#897F76;margin-top:4px}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{text-align:left;font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600;border-bottom:1px solid #33302E;padding:7px 8px}
+td{padding:8px;border-bottom:1px solid #EADBC8;vertical-align:middle}
+tr.sub td{border-bottom:1px solid #EADBC8;padding-top:0;padding-bottom:9px}
+.tag{display:inline-block;font-size:9.5px;font-weight:700;letter-spacing:.03em;padding:2px 7px;border-radius:2px;white-space:nowrap}
+.xtag{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.04em;padding:1px 5px;border-radius:2px;border:1px solid #CFC3B4;color:#897F76}
+.cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;margin-top:2px}
+.card .ev{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:14.5px;margin-bottom:10px;line-height:1.22;padding-left:10px;border-left:3px solid #897F76}
+.card .row{display:grid;grid-template-columns:68px 1fr;gap:9px;margin-bottom:7px;font-size:11.5px}
+.card .k{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#897F76;font-weight:600;padding-top:1px}
+.card .conf{margin-top:9px;padding-top:8px;border-top:1px solid #EADBC8;font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#897F76;font-weight:600}
+.wgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:26px 34px;border-top:1px solid #33302E;padding-top:16px}
+.wb .wh{display:flex;align-items:center;gap:8px;font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:14px;font-weight:600;margin-bottom:7px}
+.wb .wdot{width:9px;height:9px;border-radius:2px}
+.wr{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:5px 0;border-bottom:1px solid #EFE3D2;font-size:12.5px}
+.wr:last-child{border-bottom:none}.wr .tk{font-weight:600}.wr .px{text-align:right}
+.src{color:#8A8076;font-size:10px;margin-top:10px}
+.leg{display:flex;gap:18px;flex-wrap:wrap;font-size:10.5px;color:#6B6259;margin-top:10px}
+@media(max-width:860px){.idx,.cards,.wgrid{grid-template-columns:1fr;gap:18px}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=wrap&gt;
+&lt;header&gt;&lt;div&gt;&lt;div class=tab&gt;&lt;/div&gt;&lt;div class=eyebrow&gt;Kanza Capital · PCC 3.0 · Understand&lt;/div&gt;&lt;h1 class=serif&gt;The evidence layer — the DSE banking tape &amp;amp; the EA signal board&lt;/h1&gt;&lt;div class=lead id=lead&gt;&lt;/div&gt;&lt;div class=asof&gt;As at &lt;b id=asof&gt;&lt;/b&gt; · foreign participation ≈&lt;span id=fpct&gt;&lt;/span&gt;% · &lt;span id=rptstate&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=ro&gt;● Read-only&lt;/div&gt;&lt;/header&gt;
+
+&lt;h2 class=serif&gt;Indices turned up — the banking gauge is the one that matters here&lt;/h2&gt;&lt;div class=cat&gt;DSE indices · day change vs prior close · deviation&lt;/div&gt;
+&lt;div class=idx id=idx&gt;&lt;/div&gt;
+&lt;div class=src&gt;Source: DSE daily market report. The tape is domestic-driven — foreign participation runs low, so single-session moves are usually noise until breadth confirms a trend.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;The levered core, scored nightly — momentum computes once the series is deep enough&lt;/h2&gt;&lt;div class=cat&gt;DSE banking heatmap · per-bank sparkline + 1D deviation; deals / blocks from the daily PDF&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Bank&lt;/th&gt;&lt;th class=r&gt;Last&lt;/th&gt;&lt;th&gt;1D&lt;/th&gt;&lt;th&gt;Trend&lt;/th&gt;&lt;th&gt;Liquidity&lt;/th&gt;&lt;th&gt;Momentum&lt;/th&gt;&lt;th&gt;Rel.&amp;nbsp;strength&lt;/th&gt;&lt;th&gt;Signal&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=heat&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=leg&gt;&lt;span&gt;&lt;b style=&quot;color:#0D7680&quot;&gt;Sparkline&lt;/b&gt; closing px&lt;/span&gt;&lt;span&gt;&lt;b style=&quot;color:#0F5499&quot;&gt;Daily-PDF&lt;/b&gt; deals / blocks&lt;/span&gt;&lt;span&gt;&lt;b style=&quot;color:#B05F00&quot;&gt;Accruing&lt;/b&gt; momentum (needs &lt;span id=mn&gt;&lt;/span&gt; sessions) &amp;amp; RS (needs &lt;span id=rn&gt;&lt;/span&gt;)&lt;/span&gt;&lt;/div&gt;
+&lt;div class=src id=accmsg&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;The wider EA signal board — what the cross-market watchlist is doing&lt;/h2&gt;&lt;div class=cat&gt;EA Core + Signals · mirrors the Koyfin watchlist buckets · 1D move&lt;/div&gt;
+&lt;div class=wgrid id=watch&gt;&lt;/div&gt;
+&lt;div class=src&gt;Source: Koyfin &quot;EA Core + Signals&quot; watchlist; DSE-listed names seeded with 16 Jun closes. &lt;b&gt;KE / NSE&lt;/b&gt; and &lt;b&gt;gold&lt;/b&gt; names show &lt;span style=&quot;color:#0F5499&quot;&gt;Koyfin&lt;/span&gt; until the nightly run fills them — Koyfin&#x27;s DSE quotes lag a day, so the local closes stay sourced from the DSE report.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;What moved, and whether it matters to the book&lt;/h2&gt;&lt;div class=cat&gt;Market intelligence · event → driver → evidence → implication → confidence&lt;/div&gt;
+&lt;div class=cards id=cards&gt;&lt;/div&gt;
+
+&lt;script id=PCCDATA type=&quot;application/json&quot;&gt;{&quot;asof&quot;: &quot;2026-06-16&quot;, &quot;reportPosted&quot;: true, &quot;foreignPct&quot;: 9.6, &quot;indices&quot;: [{&quot;name&quot;: &quot;TSI · Tanzania Share&quot;, &quot;value&quot;: &quot;8,593.51&quot;, &quot;chg&quot;: &quot;+92.15&quot;, &quot;tone&quot;: &quot;green&quot;, &quot;note&quot;: &quot;domestic gauge rebounding after the 15 Jun dip&quot;, &quot;date&quot;: &quot;16 Jun&quot;}, {&quot;name&quot;: &quot;DSEI · All-Share&quot;, &quot;value&quot;: &quot;3,897.44&quot;, &quot;chg&quot;: &quot;+35.98&quot;, &quot;tone&quot;: &quot;green&quot;, &quot;note&quot;: &quot;incl. cross-listed; firmer on the day&quot;, &quot;date&quot;: &quot;16 Jun&quot;}, {&quot;name&quot;: &quot;Banks · Finance &amp; Inv.&quot;, &quot;value&quot;: &quot;18,951.43&quot;, &quot;chg&quot;: &quot;+237.08&quot;, &quot;tone&quot;: &quot;green&quot;, &quot;note&quot;: &quot;the sector you are levered to — bid back, led by NMB&quot;, &quot;date&quot;: &quot;16 Jun&quot;}], &quot;banks&quot;: [{&quot;t&quot;: &quot;CRDB&quot;, &quot;role&quot;: &quot;Core + tactical&quot;, &quot;hist&quot;: [{&quot;d&quot;: &quot;2026-06-12&quot;, &quot;px&quot;: 2650}, {&quot;d&quot;: &quot;2026-06-15&quot;, &quot;px&quot;: 2550, &quot;chgPct&quot;: -3.77, &quot;deals&quot;: 3844}, {&quot;d&quot;: &quot;2026-06-16&quot;, &quot;px&quot;: 2560, &quot;chgPct&quot;: 0.39, &quot;deals&quot;: 3166, &quot;block&quot;: 400000}], &quot;liq&quot;: &quot;Heavy&quot;, &quot;signal&quot;: &quot;NEUTRAL&quot;, &quot;sigTone&quot;: &quot;amber&quot;, &quot;note&quot;: &quot;Rebounded +0.4% to 2,560 on the day&#x27;s busiest tape (3,166 deals) + a 400k block. Tactical lot @2,540 back ITM. Concentration ticked to 30.6% — just over the 30% cap; no add.&quot;}, {&quot;t&quot;: &quot;NMB&quot;, &quot;role&quot;: &quot;iGrowth engine (~40%)&quot;, &quot;hist&quot;: [{&quot;d&quot;: &quot;2026-06-12&quot;, &quot;px&quot;: 14920, &quot;chgPct&quot;: 0.4, &quot;block&quot;: 99000}, {&quot;d&quot;: &quot;2026-06-16&quot;, &quot;px&quot;: 15380, &quot;chgPct&quot;: 1.99, &quot;deals&quot;: 629, &quot;block&quot;: 100000}], &quot;liq&quot;: &quot;Mid&quot;, &quot;signal&quot;: &quot;WATCH&quot;, &quot;sigTone&quot;: &quot;blue&quot;, &quot;note&quot;: &quot;Broke to a 15,380 session high (+2.0%), 629 deals + a 100k block, closed with zero offers. iGrowth proxy showing an institutional bid; anchors the calendar.&quot;}, {&quot;t&quot;: &quot;DCB&quot;, &quot;role&quot;: &quot;Micro-cap bank&quot;, &quot;hist&quot;: [{&quot;d&quot;: &quot;2026-06-16&quot;, &quot;px&quot;: 500, &quot;chgPct&quot;: 4.17, &quot;deals&quot;: 180}], &quot;liq&quot;: &quot;Thin&quot;, &quot;signal&quot;: &quot;NEUTRAL&quot;, &quot;sigTone&quot;: &quot;amber&quot;, &quot;note&quot;: &quot;First logged print: +4.2% to 500 on 180 deals / 40.6k sh. Micro-cap — treat the pop as noise.&quot;}, {&quot;t&quot;: &quot;KCB&quot;, &quot;role&quot;: &quot;EA cross-list (context)&quot;, &quot;hist&quot;: [{&quot;d&quot;: &quot;2026-06-12&quot;, &quot;px&quot;: 1730, &quot;chgPct&quot;: 0.58}, {&quot;d&quot;: &quot;2026-06-16&quot;, &quot;px&quot;: 1730, &quot;chgPct&quot;: -0.57, &quot;deals&quot;: 2}], &quot;liq&quot;: &quot;Thin&quot;, &quot;signal&quot;: &quot;CONTEXT&quot;, &quot;sigTone&quot;: &quot;grey&quot;, &quot;note&quot;: &quot;Thin (2 deals), −0.6% to 1,730. East-African comparator, read-through only; not a position.&quot;}], &quot;watch&quot;: [{&quot;g&quot;: &quot;Core Hold (TZ)&quot;, &quot;tone&quot;: &quot;green&quot;, &quot;items&quot;: [{&quot;t&quot;: &quot;CRDB&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 2560, &quot;chg&quot;: 0.39}, {&quot;t&quot;: &quot;NMB&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 15380, &quot;chg&quot;: 1.99}, {&quot;t&quot;: &quot;MKCB&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 4220, &quot;chg&quot;: 0.72}, {&quot;t&quot;: &quot;DCB&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 500, &quot;chg&quot;: 4.17}, {&quot;t&quot;: &quot;MBP&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 1950, &quot;chg&quot;: -1.52}]}, {&quot;g&quot;: &quot;Regional Signals (KE/EA)&quot;, &quot;tone&quot;: &quot;blue&quot;, &quot;items&quot;: [{&quot;t&quot;: &quot;KCB&quot;, &quot;x&quot;: &quot;DSE/NSE&quot;, &quot;px&quot;: 1730, &quot;chg&quot;: -0.57}, {&quot;t&quot;: &quot;EQTY&quot;, &quot;x&quot;: &quot;NSE&quot;}, {&quot;t&quot;: &quot;ABSA&quot;, &quot;x&quot;: &quot;NSE&quot;}]}, {&quot;g&quot;: &quot;Cycle / Real Economy&quot;, &quot;tone&quot;: &quot;amber&quot;, &quot;items&quot;: [{&quot;t&quot;: &quot;SWIS&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 2690, &quot;chg&quot;: 3.46}, {&quot;t&quot;: &quot;TCC&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 12450, &quot;chg&quot;: 1.55}, {&quot;t&quot;: &quot;TPCC&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 6970, &quot;chg&quot;: -0.29}, {&quot;t&quot;: &quot;TCCL&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 3160, &quot;chg&quot;: 1.61}, {&quot;t&quot;: &quot;TBL&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 10000, &quot;chg&quot;: 0.6}, {&quot;t&quot;: &quot;VODA&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 740, &quot;chg&quot;: 0.68}, {&quot;t&quot;: &quot;EABL&quot;, &quot;x&quot;: &quot;DSE/NSE&quot;, &quot;px&quot;: 5230, &quot;nt&quot;: &quot;no trade&quot;}, {&quot;t&quot;: &quot;BAT&quot;, &quot;x&quot;: &quot;NSE&quot;}, {&quot;t&quot;: &quot;BAMB&quot;, &quot;x&quot;: &quot;NSE&quot;}, {&quot;t&quot;: &quot;KQ&quot;, &quot;x&quot;: &quot;NSE&quot;}, {&quot;t&quot;: &quot;SCOM&quot;, &quot;x&quot;: &quot;NSE&quot;}]}, {&quot;g&quot;: &quot;Hedging / Parking&quot;, &quot;tone&quot;: &quot;grey&quot;, &quot;items&quot;: [{&quot;t&quot;: &quot;DSE&quot;, &quot;x&quot;: &quot;DSE&quot;, &quot;px&quot;: 6400, &quot;chg&quot;: 2.07}, {&quot;t&quot;: &quot;NSE&quot;, &quot;x&quot;: &quot;NSE&quot;}, {&quot;t&quot;: &quot;GLD&quot;, &quot;x&quot;: &quot;Commodity&quot;, &quot;nt&quot;: &quot;gold +0.7% (Koyfin)&quot;}]}], &quot;intel&quot;: [{&quot;ev&quot;: &quot;CRDB +0.4% to 2,560 — rebound on a 400k block &amp; 3,166 deals (16 Jun)&quot;, &quot;driver&quot;: &quot;Bargain-buying after the −3.8% on 15 Jun; a 400,000-share block crossed on the pre-arranged board into firm local demand.&quot;, &quot;evidence&quot;: &quot;Close 2,560 vs 2,550 prev; 1.34m shares / 3,166 deals — the day&#x27;s busiest counter. Order book offer-heavy (bids 149,733 vs offers 366,555).&quot;, &quot;implication&quot;: &quot;Tactical 20,000 @ 2,540 back in-the-money. CRDB concentration ticks to 30.6% — just above the 30% cap, so no add. No thesis change.&quot;, &quot;conf&quot;: &quot;MEDIUM&quot;, &quot;tone&quot;: &quot;amber&quot;}, {&quot;ev&quot;: &quot;NMB +2.0% to a 15,380 session high, 100k block (16 Jun)&quot;, &quot;driver&quot;: &quot;Institutional accumulation in the dominant Tanzanian bank — NMB is ~40% of iGrowth.&quot;, &quot;evidence&quot;: &quot;315,944 sh incl a 100k block / 629 deals; closed at its high with zero outstanding offers. Banks index +237 to 18,951.&quot;, &quot;implication&quot;: &quot;Supports the iGrowth thesis; the iGrowth Decision Monitor reads this through as the heatmap accrues. NMB now has 2 logged sessions.&quot;, &quot;conf&quot;: &quot;MEDIUM&quot;, &quot;tone&quot;: &quot;blue&quot;}, {&quot;ev&quot;: &quot;Foreign participation jumped to ≈9.6% — 19.2% of the sell side (16 Jun)&quot;, &quot;driver&quot;: &quot;A foreign holder distributing into the local block bid for banks; foreign buy-side flow was just 0.12%.&quot;, &quot;evidence&quot;: &quot;Foreign sells TZS 1,620.95m of 8,453.60m equity turnover (19.17%); foreign buys 9.77m (0.12%). Prior runs read ≈1%.&quot;, &quot;implication&quot;: &quot;Local flow is absorbing foreign supply — consistent with the firm domestic bid for CRDB/NMB. One-day spike for now; watch if it persists.&quot;, &quot;conf&quot;: &quot;MEDIUM&quot;, &quot;tone&quot;: &quot;amber&quot;}, {&quot;ev&quot;: &quot;Brent −3.9% / crude −4.6% on anticipated US–Iran peace deal (Koyfin, 16 Jun)&quot;, &quot;driver&quot;: &quot;Markets pricing easing Gulf supply risk; oil selling off sharply while gold +0.7% and US 10Y at 4.43%.&quot;, &quot;evidence&quot;: &quot;Brent −3.9%, WTI −4.6%; TZS/USD BOT mean 2,622.51 (from 2,609.34 at 29 May) — mild TZS softening. Koyfin DSE quotes lag a day, so local closes are taken from the DSE report.&quot;, &quot;implication&quot;: &quot;Lower oil is a macro tailwind for Tanzania (net importer) — supportive of the import bill, FX and inflation; indirectly constructive for the domestic banking book.&quot;, &quot;conf&quot;: &quot;MEDIUM&quot;, &quot;tone&quot;: &quot;green&quot;}], &quot;momN&quot;: 5, &quot;rsN&quot;: 10}&lt;/script&gt;
+&lt;script&gt;
+const D=JSON.parse(document.getElementById(&#x27;PCCDATA&#x27;).textContent);
+const TONE={green:&#x27;#0D7680&#x27;,amber:&#x27;#B05F00&#x27;,red:&#x27;#990F3D&#x27;,grey:&#x27;#897F76&#x27;,blue:&#x27;#0F5499&#x27;};
+const POS=&#x27;#0D7680&#x27;,NEG=&#x27;#990F3D&#x27;,NEU=&#x27;#897F76&#x27;;
+const f=n=&gt;n==null?&#x27;—&#x27;:n.toLocaleString(&#x27;en-US&#x27;);
+function strip(t){return t.replace(/\s*\([^)]*\)\s*$/,&#x27;&#x27;);}
+document.getElementById(&#x27;lead&#x27;).innerHTML=(D.intel&amp;&amp;D.intel.length)?(&#x27;&lt;b&gt;Today: &lt;/b&gt;&#x27;+strip(D.intel[0].ev)+(D.intel[1]?&#x27;; &#x27;+strip(D.intel[1].ev):&#x27;&#x27;)+&#x27;.&#x27;):&#x27;&#x27;;
+document.getElementById(&#x27;asof&#x27;).textContent=D.asof;
+document.getElementById(&#x27;fpct&#x27;).textContent=D.foreignPct;
+document.getElementById(&#x27;mn&#x27;).textContent=D.momN;document.getElementById(&#x27;rn&#x27;).textContent=D.rsN;
+document.getElementById(&#x27;rptstate&#x27;).textContent=D.reportPosted?&#x27;daily report parsed&#x27;:&#x27;daily report pending — prices stale&#x27;;
+document.getElementById(&#x27;idx&#x27;).innerHTML=D.indices.map(i=&gt;{
+ const up=(i.chg||&#x27;&#x27;).trim().charAt(0)!==&#x27;−&#x27;&amp;&amp;(i.chg||&#x27;&#x27;).trim().charAt(0)!==&#x27;-&#x27;;
+ const c=i.tone===&#x27;red&#x27;?NEG:(i.tone===&#x27;green&#x27;?POS:NEU);
+ const arrow=up?&#x27;▲&#x27;:&#x27;▼&#x27;;
+ return `&lt;div class=ic&gt;&lt;div class=nm&gt;${i.name} &lt;span style=&#x27;color:#a99&#x27;&gt;(${i.date})&lt;/span&gt;&lt;/div&gt;&lt;div class=&#x27;val mono&#x27;&gt;${i.value}&lt;/div&gt;&lt;div class=chg style=&#x27;color:${c}&#x27;&gt;${arrow} ${i.chg}&lt;/div&gt;&lt;div class=nt&gt;${i.note}&lt;/div&gt;&lt;/div&gt;`;
+}).join(&#x27;&#x27;);
+function tag(s,tone){const c=TONE[tone]||NEU;return `&lt;span class=tag style=&#x27;background:${c};color:#FFF1E5&#x27;&gt;${s}&lt;/span&gt;`}
+function spark(h){
+ const pts=h.map(x=&gt;x.px);if(pts.length&lt;2)return `&lt;span class=&#x27;dim sm&#x27;&gt;${pts.length?&#x27;1 pt&#x27;:&#x27;—&#x27;}&lt;/span&gt;`;
+ const w=72,ht=22,pad=2,mn=Math.min(...pts),mx=Math.max(...pts),rg=(mx-mn)||1;
+ const X=i=&gt;pad+i*(w-2*pad)/(pts.length-1),Y=v=&gt;ht-pad-((v-mn)/rg)*(ht-2*pad);
+ const d=pts.map((v,i)=&gt;`${i?&#x27;L&#x27;:&#x27;M&#x27;}${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join(&#x27; &#x27;);
+ const up=pts[pts.length-1]&gt;=pts[0],c=up?POS:NEG;
+ const lx=X(pts.length-1).toFixed(1),ly=Y(pts[pts.length-1]).toFixed(1);
+ return `&lt;svg width=${w} height=${ht} style=&#x27;display:block&#x27;&gt;&lt;path d=&#x27;${d}&#x27; fill=&#x27;none&#x27; stroke=&#x27;${c}&#x27; stroke-width=&#x27;1.4&#x27;/&gt;&lt;circle cx=&#x27;${lx}&#x27; cy=&#x27;${ly}&#x27; r=&#x27;2&#x27; fill=&#x27;${c}&#x27;/&gt;&lt;/svg&gt;`;
+}
+function dev(d1){
+ if(d1==null)return `&lt;span class=&#x27;dim&#x27;&gt;—&lt;/span&gt;`;
+ const w=54,h=16,mid=w/2,full=5;
+ const mag=Math.max(-1,Math.min(1,d1/full));
+ const c=d1&gt;0?POS:(d1&lt;0?NEG:NEU);
+ const bw=Math.abs(mag)*(w/2-1);
+ const x=d1&gt;=0?mid:mid-bw;
+ const txt=(d1&gt;=0?&#x27;+&#x27;:&#x27;&#x27;)+d1.toFixed(2)+&#x27;%&#x27;;
+ return `&lt;span style=&#x27;display:inline-flex;align-items:center;gap:7px&#x27;&gt;&lt;svg width=${w} height=${h}&gt;&lt;line x1=&#x27;${mid}&#x27; y1=&#x27;1&#x27; x2=&#x27;${mid}&#x27; y2=&#x27;${h-1}&#x27; stroke=&#x27;#CFC3B4&#x27; stroke-width=&#x27;1&#x27;/&gt;&lt;rect x=&#x27;${x.toFixed(1)}&#x27; y=&#x27;4&#x27; width=&#x27;${bw.toFixed(1)}&#x27; height=&#x27;${h-8}&#x27; fill=&#x27;${c}&#x27;/&gt;&lt;/svg&gt;&lt;span class=mono style=&#x27;color:${c};font-weight:600&#x27;&gt;${txt}&lt;/span&gt;&lt;/span&gt;`;
+}
+let maxN=0;
+document.getElementById(&#x27;heat&#x27;).innerHTML=D.banks.map(b=&gt;{
+ const h=b.hist,n=h.length;maxN=Math.max(maxN,n);
+ const last=n?h[n-1].px:null;
+ let d1=null;if(n){const r=h[n-1];d1=(r.chgPct!=null)?r.chgPct:(n&gt;=2?(r.px/h[n-2].px-1)*100:null);}
+ const deals=n&amp;&amp;h[n-1].deals?`${f(h[n-1].deals)} deals`:(n&amp;&amp;h[n-1].block?`block ${f(h[n-1].block)}`:&#x27;—&#x27;);
+ let mom;
+ if(n&gt;=D.momN){const ch=h[n-1].px/h[n-D.momN].px-1;mom=ch&gt;0.01?tag(&#x27;Firm&#x27;,&#x27;green&#x27;):(ch&lt;-0.01?tag(&#x27;Cooling&#x27;,&#x27;red&#x27;):tag(&#x27;Flat&#x27;,&#x27;grey&#x27;));}
+ else mom=tag(&#x27;Accruing &#x27;+n+&#x27;/&#x27;+D.momN,&#x27;amber&#x27;);
+ const rs=(n&gt;=D.rsN)?tag(&#x27;—&#x27;,&#x27;grey&#x27;):tag(&#x27;Accruing &#x27;+n+&#x27;/&#x27;+D.rsN,&#x27;amber&#x27;);
+ return `&lt;tr&gt;&lt;td&gt;&lt;b&gt;${b.t}&lt;/b&gt;&lt;div class=&#x27;dim sm&#x27;&gt;${b.role}&lt;/div&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;${last==null?&#x27;—&#x27;:f(last)}&lt;/td&gt;&lt;td&gt;${dev(d1)}&lt;/td&gt;&lt;td&gt;${spark(h)}&lt;/td&gt;&lt;td&gt;${b.liq} &lt;span class=&#x27;dim sm&#x27;&gt;(${deals})&lt;/span&gt;&lt;/td&gt;&lt;td&gt;${mom}&lt;/td&gt;&lt;td&gt;${rs}&lt;/td&gt;&lt;td&gt;${tag(b.signal,b.sigTone)}&lt;/td&gt;&lt;/tr&gt;&lt;tr class=sub&gt;&lt;td colspan=8 class=&#x27;dim sm&#x27;&gt;${b.note}&lt;/td&gt;&lt;/tr&gt;`;
+}).join(&#x27;&#x27;);
+const need=Math.max(0,D.momN-maxN);
+document.getElementById(&#x27;accmsg&#x27;).textContent=need&gt;0?`Source: DSE daily report. Deepest series has ${maxN} session${maxN==1?&#x27;&#x27;:&#x27;s&#x27;} — ~${need} more trading day${need==1?&#x27;&#x27;:&#x27;s&#x27;} until momentum computes.`:`Source: DSE daily report. Series deep enough — momentum now computing.`;
+document.getElementById(&#x27;watch&#x27;).innerHTML=(D.watch||[]).map(b=&gt;{
+ const dot=TONE[b.tone]||NEU;
+ const rows=b.items.map(it=&gt;{
+  let px,d1;
+  if(it.px!=null){px=`&lt;span class=mono&gt;${f(it.px)}&lt;/span&gt;`;}
+  else {px=`&lt;span class=xtag style=&#x27;border-color:#9DBBD9;color:#0F5499&#x27;&gt;Koyfin&lt;/span&gt;`;}
+  if(it.chg!=null){const c=it.chg&gt;0?POS:(it.chg&lt;0?NEG:NEU);d1=`&lt;span class=mono style=&#x27;color:${c};font-weight:600&#x27;&gt;${(it.chg&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+it.chg.toFixed(2)}%&lt;/span&gt;`;}
+  else {d1=`&lt;span class=&#x27;dim sm&#x27;&gt;${it.nt?it.nt:&#x27;pending&#x27;}&lt;/span&gt;`;}
+  return `&lt;div class=wr&gt;&lt;span&gt;&lt;span class=tk&gt;${it.t}&lt;/span&gt; &lt;span class=xtag&gt;${it.x}&lt;/span&gt;&lt;/span&gt;&lt;span class=px&gt;${px}&lt;/span&gt;&lt;span class=r&gt;${d1}&lt;/span&gt;&lt;/div&gt;`;
+ }).join(&#x27;&#x27;);
+ return `&lt;div class=wb&gt;&lt;div class=wh&gt;&lt;span class=wdot style=&#x27;background:${dot}&#x27;&gt;&lt;/span&gt;${b.g} &lt;span class=&#x27;dim sm&#x27; style=&#x27;font-weight:400&#x27;&gt;· ${b.items.length}&lt;/span&gt;&lt;/div&gt;${rows}&lt;/div&gt;`;
+}).join(&#x27;&#x27;);
+document.getElementById(&#x27;cards&#x27;).innerHTML=D.intel.map(c=&gt;{const col=TONE[c.tone]||NEU;return `&lt;div class=card&gt;&lt;div class=ev style=&#x27;border-left-color:${col}&#x27;&gt;${c.ev}&lt;/div&gt;&lt;div class=row&gt;&lt;span class=k&gt;Driver&lt;/span&gt;&lt;span&gt;${c.driver}&lt;/span&gt;&lt;/div&gt;&lt;div class=row&gt;&lt;span class=k&gt;Evidence&lt;/span&gt;&lt;span&gt;${c.evidence}&lt;/span&gt;&lt;/div&gt;&lt;div class=row&gt;&lt;span class=k&gt;Implication&lt;/span&gt;&lt;span&gt;${c.implication}&lt;/span&gt;&lt;/div&gt;&lt;div class=conf&gt;Confidence ${tag(c.conf,c.tone)}&lt;/div&gt;&lt;/div&gt;`}).join(&#x27;&#x27;);
+&lt;/script&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div><!--/F:understand-->
+<!--F:seasonality--><div class=fwrap data-k="seasonality"><iframe loading="lazy" onload="fit(this)" srcdoc="&lt;!doctype html&gt;&lt;script type=&quot;application/json&quot; id=&quot;cowork-artifact-meta&quot;&gt;
+{
+  &quot;name&quot;: &quot;Kanza Pcc3 Seasonality&quot;,
+  &quot;schemaVersion&quot;: 1,
+  &quot;description&quot;: &quot;PCC 3.0 · Tanzania Capital Transmission &amp; Capital Allocation Intelligence Engine — evidence-based, probabilistic, auditable, advisory-only. Measures where capital is, where it is moving, how fast, what cycle phase, how phases transition, and how macro forces transmit to portfolio outcomes. Engines: Capital Transmission Map; Capital-cycle phase (auto-vote); Transition Probability (30/90/180d); Capital Flow Model 2.0 (6-store matrix + 0-100 score + velocity); Market Breadth; Domestic vs Foreign regime split; Institutional Accumulation tracker; Frontier Analogue Library; Regime History Archive; Monthly seasonality DB. Datasets tiered A/B/C/D with disclosed Tier-B proxies; every output shows Source/Method/Confidence; weights are visible (no ML black box). Real BoT/NBS/DSE data. Strict signal-vs-allocation wall. Subordinate to KCP-IPS-2026-001; the Allocator and Principal decide; never executes trades.&quot;,
+  &quot;mcpTools&quot;: [],
+  &quot;mcpServerNames&quot;: []
+}
+&lt;/script&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta name=viewport content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;PCC 3.0 · Capital Transmission Intelligence Engine&lt;/title&gt;&lt;link rel=preconnect href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=preconnect href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap&quot; rel=stylesheet&gt;&lt;style&gt;
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:&quot;Inter&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 26px 64px}
+.serif{font-family:&quot;Source Serif 4&quot;,Georgia,&quot;Times New Roman&quot;,serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:&quot;tnum&quot;}
+.dim{color:#6B6259}.sm{font-size:11px}.r{text-align:right}.teal{color:#0D7680}
+.tab{width:32px;height:5px;background:#990F3D;margin-bottom:11px}
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#897F76;font-weight:600}
+h1{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:25px;margin:5px 0 6px;letter-spacing:-.012em;line-height:1.14;max-width:42ch}
+.dek{color:#6B6259;font-size:12.5px;max-width:88ch}
+.asof{font-size:11px;color:#897F76;margin-top:9px}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#897F76;border:1px solid #D9CBB8;border-radius:2px;padding:3px 8px;white-space:nowrap}
+h2{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:17px;font-weight:600;margin:32px 0 1px;letter-spacing:-.005em;line-height:1.2;max-width:64ch}
+.cat{color:#897F76;font-size:10px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:12px}
+.wall{border:1px solid #C9B8DD;background:#F4EFF8;border-radius:3px;padding:9px 14px;font-size:11px;color:#4a4258;margin-top:10px}
+.cmd{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:3px solid #33302E;border-bottom:1px solid #E0D3C2;margin-top:6px}
+.cc{padding:11px 13px}.cc+.cc{border-left:1px solid #E0D3C2}.cc .l{font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:#66605C;font-weight:600}.cc .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin-top:3px;line-height:1.05}.cc .s{font-size:9.5px;color:#897F76;margin-top:3px}
+.now2{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:start;border-top:1px solid #33302E;padding-top:14px}
+.nowbig{text-align:center;border-radius:2px;padding:18px 10px}.nowbig .pl{font-size:9px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;opacity:.85}.nowbig .pv{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:21px;font-weight:700;margin-top:4px;line-height:1.05}.nowbig .pt{font-size:10px;margin-top:5px;font-weight:600}
+.prob{margin-bottom:8px}.probl{display:flex;justify-content:space-between;font-size:11px;margin-bottom:3px}.pbar{height:9px;background:#EADBC8;border-radius:1px;overflow:hidden}.pbar span{display:block;height:100%}
+.meta3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:12px;border-top:1px solid #EADBC8;padding-top:11px}.mk .l{font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:#6B6259;font-weight:600}.mk .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:16px;font-weight:600;margin-top:3px}.mk .s{font-size:9.5px;color:#897F76;margin-top:2px}
+table{width:100%;border-collapse:collapse;font-size:11px}th{text-align:left;font-size:9px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600;border-bottom:1px solid #33302E;padding:6px 6px}td{padding:6px 6px;border-bottom:1px solid #EADBC8;vertical-align:top}tr:last-child td{border-bottom:none}
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;border-radius:2px;color:#FFF1E5;white-space:nowrap}
+.cpill{display:inline-block;font-size:8.5px;font-weight:700;letter-spacing:.02em;padding:1px 6px;border-radius:2px;white-space:nowrap}
+.tier{display:inline-block;width:18px;text-align:center;font-size:9px;font-weight:700;padding:2px 0;border-radius:2px;color:#FFF1E5}
+.vel{display:inline-block;font-size:9px;font-weight:700;padding:1px 6px;border-radius:2px}
+.gauge{height:14px;background:linear-gradient(90deg,#990F3D 0%,#B05F00 35%,#C9BBA9 50%,#0F5499 70%,#0D7680 100%);border-radius:2px;position:relative;margin:6px 0 4px}
+.gmark{position:absolute;top:-4px;width:3px;height:22px;background:#33302E}
+.gscale{display:flex;justify-content:space-between;font-size:9px;color:#897F76}
+.flowwrap{display:grid;grid-template-columns:190px 1fr;gap:24px;border-top:1px solid #33302E;padding-top:14px;align-items:start}
+.fscore{text-align:center;border:1px solid #D9CBB8;border-radius:3px;padding:14px 10px}.fscore .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:42px;font-weight:700;line-height:1;color:#0F5499}.fscore .l{font-size:9px;letter-spacing:.05em;text-transform:uppercase;color:#6B6259;font-weight:600;margin-top:4px}.fscore .d{font-size:10.5px;color:#33302E;margin-top:7px;line-height:1.4}
+.note{border-left:3px solid #0D7680;padding:9px 14px;color:#33302E;font-size:11px;margin-top:13px;background:#E7EFED}
+.src{color:#8A8076;font-size:10px;margin-top:9px}
+.trans{display:flex;flex-direction:column;gap:0;border-top:1px solid #33302E;padding-top:14px;max-width:760px}
+.tnode{display:grid;grid-template-columns:26px 1fr auto;gap:11px;align-items:center;border:1px solid #E0D3C2;border-left:3px solid #0F5499;border-radius:2px;padding:7px 12px;background:#FBF4EA}
+.tnode .tn{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:700;color:#0F5499;font-size:13px}.tnode .tnm{font-weight:600;font-size:12px}.tnode .tnd{font-size:10.5px;color:#6B6259}.tnode .tv{text-align:right;font-size:11px}.tnode .tvs{font-size:9.5px;color:#897F76}
+.tarrow{text-align:center;color:#C9A24B;font-size:13px;line-height:1.1;margin:1px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:22px;border-top:1px solid #33302E;padding-top:14px}
+.sp{border:1px solid #E0D3C2;border-radius:3px;padding:13px 15px}.sp .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:34px;font-weight:700;line-height:1}.sp .l{font-size:10px;letter-spacing:.04em;text-transform:uppercase;color:#6B6259;font-weight:600}.sp .n{font-size:11px;color:#33302E;margin-top:7px;line-height:1.4}
+.band{display:grid;grid-template-columns:repeat(12,1fr);gap:5px;border-top:1px solid #33302E;padding-top:14px}
+.mcell{border-radius:2px;padding:8px 3px 7px;text-align:center;position:relative;border:1px solid transparent}.mcell .mm{font-size:11px;font-weight:700}.mcell .mp{font-size:8px;letter-spacing:.03em;text-transform:uppercase;margin-top:2px;opacity:.95}
+.mcell.now{outline:2px solid #33302E;outline-offset:1px;box-shadow:0 0 0 3px #FFF1E5}
+.youhere{font-size:8px;font-weight:700;color:#FFF1E5;background:#33302E;border-radius:2px;padding:1px 4px;position:absolute;top:-9px;left:50%;transform:translateX(-50%);white-space:nowrap}
+.feeds{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;border-top:1px solid #EADBC8;padding-top:13px}.fd{border-left:2px solid #0F5499;padding-left:8px}.fd .h{font-size:10.5px;font-weight:700}.fd .b{font-size:9.5px;color:#6B6259;margin-top:2px;line-height:1.35}
+.transwrap{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;border-top:1px solid #EADBC8;padding-top:12px}.tr3{text-align:center;border:1px solid #E0D3C2;border-radius:3px;padding:12px}.tr3 .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:30px;font-weight:700;color:#B05F00;line-height:1}.tr3 .l{font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:#6B6259;font-weight:600;margin-top:4px}
+@media(max-width:860px){.now2,.flowwrap,.split{grid-template-columns:1fr}.cmd,.meta3,.feeds,.transwrap{grid-template-columns:1fr 1fr}.mcell .mp{display:none}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=wrap&gt;
+&lt;header&gt;&lt;div&gt;&lt;div class=tab&gt;&lt;/div&gt;&lt;div class=eyebrow&gt;Kanza Capital · PCC 3.0 · Capital Transmission Intelligence Engine&lt;/div&gt;&lt;h1 class=serif id=lead&gt;Where capital is, where it is moving, how fast, and what comes next&lt;/h1&gt;&lt;div class=dek&gt;An institutional capital-transmission layer: phase, transition risk, flow, velocity, breadth, domestic/foreign split and institutional activity — each &lt;b&gt;computed&lt;/b&gt; from real BoT / NBS / DSE inputs with visible weights. Every output shows Source · Method · Confidence; datasets are tiered A→D; proxies beat empty panels. Advisory-only · subordinate to KCP-IPS-2026-001.&lt;/div&gt;&lt;div class=asof&gt;As at &lt;b id=asof&gt;&lt;/b&gt; · feeds re-logged nightly · archive grows each run&lt;/div&gt;&lt;/div&gt;&lt;div class=ro&gt;● Read-only&lt;/div&gt;&lt;/header&gt;
+&lt;div class=wall&gt;&lt;b&gt;Signal ≠ allocation.&lt;/b&gt; This engine emits &lt;b&gt;signals and historical implications only&lt;/b&gt; — never &quot;buy/sell X.&quot; Allocation implications feed the Capital Allocation Engine; the Allocator and the Principal decide (§3.5). The engine never executes, uses no hidden weights and no black-box ML — every score is traceable.&lt;/div&gt;
+
+&lt;div class=cmd id=cmd&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Tanzania Capital Transmission Map&lt;/h2&gt;&lt;div class=cat&gt;Section 8 · how a BoT rate move propagates to portfolio income · current read per node&lt;/div&gt;
+&lt;div class=trans id=trans&gt;&lt;/div&gt;
+&lt;div class=src&gt;Each node is a live PCC reading; arrows are the documented transmission, not a forecast. Source per node inline. This is the backbone that connects the individual indicators below.&lt;/div&gt;
+
+&lt;h2 class=serif id=phaseHead&gt;The capital-cycle phase, computed from the indicator vote&lt;/h2&gt;&lt;div class=cat&gt;Section 3 · Accumulation / Re-rating / Distribution / Reset&lt;/div&gt;
+&lt;div class=now2&gt;
+ &lt;div class=nowbig id=nowbig&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div id=probs&gt;&lt;/div&gt;
+  &lt;div class=meta3&gt;
+   &lt;div class=mk&gt;&lt;div class=l&gt;Lead probability&lt;/div&gt;&lt;div class=v id=mProb&gt;—&lt;/div&gt;&lt;div class=s id=mProbS&gt;&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=mk&gt;&lt;div class=l&gt;Confidence&lt;/div&gt;&lt;div class=v id=mConf&gt;—&lt;/div&gt;&lt;div class=s&gt;depth + agreement&lt;/div&gt;&lt;/div&gt;
+   &lt;div class=mk&gt;&lt;div class=l&gt;Expected duration&lt;/div&gt;&lt;div class=v id=mDur&gt;—&lt;/div&gt;&lt;div class=s id=mFreq&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/div&gt;
+ &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Transition Probability Engine — what comes next, and when&lt;/h2&gt;&lt;div class=cat&gt;Section 1 · P(move to Distribution) by horizon · probabilistic, not predictive&lt;/div&gt;
+&lt;div class=transwrap&gt;
+ &lt;div class=tr3&gt;&lt;div class=v id=t30&gt;—&lt;/div&gt;&lt;div class=l&gt;within 30 days&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=tr3&gt;&lt;div class=v id=t90&gt;—&lt;/div&gt;&lt;div class=l&gt;within 90 days&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=tr3&gt;&lt;div class=v id=t180&gt;—&lt;/div&gt;&lt;div class=l&gt;within 180 days&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=src id=transitionsrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Capital Flow Model 2.0 — direction and velocity&lt;/h2&gt;&lt;div class=cat&gt;Sections 2 · 4 · 11 · 6-store matrix · 0–100 Flow Score · Source / Method / Confidence&lt;/div&gt;
+&lt;div class=flowwrap&gt;
+ &lt;div class=fscore&gt;&lt;div class=v id=cfScore&gt;—&lt;/div&gt;&lt;div class=l&gt;Capital Flow Score&lt;/div&gt;&lt;div class=d id=cfDir&gt;&lt;/div&gt;
+  &lt;div class=gauge style=&quot;margin-top:11px&quot;&gt;&lt;div class=gmark id=cfMark&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class=gscale&gt;&lt;span&gt;0 risk-off&lt;/span&gt;&lt;span&gt;50&lt;/span&gt;&lt;span&gt;100 risk-on&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Store&lt;/th&gt;&lt;th&gt;Direction&lt;/th&gt;&lt;th&gt;Velocity&lt;/th&gt;&lt;th&gt;Source&lt;/th&gt;&lt;th&gt;Method / proxy&lt;/th&gt;&lt;th&gt;Conf.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=flowtab&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=src id=flowsrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Market Breadth Engine — is participation broadening or narrowing?&lt;/h2&gt;&lt;div class=cat&gt;Section 2 · counters up vs traded · breadth often deteriorates before price&lt;/div&gt;
+&lt;div id=breadth&gt;&lt;/div&gt;
+&lt;div class=src id=breadthsrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Domestic vs Foreign regime split&lt;/h2&gt;&lt;div class=cat&gt;Section 3 · separated, because Tanzania is domestically-driven&lt;/div&gt;
+&lt;div class=split id=splitbox&gt;&lt;/div&gt;
+&lt;div class=src id=splitsrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Institutional Accumulation Tracker&lt;/h2&gt;&lt;div class=cat&gt;Section 6 · block trades &amp; volume concentration · inferred accumulation / distribution&lt;/div&gt;
+&lt;div id=instbox&gt;&lt;/div&gt;
+&lt;div class=src id=instsrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;The indicator board — every input with method and confidence&lt;/h2&gt;&lt;div class=cat&gt;Auditable inputs · each casts a weighted vote into the phase probabilities&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Indicator&lt;/th&gt;&lt;th class=r&gt;Reading&lt;/th&gt;&lt;th&gt;Trend&lt;/th&gt;&lt;th&gt;Votes&lt;/th&gt;&lt;th&gt;Source&lt;/th&gt;&lt;th&gt;Method&lt;/th&gt;&lt;th&gt;Conf.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=indtab&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=src&gt;Change a reading (nightly) and the phase re-computes. Tier-B proxies (duration, CIS) vote here and also inform the flow model, which is scored independently from the store matrix.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Dataset tiering — proxy over empty panel, methodology disclosed&lt;/h2&gt;&lt;div class=cat&gt;Section 10 · A direct · B proxy · C build internally · D unavailable&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Dataset&lt;/th&gt;&lt;th&gt;Tier&lt;/th&gt;&lt;th&gt;Source / method (proxy disclosed)&lt;/th&gt;&lt;th&gt;Conf.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=tiertab&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=src id=tiersrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;What has historically worked in each phase&lt;/h2&gt;&lt;div class=cat&gt;Allocation implications · signals only · the Allocator decides&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Phase&lt;/th&gt;&lt;th&gt;Strongest&lt;/th&gt;&lt;th&gt;Weakest&lt;/th&gt;&lt;th&gt;Bank equities&lt;/th&gt;&lt;th&gt;Sov. bonds&lt;/th&gt;&lt;th&gt;iGrowth&lt;/th&gt;&lt;th&gt;iIncome&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=alloctab&gt;&lt;/tbody&gt;&lt;/table&gt;
+
+&lt;h2 class=serif&gt;Frontier Analogue Library&lt;/h2&gt;&lt;div class=cat&gt;Section 12 · context, not prediction · similarity is a disclosed judgment (Tier C library accruing)&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Market · episode&lt;/th&gt;&lt;th class=r&gt;Similarity&lt;/th&gt;&lt;th&gt;Closest dimension&lt;/th&gt;&lt;th&gt;Observed outcome / risk&lt;/th&gt;&lt;th&gt;Conf.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=anatab&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=src id=anasrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Regime History Archive&lt;/h2&gt;&lt;div class=cat&gt;Section 5 · every nightly run logs date · phase · flow · confidence · key indicators&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Date&lt;/th&gt;&lt;th&gt;Phase&lt;/th&gt;&lt;th class=r&gt;Flow&lt;/th&gt;&lt;th&gt;Conf.&lt;/th&gt;&lt;th&gt;Key indicators&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=archtab&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=src id=archsrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Monthly seasonality database&lt;/h2&gt;&lt;div class=cat&gt;Section 9 · per-month · quantitative stats Tier C (Accruing) · drivers evidenced&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Month&lt;/th&gt;&lt;th class=r&gt;Avg ret&lt;/th&gt;&lt;th class=r&gt;Pos freq&lt;/th&gt;&lt;th&gt;Turnover&lt;/th&gt;&lt;th&gt;Driver (evidenced)&lt;/th&gt;&lt;th&gt;Conf.&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody id=seastab&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=band id=band&gt;&lt;/div&gt;
+&lt;div class=src id=seassrc&gt;&lt;/div&gt;
+
+&lt;h2 class=serif&gt;What this engine feeds&lt;/h2&gt;&lt;div class=cat&gt;Section 13 · PCC integration · research-only&lt;/div&gt;
+&lt;div class=feeds id=feeds&gt;&lt;/div&gt;
+
+&lt;div class=note id=learnnote&gt;&lt;/div&gt;
+&lt;div class=note style=&quot;border-left-color:#897F76;background:#F2ECE3&quot;&gt;&lt;b&gt;Boundary &amp;amp; caveats.&lt;/b&gt; Probabilistic, not predictive. Transition probabilities and analogue similarity are disclosed configuration/judgment estimates (Tier B/C) — base rates accrue in the archive, not fabricated. Single-session breadth &amp; institutional reads are snapshots; their trend is Tier C. Cycles can break, including downward. No hidden weights, no ML black box — every score is explainable. Nothing overrides the Constitution; execution remains Arthur&#x27;s (§3.5). Not personalised investment advice.&lt;/div&gt;
+
+&lt;script id=PCCDATA type=&quot;application/json&quot;&gt;{
+&quot;asof&quot;:&quot;2026-06-17&quot;,
+&quot;phases&quot;:{
+ &quot;ACC&quot;:{&quot;label&quot;:&quot;Accumulation&quot;,&quot;color&quot;:&quot;#0D7680&quot;,&quot;tag&quot;:&quot;Deploy — cheap base&quot;},
+ &quot;RER&quot;:{&quot;label&quot;:&quot;Re-rating&quot;,&quot;color&quot;:&quot;#0F5499&quot;,&quot;tag&quot;:&quot;Hold · ride the multiple&quot;},
+ &quot;DIST&quot;:{&quot;label&quot;:&quot;Distribution&quot;,&quot;color&quot;:&quot;#B05F00&quot;,&quot;tag&quot;:&quot;Trim · realise · de-risk&quot;},
+ &quot;RST&quot;:{&quot;label&quot;:&quot;Reset&quot;,&quot;color&quot;:&quot;#990F3D&quot;,&quot;tag&quot;:&quot;Defend · then accumulate&quot;}
+},
+&quot;phaseDesc&quot;:{&quot;RER&quot;:&quot;Rates falling, credit accelerating, earnings rising, multiples expanding — late innings of the move that produced +29% DSEI / +88% Banks in 2025.&quot;},
+&quot;indicators&quot;:[
+ {&quot;k&quot;:&quot;cbr&quot;,&quot;label&quot;:&quot;BoT Central Bank Rate&quot;,&quot;val&quot;:&quot;5.75%&quot;,&quot;trend&quot;:&quot;held · 3rd mtg&quot;,&quot;tone&quot;:&quot;green&quot;,&quot;votes&quot;:{&quot;RER&quot;:1.0},&quot;voteTxt&quot;:&quot;Re-rating&quot;,&quot;src&quot;:&quot;BoT MPC 2-Apr-26&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;k&quot;:&quot;yield&quot;,&quot;label&quot;:&quot;T-bond yield (10y)&quot;,&quot;val&quot;:&quot;10.50%&quot;,&quot;trend&quot;:&quot;compressed 13.5→10.5% since Oct-25&quot;,&quot;tone&quot;:&quot;green&quot;,&quot;votes&quot;:{&quot;RER&quot;:0.8,&quot;DIST&quot;:0.2},&quot;voteTxt&quot;:&quot;Re-rating&quot;,&quot;src&quot;:&quot;BoT TBonds #699, 10-Jun-26&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;k&quot;:&quot;credit&quot;,&quot;label&quot;:&quot;Private-sector credit&quot;,&quot;val&quot;:&quot;+23.6% y/y&quot;,&quot;trend&quot;:&quot;decelerating 24.3→23.6&quot;,&quot;tone&quot;:&quot;amber&quot;,&quot;votes&quot;:{&quot;RER&quot;:0.5,&quot;DIST&quot;:0.5},&quot;voteTxt&quot;:&quot;Split&quot;,&quot;src&quot;:&quot;BoT MER, Apr-26&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;k&quot;:&quot;cpi&quot;,&quot;label&quot;:&quot;Inflation (NBS)&quot;,&quot;val&quot;:&quot;4.0%&quot;,&quot;trend&quot;:&quot;rising from 3.2% (fuel)&quot;,&quot;tone&quot;:&quot;amber&quot;,&quot;votes&quot;:{&quot;DIST&quot;:1.0},&quot;voteTxt&quot;:&quot;Distribution&quot;,&quot;src&quot;:&quot;NBS CPI, Apr-26&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;k&quot;:&quot;equity&quot;,&quot;label&quot;:&quot;Equity valuation / run&quot;,&quot;val&quot;:&quot;Banks +88% (25)&quot;,&quot;trend&quot;:&quot;extended; strong YTD&quot;,&quot;tone&quot;:&quot;amber&quot;,&quot;votes&quot;:{&quot;DIST&quot;:1.0},&quot;voteTxt&quot;:&quot;Distribution&quot;,&quot;src&quot;:&quot;DSE 2025 report&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;k&quot;:&quot;foreign&quot;,&quot;label&quot;:&quot;Foreign flow&quot;,&quot;val&quot;:&quot;Net seller&quot;,&quot;trend&quot;:&quot;outflows widening&quot;,&quot;tone&quot;:&quot;red&quot;,&quot;votes&quot;:{&quot;DIST&quot;:1.0},&quot;voteTxt&quot;:&quot;Distribution&quot;,&quot;src&quot;:&quot;DSE daily, Apr-26&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;k&quot;:&quot;earn&quot;,&quot;label&quot;:&quot;Banking earnings&quot;,&quot;val&quot;:&quot;+16% Q1-26&quot;,&quot;trend&quot;:&quot;net profit 671bn&quot;,&quot;tone&quot;:&quot;green&quot;,&quot;votes&quot;:{&quot;RER&quot;:1.0},&quot;voteTxt&quot;:&quot;Re-rating&quot;,&quot;src&quot;:&quot;Q1-26 sector&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;k&quot;:&quot;gdp&quot;,&quot;label&quot;:&quot;Real GDP&quot;,&quot;val&quot;:&quot;+6.2% Q1-26&quot;,&quot;trend&quot;:&quot;broad-based&quot;,&quot;tone&quot;:&quot;green&quot;,&quot;votes&quot;:{&quot;RER&quot;:1.0},&quot;voteTxt&quot;:&quot;Re-rating&quot;,&quot;src&quot;:&quot;BoT/NBS Q1-26&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;k&quot;:&quot;fx&quot;,&quot;label&quot;:&quot;USD/TZS (IFEM WAR)&quot;,&quot;val&quot;:&quot;2,633.8&quot;,&quot;trend&quot;:&quot;TZS −0.5% MoM&quot;,&quot;tone&quot;:&quot;amber&quot;,&quot;votes&quot;:{&quot;DIST&quot;:0.5},&quot;voteTxt&quot;:&quot;Mild caution&quot;,&quot;src&quot;:&quot;BoT IFEM, 12-Jun-26&quot;,&quot;method&quot;:&quot;Direct (A)&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;k&quot;:&quot;duration&quot;,&quot;label&quot;:&quot;Duration demand (proxy)&quot;,&quot;val&quot;:&quot;Oversubscribed&quot;,&quot;trend&quot;:&quot;≈34% over-bid + curve compressing&quot;,&quot;tone&quot;:&quot;green&quot;,&quot;votes&quot;:{&quot;RER&quot;:0.6,&quot;DIST&quot;:0.4},&quot;voteTxt&quot;:&quot;Into duration&quot;,&quot;src&quot;:&quot;BoT TBonds/TBills&quot;,&quot;method&quot;:&quot;PROXY (B): over-bid + yield compression&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;k&quot;:&quot;cisflow&quot;,&quot;label&quot;:&quot;CIS flow (proxy)&quot;,&quot;val&quot;:&quot;Into growth&quot;,&quot;trend&quot;:&quot;iGrowth NAV 212.2 vs iIncome 121.1 (16-Jun)&quot;,&quot;tone&quot;:&quot;green&quot;,&quot;votes&quot;:{&quot;RER&quot;:0.6,&quot;DIST&quot;:0.4},&quot;voteTxt&quot;:&quot;Risk-on rotation&quot;,&quot;src&quot;:&quot;iTrust Funds&quot;,&quot;method&quot;:&quot;PROXY (B): NAV-level/perf differential, 6-fund family&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;k&quot;:&quot;tbill&quot;,&quot;label&quot;:&quot;T-bill auction (latest)&quot;,&quot;val&quot;:&quot;No. 1200&quot;,&quot;trend&quot;:&quot;3-Jun-26 · WAR pending&quot;,&quot;tone&quot;:&quot;grey&quot;,&quot;votes&quot;:{},&quot;voteTxt&quot;:&quot;Logged&quot;,&quot;src&quot;:&quot;BoT TBills&quot;,&quot;method&quot;:&quot;Direct (A); WAR (C)&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;k&quot;:&quot;secy&quot;,&quot;label&quot;:&quot;Secondary bond curve&quot;,&quot;val&quot;:&quot;Ladder live&quot;,&quot;trend&quot;:&quot;149 active issues; trading thin (mostly no-trade)&quot;,&quot;tone&quot;:&quot;grey&quot;,&quot;votes&quot;:{},&quot;voteTxt&quot;:&quot;Secondary curve — logged&quot;,&quot;src&quot;:&quot;iTrust gov bond board&quot;,&quot;method&quot;:&quot;Tier A ladder + last-trade YTM; B proxy when untouched&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;}
+],
+&quot;confidence&quot;:&quot;MEDIUM&quot;,&quot;durationNote&quot;:&quot;~1–2 quarters&quot;,&quot;histFreq&quot;:&quot;base rates Tier C (Accruing)&quot;,
+&quot;transition&quot;:{&quot;accel&quot;:0.80,&quot;conf&quot;:&quot;MED-LOW&quot;,&quot;method&quot;:&quot;phase config (DIST share of RER+DIST) blended 50/50 with DIST-signal acceleration (CPI rising, foreign outflows widening, credit rolling over, valuation extended, TZS soft = 5 of 6 DIST signals worsening); horizon-scaled hazard. Base-rate transition history is Tier C (Accruing).&quot;},
+&quot;capitalFlow&quot;:{&quot;direction&quot;:&quot;Risk-on, maturing — into T-bonds, domestic equities &amp; growth CIS; out of cash; foreign exiting, mild FX leakage&quot;,&quot;confidence&quot;:&quot;MEDIUM&quot;,&quot;stores&quot;:[
+ {&quot;name&quot;:&quot;Treasury bonds&quot;,&quot;score&quot;:72,&quot;w&quot;:0.30,&quot;flow&quot;:&quot;Inflow ▲ strong&quot;,&quot;vel&quot;:&quot;Accelerating&quot;,&quot;velTone&quot;:&quot;green&quot;,&quot;src&quot;:&quot;BoT TBonds&quot;,&quot;method&quot;:&quot;10y 13.5→10.5% + ≈34% over-bid (A/B)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;name&quot;:&quot;DSE equities&quot;,&quot;score&quot;:78,&quot;w&quot;:0.25,&quot;flow&quot;:&quot;Inflow ▲ (domestic)&quot;,&quot;vel&quot;:&quot;Decelerating&quot;,&quot;velTone&quot;:&quot;amber&quot;,&quot;src&quot;:&quot;DSE daily&quot;,&quot;method&quot;:&quot;DSEI/Banks run; foreign 19% of sells → domestic-funded (A)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;name&quot;:&quot;CIS / funds&quot;,&quot;score&quot;:74,&quot;w&quot;:0.20,&quot;flow&quot;:&quot;Inflow ▲ to growth&quot;,&quot;vel&quot;:&quot;Stable&quot;,&quot;velTone&quot;:&quot;grey&quot;,&quot;src&quot;:&quot;iTrust Funds&quot;,&quot;method&quot;:&quot;iGrowth NAV 212.2 vs iIncome 121.1 (16-Jun); 6-fund family (A NAV / B flow)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;name&quot;:&quot;Treasury bills&quot;,&quot;score&quot;:58,&quot;w&quot;:0.10,&quot;flow&quot;:&quot;Inflow ▲ mild&quot;,&quot;vel&quot;:&quot;Stable&quot;,&quot;velTone&quot;:&quot;grey&quot;,&quot;src&quot;:&quot;BoT TBills&quot;,&quot;method&quot;:&quot;auctions oversubscribed; WAR pending (A/C)&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;name&quot;:&quot;Cash&quot;,&quot;score&quot;:60,&quot;w&quot;:0.05,&quot;flow&quot;:&quot;Outflow ▽ (deployed)&quot;,&quot;vel&quot;:&quot;Stable&quot;,&quot;velTone&quot;:&quot;grey&quot;,&quot;src&quot;:&quot;PCC ledger&quot;,&quot;method&quot;:&quot;PCR 96.6%, dry powder emptied (A)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;name&quot;:&quot;Foreign currency&quot;,&quot;score&quot;:42,&quot;w&quot;:0.10,&quot;flow&quot;:&quot;Mild inflow △ (TZS soft)&quot;,&quot;vel&quot;:&quot;Stable&quot;,&quot;velTone&quot;:&quot;grey&quot;,&quot;src&quot;:&quot;BoT IFEM&quot;,&quot;method&quot;:&quot;USD/TZS −0.5%; High-Low range narrowing (A/B)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;}
+]},
+&quot;breadth&quot;:{&quot;asof&quot;:&quot;16-Jun-26&quot;,&quot;src&quot;:&quot;DSE daily report&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;,&quot;counters&quot;:[
+ {&quot;t&quot;:&quot;CRDB&quot;,&quot;chg&quot;:0.39,&quot;cap&quot;:&quot;bank&quot;},{&quot;t&quot;:&quot;NMB&quot;,&quot;chg&quot;:1.99,&quot;cap&quot;:&quot;bank&quot;},{&quot;t&quot;:&quot;DCB&quot;,&quot;chg&quot;:4.17,&quot;cap&quot;:&quot;bank&quot;},{&quot;t&quot;:&quot;MKCB&quot;,&quot;chg&quot;:0.72,&quot;cap&quot;:&quot;bank&quot;},{&quot;t&quot;:&quot;KCB&quot;,&quot;chg&quot;:-0.57,&quot;cap&quot;:&quot;bank&quot;},
+ {&quot;t&quot;:&quot;TBL&quot;,&quot;chg&quot;:0.6,&quot;cap&quot;:&quot;large&quot;},{&quot;t&quot;:&quot;TCC&quot;,&quot;chg&quot;:1.55,&quot;cap&quot;:&quot;large&quot;},{&quot;t&quot;:&quot;TPCC&quot;,&quot;chg&quot;:-0.29,&quot;cap&quot;:&quot;large&quot;},{&quot;t&quot;:&quot;VODA&quot;,&quot;chg&quot;:0.68,&quot;cap&quot;:&quot;large&quot;},{&quot;t&quot;:&quot;DSE&quot;,&quot;chg&quot;:2.07,&quot;cap&quot;:&quot;large&quot;},{&quot;t&quot;:&quot;EABL&quot;,&quot;chg&quot;:2.35,&quot;cap&quot;:&quot;large&quot;},
+ {&quot;t&quot;:&quot;SWIS&quot;,&quot;chg&quot;:3.46,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;TCCL&quot;,&quot;chg&quot;:1.61,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;MBP&quot;,&quot;chg&quot;:-1.52,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;TOL&quot;,&quot;chg&quot;:-4.29,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;NMG&quot;,&quot;chg&quot;:-3.7,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;MCB&quot;,&quot;chg&quot;:4.0,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;NICO&quot;,&quot;chg&quot;:0.82,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;PAL&quot;,&quot;chg&quot;:1.32,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;TTP&quot;,&quot;chg&quot;:10.0,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;AFRIPRISE&quot;,&quot;chg&quot;:3.08,&quot;cap&quot;:&quot;mid&quot;},{&quot;t&quot;:&quot;VERTEX&quot;,&quot;chg&quot;:-2.9,&quot;cap&quot;:&quot;etf&quot;}
+],&quot;note&quot;:&quot;NBC did not trade (excluded from traded counts).&quot;},
+&quot;regimeSplit&quot;:{&quot;domestic&quot;:{&quot;score&quot;:78,&quot;note&quot;:&quot;Domestic flow absorbing foreign supply; block bids for CRDB/NMB; DSEI/Banks bid up.&quot;},&quot;foreign&quot;:{&quot;score&quot;:35,&quot;note&quot;:&quot;Net seller — 19.2% of the sell side vs 0.12% of buys (16-Jun).&quot;},&quot;src&quot;:&quot;DSE daily report&quot;,&quot;method&quot;:&quot;foreign equity-turnover % vs domestic absorption (A)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+&quot;institutional&quot;:{&quot;score&quot;:62,&quot;state&quot;:&quot;Mild accumulation (domestic)&quot;,&quot;src&quot;:&quot;DSE daily-report block prints&quot;,&quot;method&quot;:&quot;block trades + volume concentration; identity inferred, not confirmed&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;,&quot;blocks&quot;:[
+ {&quot;t&quot;:&quot;CRDB&quot;,&quot;b&quot;:&quot;400k block into firm demand; busiest tape (3,166 deals)&quot;},
+ {&quot;t&quot;:&quot;NMB&quot;,&quot;b&quot;:&quot;100k block; closed at session high with zero offers&quot;},
+ {&quot;t&quot;:&quot;NMB&quot;,&quot;b&quot;:&quot;prior 99k &amp; 100k blocks across recent sessions&quot;}
+],&quot;note&quot;:&quot;Domestic blocks crossing into demand = accumulation; offset by foreign distribution. Net mild-accumulation. Trade-size distribution &amp; concentration history are Tier C.&quot;},
+&quot;transmission&quot;:[
+ {&quot;n&quot;:&quot;1&quot;,&quot;node&quot;:&quot;BoT policy rate&quot;,&quot;read&quot;:&quot;CBR 5.75% · held&quot;,&quot;src&quot;:&quot;BoT MPC&quot;},
+ {&quot;n&quot;:&quot;2&quot;,&quot;node&quot;:&quot;Treasury yields&quot;,&quot;read&quot;:&quot;10y 10.50% · falling&quot;,&quot;src&quot;:&quot;BoT TBonds&quot;},
+ {&quot;n&quot;:&quot;3&quot;,&quot;node&quot;:&quot;Bond prices&quot;,&quot;read&quot;:&quot;Rising (MTM gains)&quot;,&quot;src&quot;:&quot;derived&quot;},
+ {&quot;n&quot;:&quot;4&quot;,&quot;node&quot;:&quot;Duration demand&quot;,&quot;read&quot;:&quot;Accelerating · over-bid&quot;,&quot;src&quot;:&quot;BoT auctions + iTrust secondary&quot;},
+ {&quot;n&quot;:&quot;5&quot;,&quot;node&quot;:&quot;Bank funding cost&quot;,&quot;read&quot;:&quot;Easing&quot;,&quot;src&quot;:&quot;derived&quot;},
+ {&quot;n&quot;:&quot;6&quot;,&quot;node&quot;:&quot;Net interest income&quot;,&quot;read&quot;:&quot;Supported · credit +23.6%&quot;,&quot;src&quot;:&quot;BoT MER&quot;},
+ {&quot;n&quot;:&quot;7&quot;,&quot;node&quot;:&quot;Bank earnings&quot;,&quot;read&quot;:&quot;+16% Q1-26&quot;,&quot;src&quot;:&quot;sector Q1-26&quot;},
+ {&quot;n&quot;:&quot;8&quot;,&quot;node&quot;:&quot;CRDB / NMB valuation&quot;,&quot;read&quot;:&quot;Re-rating · Banks +88% (25)&quot;,&quot;src&quot;:&quot;DSE&quot;},
+ {&quot;n&quot;:&quot;9&quot;,&quot;node&quot;:&quot;iGrowth&quot;,&quot;read&quot;:&quot;NAV +21% (NMB-driven)&quot;,&quot;src&quot;:&quot;iTrust&quot;},
+ {&quot;n&quot;:&quot;10&quot;,&quot;node&quot;:&quot;Productive Capital&quot;,&quot;read&quot;:&quot;TZS 3.88bn · PCR 96.6%&quot;,&quot;src&quot;:&quot;PCC ledger&quot;},
+ {&quot;n&quot;:&quot;11&quot;,&quot;node&quot;:&quot;Monthly income&quot;,&quot;read&quot;:&quot;30.3m/mo · covers burn 2.4×&quot;,&quot;src&quot;:&quot;PCC income&quot;}
+],
+&quot;tiers&quot;:[
+ {&quot;ds&quot;:&quot;DSE indices, turnover, deals, blocks, participation&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;DSE daily market report — direct&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;ds&quot;:&quot;T-bond primary (coupon, date, tenor)&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;BoT TBonds list — direct&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;ds&quot;:&quot;T-bill primary (date, number)&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;BoT TBills list — direct&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;ds&quot;:&quot;IFEM USD/TZS WAR, volume, High-Low&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;BoT IFEM — direct&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;ds&quot;:&quot;CBR · CPI · GDP · credit growth&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;BoT MPC / MER · NBS — direct&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;ds&quot;:&quot;CIS fund NAVs (iCash/iDollar/iGrowth/iIncome/Imaan/iSave)&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;iTrust Funds — daily NAV direct&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;ds&quot;:&quot;Live intraday DSE quotes (sector-tagged, ~5-min)&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;iTrust dashboard feed — direct (intraday; official close from DSE report)&quot;,&quot;conf&quot;:&quot;HIGH&quot;},
+ {&quot;ds&quot;:&quot;Corporate bond board (YTM / clean price)&quot;,&quot;tier&quot;:&quot;A&quot;,&quot;sm&quot;:&quot;iTrust Corporate Bonds — 34 issues, avg 10.77% coupon; YTM/clean-price when traded&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;ds&quot;:&quot;Secondary bond yields / curve&quot;,&quot;tier&quot;:&quot;AB&quot;,&quot;sm&quot;:&quot;iTrust gov bond board (CMSA broker-dealer): maturity/coupon ladder + per-bond last-trade YTM direct (A); proxy (primary WAY) for untouched bonds (B). Dealer two-way runs still Tier-D.&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;ds&quot;:&quot;CIS flows (iGrowth/iIncome/UTT)&quot;,&quot;tier&quot;:&quot;B&quot;,&quot;sm&quot;:&quot;PROXY: NAV growth &amp; relative performance (subscriptions not public)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;ds&quot;:&quot;Duration demand&quot;,&quot;tier&quot;:&quot;B&quot;,&quot;sm&quot;:&quot;PROXY: bid-to-cover/over-bid + secondary-yield compression&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;ds&quot;:&quot;FX volatility &amp; reserves&quot;,&quot;tier&quot;:&quot;B&quot;,&quot;sm&quot;:&quot;PROXY: IFEM High-Low range; import-cover months (≈4.4mo)&quot;,&quot;conf&quot;:&quot;MEDIUM&quot;},
+ {&quot;ds&quot;:&quot;Phase transition base rates&quot;,&quot;tier&quot;:&quot;C&quot;,&quot;sm&quot;:&quot;BUILD: archive logs each nightly phase read → transition frequencies&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;ds&quot;:&quot;Monthly/quarterly returns, momentum, RS, breadth trend&quot;,&quot;tier&quot;:&quot;C&quot;,&quot;sm&quot;:&quot;BUILD: nightly DSE logging&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;ds&quot;:&quot;Seasonality stats (mean/median/pos-freq/vol per asset)&quot;,&quot;tier&quot;:&quot;C&quot;,&quot;sm&quot;:&quot;BUILD: from the logged series&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;ds&quot;:&quot;T-bill/T-bond bid-to-cover &amp; WAY history&quot;,&quot;tier&quot;:&quot;C&quot;,&quot;sm&quot;:&quot;BUILD: log each auction&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;ds&quot;:&quot;Frontier analogue similarity library&quot;,&quot;tier&quot;:&quot;C&quot;,&quot;sm&quot;:&quot;BUILD: vectorise each period (yields/FX/credit/CPI/valuation/flows)&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;ds&quot;:&quot;Institutional flow attribution (block-level identity)&quot;,&quot;tier&quot;:&quot;D&quot;,&quot;sm&quot;:&quot;Partial in DSE PDF only; no full attribution feed&quot;,&quot;conf&quot;:&quot;n/a&quot;},
+ {&quot;ds&quot;:&quot;CIS subscription/redemption granular flows&quot;,&quot;tier&quot;:&quot;D&quot;,&quot;sm&quot;:&quot;Not public — NAV proxy used (B)&quot;,&quot;conf&quot;:&quot;n/a&quot;},
+ {&quot;ds&quot;:&quot;Real-time secondary dealer runs&quot;,&quot;tier&quot;:&quot;D&quot;,&quot;sm&quot;:&quot;Until a dealer-quote source is provided&quot;,&quot;conf&quot;:&quot;n/a&quot;}
+],
+&quot;alloc&quot;:{
+ &quot;ACC&quot;:{&quot;strong&quot;:&quot;Bank equity at div-lows; long bonds&quot;,&quot;weak&quot;:&quot;Cash / parked iIncome&quot;,&quot;banks&quot;:&quot;Accumulate&quot;,&quot;bonds&quot;:&quot;Lock coupons pre-easing&quot;,&quot;igrowth&quot;:&quot;Build&quot;,&quot;iincome&quot;:&quot;Rotate out&quot;},
+ &quot;RER&quot;:{&quot;strong&quot;:&quot;Bank equity; iGrowth&quot;,&quot;weak&quot;:&quot;Idle cash&quot;,&quot;banks&quot;:&quot;Hold / ride&quot;,&quot;bonds&quot;:&quot;MTM gains; hold&quot;,&quot;igrowth&quot;:&quot;Core — hold&quot;,&quot;iincome&quot;:&quot;Lags; UW&quot;},
+ &quot;DIST&quot;:{&quot;strong&quot;:&quot;Sov. bonds; realise equity; iIncome&quot;,&quot;weak&quot;:&quot;Leveraged late adds&quot;,&quot;banks&quot;:&quot;Trim; review OD&quot;,&quot;bonds&quot;:&quot;Defensive anchor&quot;,&quot;igrowth&quot;:&quot;Take profits&quot;,&quot;iincome&quot;:&quot;Park — favour&quot;},
+ &quot;RST&quot;:{&quot;strong&quot;:&quot;Cash / iIncome / short bonds&quot;,&quot;weak&quot;:&quot;Bank equity; leverage&quot;,&quot;banks&quot;:&quot;Defend&quot;,&quot;bonds&quot;:&quot;Short duration&quot;,&quot;igrowth&quot;:&quot;Do not add&quot;,&quot;iincome&quot;:&quot;Hold — preserve&quot;}
+},
+&quot;analogues&quot;:[
+ {&quot;c&quot;:&quot;Kenya · 2013–15 bank re-rating → 2016 rate-cap shock&quot;,&quot;sim&quot;:72,&quot;dim&quot;:&quot;Bank-led EA frontier re-rating then a sector policy shock&quot;,&quot;note&quot;:&quot;Outcome: strong run, then rate-cap de-rated banks regardless of quality. Risk: a rate-cap-style surprise into concentration.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Nigeria · 2017–18 recovery re-rating&quot;,&quot;sim&quot;:55,&quot;dim&quot;:&quot;Rates/FX normalisation driving a bank-heavy bounce&quot;,&quot;note&quot;:&quot;Outcome: sharp re-rating then FX-driven give-back. Risk: FX/reserve reversal.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Vietnam · 2016–18 frontier re-rating&quot;,&quot;sim&quot;:50,&quot;dim&quot;:&quot;Reform + liquidity expansion&quot;,&quot;note&quot;:&quot;Foreign INflows led there (vs outflows here) — divergent on the flow axis.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Bangladesh · liquidity-driven equity rallies&quot;,&quot;sim&quot;:48,&quot;dim&quot;:&quot;Domestic-liquidity-led, thin foreign&quot;,&quot;note&quot;:&quot;Closest on the domestic-driven axis; prone to liquidity air-pockets.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Ghana · 2021 rally → 2022 debt reset&quot;,&quot;sim&quot;:45,&quot;dim&quot;:&quot;Yield/See-saw then fiscal stress&quot;,&quot;note&quot;:&quot;Cautionary Reset analogue — duration that re-priced violently.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Pakistan · frontier boom-bust&quot;,&quot;sim&quot;:42,&quot;dim&quot;:&quot;Rate/FX cycle whipsaw&quot;,&quot;note&quot;:&quot;Cautionary on FX-led resets.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Sri Lanka · 2021–22 crisis/reset&quot;,&quot;sim&quot;:40,&quot;dim&quot;:&quot;Reserve depletion → reset&quot;,&quot;note&quot;:&quot;Cautionary tail: FX-reserve adequacy matters.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Zambia · commodity/FX cycles&quot;,&quot;sim&quot;:38,&quot;dim&quot;:&quot;External-balance-driven&quot;,&quot;note&quot;:&quot;Less comparable; commodity-FX dominant.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Indonesia · EM (larger, deeper)&quot;,&quot;sim&quot;:33,&quot;dim&quot;:&quot;EM, deeper market&quot;,&quot;note&quot;:&quot;Scale/depth differ; limited transfer.&quot;,&quot;conf&quot;:&quot;LOW&quot;},
+ {&quot;c&quot;:&quot;Botswana · stable low-beta&quot;,&quot;sim&quot;:30,&quot;dim&quot;:&quot;Stable, low-turnover&quot;,&quot;note&quot;:&quot;Different volatility regime.&quot;,&quot;conf&quot;:&quot;LOW&quot;}
+],
+&quot;regimeHistory&quot;:[
+ {&quot;date&quot;:&quot;2026-06-17&quot;,&quot;phase&quot;:&quot;Re-rating&quot;,&quot;flow&quot;:69,&quot;conf&quot;:&quot;MEDIUM&quot;,&quot;ind&quot;:&quot;CBR 5.75 · 10y 10.5 · credit 23.6 · CPI 4.0 · USD/TZS 2,634&quot;}
+],
+&quot;seasonality&quot;:[
+ {&quot;m&quot;:&quot;Jan&quot;,&quot;drv&quot;:&quot;Year-open; pre-results lull&quot;,&quot;turn&quot;:&quot;Light&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Feb&quot;,&quot;drv&quot;:&quot;FY audited-results season begins&quot;,&quot;turn&quot;:&quot;Building&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Mar&quot;,&quot;drv&quot;:&quot;Results / early dividend signalling&quot;,&quot;turn&quot;:&quot;Firm&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Apr&quot;,&quot;drv&quot;:&quot;Dividend declarations (CRDB FY-div 14 Apr-26: TZS 90/sh)&quot;,&quot;turn&quot;:&quot;Firm&quot;,&quot;conf&quot;:&quot;Low-evid.&quot;},
+ {&quot;m&quot;:&quot;May&quot;,&quot;drv&quot;:&quot;AGM season; record-date positioning&quot;,&quot;turn&quot;:&quot;Firm&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Jun&quot;,&quot;drv&quot;:&quot;Ex-dividend (NMB ex-div ~3 Jun); price drops by div&quot;,&quot;turn&quot;:&quot;Mixed&quot;,&quot;conf&quot;:&quot;Low-evid.&quot;},
+ {&quot;m&quot;:&quot;Jul&quot;,&quot;drv&quot;:&quot;Post-ex-div drift&quot;,&quot;turn&quot;:&quot;Light&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Aug&quot;,&quot;drv&quot;:&quot;H1 interim results&quot;,&quot;turn&quot;:&quot;Building&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Sep&quot;,&quot;drv&quot;:&quot;Q3 reports; institutional profit-taking&quot;,&quot;turn&quot;:&quot;Firm&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Oct&quot;,&quot;drv&quot;:&quot;Post-peak drift&quot;,&quot;turn&quot;:&quot;Light&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Nov&quot;,&quot;drv&quot;:&quot;Reaccumulation window opens&quot;,&quot;turn&quot;:&quot;Building&quot;,&quot;conf&quot;:&quot;Accruing&quot;},
+ {&quot;m&quot;:&quot;Dec&quot;,&quot;drv&quot;:&quot;Year-end; dividend-low base&quot;,&quot;turn&quot;:&quot;Light&quot;,&quot;conf&quot;:&quot;Accruing&quot;}
+],
+&quot;seasPhaseBand&quot;:[&quot;ACC&quot;,&quot;RER&quot;,&quot;RER&quot;,&quot;RER&quot;,&quot;RER&quot;,&quot;DIST&quot;,&quot;DIST&quot;,&quot;RER&quot;,&quot;DIST&quot;,&quot;RST&quot;,&quot;ACC&quot;,&quot;ACC&quot;],
+&quot;feeds&quot;:[
+ {&quot;h&quot;:&quot;Market Regime&quot;,&quot;b&quot;:&quot;Phase + Flow Score + transition risk&quot;},
+ {&quot;h&quot;:&quot;Capital Allocation&quot;,&quot;b&quot;:&quot;Per-phase implications (signals, not orders)&quot;},
+ {&quot;h&quot;:&quot;Portfolio Health&quot;,&quot;b&quot;:&quot;Cycle position as forward-risk input&quot;},
+ {&quot;h&quot;:&quot;Forecast&quot;,&quot;b&quot;:&quot;Phase duration + analogue priors&quot;},
+ {&quot;h&quot;:&quot;Research&quot;,&quot;b&quot;:&quot;Auditable evidence trail&quot;}
+],
+&quot;learning&quot;:&quot;Continuous learning: the nightly tracker re-logs DSE closes / turnover / deals / blocks / foreign participation, the BoT TBills &amp; TBonds auctions, the BoT IFEM FX summary, and the monthly BoT MER (credit) + NBS CPI + reserves. Each run re-computes phase, transition, flow, velocity, breadth, the domestic/foreign split and institutional reads, appends a Regime History row, and extends the Tier-C series (returns, bid-to-cover, breadth trend, analogue vectors) — promoting them from Accruing to evidenced as n grows, and re-testing proxies against any higher-quality source (dealer runs, secondary publications) as it becomes available. Wired: bot.go.tz/TBills · /TBonds · /FinancialMarket/ifem · DSE daily report · BoT MER · NBS CPI · iTrust portal (investor.itrust.co.tz): Funds NAV, government &amp;amp; corporate secondary bond boards, and live intraday DSE quotes.&quot;
+}&lt;/script&gt;
+&lt;script&gt;
+const D=JSON.parse(document.getElementById(&#x27;PCCDATA&#x27;).textContent);
+const P=D.phases, TONE={green:&#x27;#0D7680&#x27;,amber:&#x27;#B05F00&#x27;,red:&#x27;#990F3D&#x27;,blue:&#x27;#0F5499&#x27;,grey:&#x27;#897F76&#x27;};
+const order=[&#x27;ACC&#x27;,&#x27;RER&#x27;,&#x27;DIST&#x27;,&#x27;RST&#x27;];
+function cpill(c){var col=({HIGH:&#x27;#0D7680&#x27;,MEDIUM:&#x27;#B05F00&#x27;,&#x27;MED-LOW&#x27;:&#x27;#897F76&#x27;,LOW:&#x27;#897F76&#x27;,&#x27;Low-evid.&#x27;:&#x27;#0F5499&#x27;,Accruing:&#x27;#B05F00&#x27;,&#x27;n/a&#x27;:&#x27;#B6AA99&#x27;})[c]||&#x27;#897F76&#x27;;var out=(c===&#x27;Accruing&#x27;||c===&#x27;Low-evid.&#x27;);return `&lt;span class=cpill style=&quot;${out?(&#x27;background:transparent;border:1px solid &#x27;+col+&#x27;;color:&#x27;+col):(&#x27;background:&#x27;+col+&#x27;;color:#FFF1E5&#x27;)}&quot;&gt;${c}&lt;/span&gt;`;}
+// phase vote
+let tot={ACC:0,RER:0,DIST:0,RST:0};
+D.indicators.forEach(it=&gt;{for(const k in it.votes)tot[k]+=it.votes[k];});
+order.forEach(k=&gt;tot[k]+=0.04);
+let s2=order.reduce((a,k)=&gt;a+tot[k],0),prob={};order.forEach(k=&gt;prob[k]=tot[k]/s2);
+let cur=order[0];order.forEach(k=&gt;{if(prob[k]&gt;prob[cur])cur=k;});
+const ph=P[cur];
+document.getElementById(&#x27;asof&#x27;).textContent=D.asof;
+// flow score
+const cf=D.capitalFlow,cfScore=Math.round(cf.stores.reduce((a,s)=&gt;a+s.score*s.w,0));
+// transition
+const tr=D.transition,distShare=prob.DIST/(prob.RER+prob.DIST),hz=Math.max(0,Math.min(0.9,distShare*0.5+tr.accel*0.5));
+const t30=Math.round(hz*0.45*100),t90=Math.round(hz*0.85*100),t180=Math.round(hz*100);
+// breadth
+const bz=D.breadth,traded=bz.counters.length;
+const up=bz.counters.filter(c=&gt;c.chg&gt;0).length;
+const bank=bz.counters.filter(c=&gt;c.cap===&#x27;bank&#x27;),bankUp=bank.filter(c=&gt;c.chg&gt;0).length;
+const large=bz.counters.filter(c=&gt;c.cap===&#x27;large&#x27;),largeUp=large.filter(c=&gt;c.chg&gt;0).length;
+const upRatio=up/traded,bInterp=upRatio&gt;0.6?&#x27;Broadening&#x27;:(upRatio&lt;0.4?&#x27;Narrowing&#x27;:&#x27;Stable&#x27;),bCol=upRatio&gt;0.6?&#x27;#0D7680&#x27;:(upRatio&lt;0.4?&#x27;#990F3D&#x27;:&#x27;#B05F00&#x27;);
+// command row
+document.getElementById(&#x27;cmd&#x27;).innerHTML=[
+ [&#x27;Phase&#x27;,ph.label,(prob[cur]*100).toFixed(0)+&#x27;% · DIST &#x27;+(prob.DIST*100).toFixed(0)+&#x27;%&#x27;,ph.color],
+ [&#x27;Transition → DIST&#x27;,t90+&#x27;%&#x27;,&#x27;within 90 days&#x27;,&#x27;#B05F00&#x27;],
+ [&#x27;Capital flow&#x27;,cfScore+&#x27;/100&#x27;,cf.confidence+&#x27; · risk-on&#x27;,&#x27;#0F5499&#x27;],
+ [&#x27;Breadth&#x27;,up+&#x27;/&#x27;+traded+&#x27; up&#x27;,bInterp,bCol],
+ [&#x27;Domestic / Foreign&#x27;,D.regimeSplit.domestic.score+&#x27; / &#x27;+D.regimeSplit.foreign.score,&#x27;risk-on vs risk-off&#x27;,&#x27;#0D7680&#x27;]
+].map(c=&gt;`&lt;div class=cc&gt;&lt;div class=l&gt;${c[0]}&lt;/div&gt;&lt;div class=v style=&quot;color:${c[3]}&quot;&gt;${c[1]}&lt;/div&gt;&lt;div class=s&gt;${c[2]}&lt;/div&gt;&lt;/div&gt;`).join(&#x27;&#x27;);
+document.getElementById(&#x27;lead&#x27;).textContent=&#x27;The cycle reads &#x27;+ph.label+&#x27; (late); capital flow &#x27;+cfScore+&#x27;/100; Distribution &#x27;+t90+&#x27;% within 90 days&#x27;;
+// transmission map
+document.getElementById(&#x27;trans&#x27;).innerHTML=D.transmission.map((n,i)=&gt;`&lt;div class=tnode&gt;&lt;div class=tn&gt;${n.n}&lt;/div&gt;&lt;div&gt;&lt;div class=tnm&gt;${n.node}&lt;/div&gt;&lt;/div&gt;&lt;div class=tv&gt;&lt;span class=mono&gt;${n.read}&lt;/span&gt;&lt;div class=tvs&gt;${n.src}&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;${i&lt;D.transmission.length-1?&#x27;&lt;div class=tarrow&gt;↓&lt;/div&gt;&#x27;:&#x27;&#x27;}`).join(&#x27;&#x27;);
+// phase block
+document.getElementById(&#x27;phaseHead&#x27;).textContent=&#x27;The cycle is in &#x27;+ph.label+&#x27; — late innings, Distribution close behind&#x27;;
+document.getElementById(&#x27;nowbig&#x27;).style.background=ph.color+&#x27;1a&#x27;;document.getElementById(&#x27;nowbig&#x27;).style.border=&#x27;1px solid &#x27;+ph.color+&#x27;66&#x27;;
+document.getElementById(&#x27;nowbig&#x27;).innerHTML=`&lt;div class=pl style=&quot;color:${ph.color}&quot;&gt;Computed phase&lt;/div&gt;&lt;div class=pv style=&quot;color:${ph.color}&quot;&gt;${ph.label}&lt;/div&gt;&lt;div class=pt style=&quot;color:${ph.color}&quot;&gt;${ph.tag}&lt;/div&gt;`;
+document.getElementById(&#x27;probs&#x27;).innerHTML=order.map(k=&gt;{const p=P[k],pct=prob[k]*100;return `&lt;div class=prob&gt;&lt;div class=probl&gt;&lt;span&gt;&lt;b style=&quot;color:${p.color}&quot;&gt;${p.label}&lt;/b&gt;${k===cur?&#x27; &lt;span class=cpill style=&quot;background:transparent;border:1px solid &#x27;+p.color+&#x27;;color:&#x27;+p.color+&#x27;&quot;&gt;lead&lt;/span&gt;&#x27;:&#x27;&#x27;}&lt;/span&gt;&lt;span class=mono&gt;${pct.toFixed(0)}%&lt;/span&gt;&lt;/div&gt;&lt;div class=pbar&gt;&lt;span style=&quot;width:${pct.toFixed(0)}%;background:${p.color}&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;`;}).join(&#x27;&#x27;);
+document.getElementById(&#x27;mProb&#x27;).textContent=(prob[cur]*100).toFixed(0)+&#x27;%&#x27;;document.getElementById(&#x27;mProb&#x27;).style.color=ph.color;
+document.getElementById(&#x27;mProbS&#x27;).textContent=ph.label+&#x27;; DIST &#x27;+(prob.DIST*100).toFixed(0)+&#x27;%&#x27;;
+document.getElementById(&#x27;mConf&#x27;).textContent=D.confidence;document.getElementById(&#x27;mDur&#x27;).textContent=D.durationNote;document.getElementById(&#x27;mFreq&#x27;).textContent=D.histFreq;
+// transition render
+document.getElementById(&#x27;t30&#x27;).textContent=t30+&#x27;%&#x27;;document.getElementById(&#x27;t90&#x27;).textContent=t90+&#x27;%&#x27;;document.getElementById(&#x27;t180&#x27;).textContent=t180+&#x27;%&#x27;;
+document.getElementById(&#x27;transitionsrc&#x27;).innerHTML=&#x27;Source: phase board + signal acceleration. Method: &#x27;+tr.method+&#x27; Confidence &#x27;+cpill(tr.conf)+&#x27;. Probabilistic, not a prediction.&#x27;;
+// flow
+document.getElementById(&#x27;cfScore&#x27;).textContent=cfScore;document.getElementById(&#x27;cfMark&#x27;).style.left=&#x27;calc(&#x27;+cfScore+&#x27;% - 1px)&#x27;;document.getElementById(&#x27;cfDir&#x27;).textContent=cf.direction;
+document.getElementById(&#x27;flowtab&#x27;).innerHTML=cf.stores.map(s=&gt;{const c=s.score&gt;=55?&#x27;#0D7680&#x27;:(s.score&lt;=45?&#x27;#990F3D&#x27;:&#x27;#897F76&#x27;),vc=TONE[s.velTone]||&#x27;#897F76&#x27;;return `&lt;tr&gt;&lt;td&gt;&lt;b&gt;${s.name}&lt;/b&gt; &lt;span class=&#x27;dim sm&#x27;&gt;w ${(s.w*100).toFixed(0)}%&lt;/span&gt;&lt;/td&gt;&lt;td style=&quot;color:${c};font-weight:600&quot;&gt;${s.flow}&lt;/td&gt;&lt;td&gt;&lt;span class=vel style=&quot;background:${vc}1f;color:${vc}&quot;&gt;${s.vel}&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${s.src}&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${s.method}&lt;/td&gt;&lt;td&gt;${cpill(s.conf)}&lt;/td&gt;&lt;/tr&gt;`;}).join(&#x27;&#x27;);
+document.getElementById(&#x27;flowsrc&#x27;).innerHTML=&#x27;Capital Flow Score = visible weighted mean of store scores (50 = neutral). Velocity is the rate-of-change read (leads direction). Confidence &#x27;+cf.confidence+&#x27;.&#x27;;
+// breadth
+document.getElementById(&#x27;breadth&#x27;).innerHTML=`&lt;div style=&quot;display:flex;gap:26px;flex-wrap:wrap;align-items:center&quot;&gt;&lt;div&gt;&lt;div class=cat style=&quot;margin:0&quot;&gt;Banks up&lt;/div&gt;&lt;div class=serif style=&quot;font-size:24px;font-weight:700&quot;&gt;${bankUp}/${bank.length}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=cat style=&quot;margin:0&quot;&gt;Large caps up&lt;/div&gt;&lt;div class=serif style=&quot;font-size:24px;font-weight:700&quot;&gt;${largeUp}/${large.length}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=cat style=&quot;margin:0&quot;&gt;Market up&lt;/div&gt;&lt;div class=serif style=&quot;font-size:24px;font-weight:700&quot;&gt;${up}/${traded}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;div class=cat style=&quot;margin:0&quot;&gt;Interpretation&lt;/div&gt;&lt;div class=serif style=&quot;font-size:24px;font-weight:700;color:${bCol}&quot;&gt;${bInterp}&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;`;
+document.getElementById(&#x27;breadthsrc&#x27;).innerHTML=&#x27;Source: &#x27;+bz.src+&#x27; (&#x27;+bz.asof+&#x27;). &#x27;+bz.note+&#x27; Method: counters with a positive day-move ÷ traded; &amp;gt;60% Broadening, &amp;lt;40% Narrowing. Confidence &#x27;+cpill(bz.conf)+&#x27; — single-session snapshot; the breadth &lt;i&gt;trend&lt;/i&gt; is Tier C (Accruing). Breadth often deteriorates before price.&#x27;;
+// split
+const rs=D.regimeSplit;
+document.getElementById(&#x27;splitbox&#x27;).innerHTML=[[&#x27;Domestic&#x27;,rs.domestic,&#x27;#0D7680&#x27;,&#x27;Risk-On&#x27;],[&#x27;Foreign&#x27;,rs.foreign,&#x27;#990F3D&#x27;,&#x27;Risk-Off&#x27;]].map(x=&gt;`&lt;div class=sp&gt;&lt;div class=l&gt;${x[0]} regime&lt;/div&gt;&lt;div class=v style=&quot;color:${x[2]}&quot;&gt;${x[1].score}&lt;span style=&quot;font-size:15px;color:#897F76&quot;&gt;/100&lt;/span&gt; &lt;span style=&quot;font-size:12px;color:${x[2]}&quot;&gt;${x[3]}&lt;/span&gt;&lt;/div&gt;&lt;div class=n&gt;${x[1].note}&lt;/div&gt;&lt;/div&gt;`).join(&#x27;&#x27;);
+document.getElementById(&#x27;splitsrc&#x27;).innerHTML=&#x27;Source: &#x27;+rs.src+&#x27;. Method: &#x27;+rs.method+&#x27;. Confidence &#x27;+cpill(rs.conf)+&#x27;. Read: domestic investors are supporting the market despite foreign selling.&#x27;;
+// institutional
+const inst=D.institutional;
+document.getElementById(&#x27;instbox&#x27;).innerHTML=`&lt;div style=&quot;display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start&quot;&gt;&lt;div style=&quot;border:1px solid #D9CBB8;border-radius:3px;padding:13px 16px;text-align:center&quot;&gt;&lt;div class=serif style=&quot;font-size:34px;font-weight:700;color:#0D7680;line-height:1&quot;&gt;${inst.score}&lt;/div&gt;&lt;div class=cat style=&quot;margin:4px 0 0&quot;&gt;Activity score&lt;/div&gt;&lt;div style=&quot;font-size:11px;font-weight:600;color:#0D7680;margin-top:3px&quot;&gt;${inst.state}&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;flex:1;min-width:240px&quot;&gt;&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Counter&lt;/th&gt;&lt;th&gt;Block-trade evidence&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;${inst.blocks.map(b=&gt;`&lt;tr&gt;&lt;td&gt;&lt;b&gt;${b.t}&lt;/b&gt;&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${b.b}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)}&lt;/tbody&gt;&lt;/table&gt;&lt;/div&gt;&lt;/div&gt;`;
+document.getElementById(&#x27;instsrc&#x27;).innerHTML=&#x27;Source: &#x27;+inst.src+&#x27;. Method: &#x27;+inst.method+&#x27;. Confidence &#x27;+cpill(inst.conf)+&#x27;. &#x27;+inst.note;
+// indicator board
+document.getElementById(&#x27;indtab&#x27;).innerHTML=D.indicators.map(it=&gt;{const c=TONE[it.tone]||TONE.grey;return `&lt;tr&gt;&lt;td&gt;&lt;b&gt;${it.label}&lt;/b&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27; style=&quot;color:${c};font-weight:600&quot;&gt;${it.val}&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${it.trend}&lt;/td&gt;&lt;td class=&#x27;sm&#x27;&gt;${it.voteTxt}&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${it.src}&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${it.method}&lt;/td&gt;&lt;td&gt;${cpill(it.conf)}&lt;/td&gt;&lt;/tr&gt;`;}).join(&#x27;&#x27;);
+// tiers
+const TC={A:&#x27;#0D7680&#x27;,&#x27;AB&#x27;:&#x27;#0D7680&#x27;,B:&#x27;#0F5499&#x27;,C:&#x27;#B05F00&#x27;,D:&#x27;#897F76&#x27;};
+document.getElementById(&#x27;tiertab&#x27;).innerHTML=D.tiers.map(t=&gt;`&lt;tr&gt;&lt;td&gt;${t.ds}&lt;/td&gt;&lt;td&gt;&lt;span class=tier style=&quot;background:${TC[t.tier]}&quot;&gt;${t.tier}&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;sm&#x27;&gt;${t.sm}&lt;/td&gt;&lt;td&gt;${cpill(t.conf)}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;);
+const cnt={A:0,B:0,C:0,D:0};D.tiers.forEach(t=&gt;cnt[t.tier]++);
+document.getElementById(&#x27;tiersrc&#x27;).innerHTML=`Tier A direct (${cnt.A}) · B proxy (${cnt.B}) · C build (${cnt.C}) · D unavailable (${cnt.D}). Operates today on A+B; sharpens as C accrues — never blocked.`;
+// alloc
+document.getElementById(&#x27;alloctab&#x27;).innerHTML=order.map(k=&gt;{const p=P[k],a=D.alloc[k],on=k===cur;return `&lt;tr style=&quot;${on?&#x27;background:&#x27;+p.color+&#x27;12&#x27;:&#x27;&#x27;}&quot;&gt;&lt;td&gt;&lt;span class=tag style=&quot;background:${p.color}&quot;&gt;${p.label}&lt;/span&gt;${on?&#x27; ←now&#x27;:&#x27;&#x27;}&lt;/td&gt;&lt;td&gt;${a.strong}&lt;/td&gt;&lt;td class=dim&gt;${a.weak}&lt;/td&gt;&lt;td&gt;${a.banks}&lt;/td&gt;&lt;td&gt;${a.bonds}&lt;/td&gt;&lt;td&gt;${a.igrowth}&lt;/td&gt;&lt;td&gt;${a.iincome}&lt;/td&gt;&lt;/tr&gt;`;}).join(&#x27;&#x27;);
+// analogues
+document.getElementById(&#x27;anatab&#x27;).innerHTML=D.analogues.map(a=&gt;{const col=a.sim&gt;=60?&#x27;#0D7680&#x27;:(a.sim&gt;=45?&#x27;#B05F00&#x27;:&#x27;#897F76&#x27;);return `&lt;tr&gt;&lt;td&gt;&lt;b&gt;${a.c}&lt;/b&gt;&lt;/td&gt;&lt;td class=r&gt;&lt;span class=mono style=&quot;color:${col};font-weight:600&quot;&gt;${a.sim}&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${a.dim}&lt;/td&gt;&lt;td class=&#x27;sm&#x27;&gt;${a.note}&lt;/td&gt;&lt;td&gt;${cpill(a.conf)}&lt;/td&gt;&lt;/tr&gt;`;}).join(&#x27;&#x27;);
+document.getElementById(&#x27;anasrc&#x27;).innerHTML=&#x27;&lt;b&gt;Context, not prediction.&lt;/b&gt; Similarity is a disclosed qualitative judgment (0–100) pending the Tier-C quantitative library (yields/FX/credit/CPI/valuation/flows vectors). Confidence LOW across the board — the closest, Kenya 2013–16, carries the clearest warning: concentration + a sector policy shock.&#x27;;
+// archive
+document.getElementById(&#x27;archtab&#x27;).innerHTML=D.regimeHistory.map(r=&gt;`&lt;tr&gt;&lt;td class=mono&gt;${r.date}&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&quot;background:${P[({&#x27;Re-rating&#x27;:&#x27;RER&#x27;,&#x27;Accumulation&#x27;:&#x27;ACC&#x27;,&#x27;Distribution&#x27;:&#x27;DIST&#x27;,&#x27;Reset&#x27;:&#x27;RST&#x27;})[r.phase]||&#x27;RER&#x27;].color}&quot;&gt;${r.phase}&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;r mono&#x27;&gt;${r.flow}&lt;/td&gt;&lt;td&gt;${cpill(r.conf)}&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${r.ind}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;);
+document.getElementById(&#x27;archsrc&#x27;).innerHTML=&#x27;Archive begins &#x27;+D.regimeHistory[0].date+&#x27; — the nightly tracker appends one row per run. Once it deepens it answers: show all Distribution periods · average phase duration · typical returns by phase. This in-house history eventually outranks external analogues.&#x27;;
+// seasonality
+document.getElementById(&#x27;seastab&#x27;).innerHTML=D.seasonality.map(m=&gt;`&lt;tr&gt;&lt;td&gt;&lt;b&gt;${m.m}&lt;/b&gt;&lt;/td&gt;&lt;td class=&#x27;r dim&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;r dim&#x27;&gt;—&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;${m.turn}&lt;/td&gt;&lt;td class=&#x27;sm&#x27;&gt;${m.drv}&lt;/td&gt;&lt;td&gt;${cpill(m.conf)}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;);
+const now=new Date(),mi=now.getMonth();
+document.getElementById(&#x27;band&#x27;).innerHTML=D.seasPhaseBand.map((code,i)=&gt;{const p=P[code],on=i===mi,ml=D.seasonality[i].m;return `&lt;div class=&quot;mcell${on?&#x27; now&#x27;:&#x27;&#x27;}&quot; style=&quot;background:${p.color}1f;border-color:${p.color}66&quot;&gt;${on?&#x27;&lt;span class=youhere&gt;NOW&lt;/span&gt;&#x27;:&#x27;&#x27;}&lt;div class=mm style=&quot;color:${p.color}&quot;&gt;${ml}&lt;/div&gt;&lt;div class=mp style=&quot;color:${p.color}&quot;&gt;${p.label.slice(0,6)}&lt;/div&gt;&lt;/div&gt;`;}).join(&#x27;&#x27;);
+document.getElementById(&#x27;seassrc&#x27;).innerHTML=&quot;Avg-return &amp; positive-frequency show &lt;b&gt;—&lt;/b&gt; (Tier C, Accruing) — not fabricated. Drivers evidenced; phase band tints each month by typical role; marker is today.&quot;;
+// feeds
+document.getElementById(&#x27;feeds&#x27;).innerHTML=D.feeds.map(f=&gt;`&lt;div class=fd&gt;&lt;div class=h&gt;${f.h}&lt;/div&gt;&lt;div class=b&gt;${f.b}&lt;/div&gt;&lt;/div&gt;`).join(&#x27;&#x27;);
+document.getElementById(&#x27;learnnote&#x27;).innerHTML=&#x27;&lt;b&gt;Continuous learning.&lt;/b&gt; &#x27;+D.learning;
+&lt;/script&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div><!--/F:seasonality-->
+<!--F:research--><div class=fwrap data-k="research"><iframe loading="lazy" onload="fit(this)" srcdoc="&lt;!doctype html&gt;&lt;script type=&quot;application/json&quot; id=&quot;cowork-artifact-meta&quot;&gt;
+{
+  &quot;name&quot;: &quot;Kanza Pcc3 Research&quot;,
+  &quot;schemaVersion&quot;: 1,
+  &quot;description&quot;: &quot;PCC 3.0 Research Layer D (Steps 17-19), purple-flagged research-only / not-a-directive: (A) Historical Analogue Engine — four illustrative patterns (duration-lock AFFIRMS; single-bank-into-policy-shock WARNS; leverage-funded late adds WARN; dry-powder MIXED); (B) AI Shadow Portfolio — a rules+regime hypothetical that disagrees on purpose (trims CRDB, cuts iGrowth, rebuilds 8% dry powder, zero OD-tactical, retire OD first) vs the actual allocation; (C) Human-vs-AI Scoreboard — honest tiny-sample (1 human win on the 2025 CRDB conviction, 1 tie on the lock, 2 too fresh; confidence LOW). Subordinate to KCP-IPS-2026-001; execution always the Principal&#x27;s.&quot;
+}
+&lt;/script&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta charset=utf-8&gt;&lt;meta name=viewport content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;PCC 3.0 · Research Layer D&lt;/title&gt;&lt;link rel=preconnect href=&quot;https://fonts.googleapis.com&quot;&gt;&lt;link rel=preconnect href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;&lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&amp;display=swap&quot; rel=stylesheet&gt;&lt;style&gt;
+:root{color-scheme:light}*{box-sizing:border-box}
+body{margin:0;background:#FFF1E5;color:#33302E;font-family:&quot;Inter&quot;,&quot;Helvetica Neue&quot;,Helvetica,Arial,system-ui,sans-serif;font-size:13px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:22px 26px 64px}
+.serif{font-family:&quot;Source Serif 4&quot;,Georgia,&quot;Times New Roman&quot;,serif}.mono{font-variant-numeric:tabular-nums;font-feature-settings:&quot;tnum&quot;}
+.dim{color:#6B6259}.sm{font-size:11px}.r{text-align:right}
+.tab{width:32px;height:5px;background:#593380;margin-bottom:11px}
+header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:8px}
+.eyebrow{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#593380;font-weight:600}
+h1{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-weight:600;font-size:27px;margin:5px 0 6px;letter-spacing:-.012em;line-height:1.12;max-width:34ch}
+.dek{color:#6B6259;font-size:13px;max-width:74ch}
+.ro{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:#593380;border:1px solid #C9B8DD;border-radius:2px;padding:3px 8px}
+h2{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin:34px 0 1px;letter-spacing:-.005em;line-height:1.2;max-width:58ch}
+.cat{color:#897F76;font-size:10.5px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:13px}
+.banner{border-left:3px solid #593380;background:#F1EAF6;padding:10px 15px;margin:14px 0 4px;font-size:11.5px;color:#4a4258}
+.ans{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.anh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:5px}
+.tag{display:inline-block;font-size:9px;font-weight:700;padding:2px 7px;border-radius:2px}
+table{width:100%;border-collapse:collapse;font-size:12px}th{text-align:left;font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600;border-bottom:1px solid #593380;padding:7px 8px}td{padding:8px;border-bottom:1px solid #EADBC8;vertical-align:top}tr:last-child td{border-bottom:none}
+.note{border-left:3px solid #593380;padding:9px 14px;color:#4a4258;font-size:11.5px;margin-top:12px;background:#F1EAF6}
+.kbar{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:16px;border-top:1px solid #593380;padding-top:13px}.kpi .l{font-size:10px;letter-spacing:.03em;text-transform:uppercase;color:#6B6259;font-weight:600}.kpi .v{font-family:&quot;Source Serif 4&quot;,Georgia,serif;font-size:18px;font-weight:600;margin-top:3px}.kpi .s{font-size:10px;color:#897F76;margin-top:3px}
+.src{color:#8A8076;font-size:10px;margin-top:9px}
+svg{display:block}
+@media(max-width:860px){.ans,.kbar{grid-template-columns:1fr;gap:18px}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;div class=wrap&gt;
+&lt;header&gt;&lt;div&gt;&lt;div class=tab&gt;&lt;/div&gt;&lt;div class=eyebrow&gt;Kanza Capital · PCC 3.0 · Research Layer D&lt;/div&gt;&lt;h1 class=serif&gt;The shadow agrees with your best call — and contests your two freshest&lt;/h1&gt;&lt;div class=dek&gt;A sparring partner, never an instruction. The rules engine validates the duration-lock, but would trim CRDB, cut iGrowth and rebuild 8% dry powder — and, like your own rules, retire the overdraft first.&lt;/div&gt;&lt;/div&gt;&lt;div class=ro&gt;◆ Research only&lt;/div&gt;&lt;/header&gt;
+
+&lt;div class=banner&gt;&lt;b&gt;Read this first.&lt;/b&gt; Everything below is &lt;b&gt;research, point-in-time, and not personalised investment advice&lt;/b&gt;. The AI Shadow Portfolio is a transparent rules-and-regime hypothesis built to pressure-test your thinking by disagreeing on purpose. Execution authority remains the Principal&#x27;s (§3.5); this layer cannot override the Constitution.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;Two patterns affirm the book; two warn — none of them says sell&lt;/h2&gt;&lt;div class=cat&gt;Historical Analogue Engine · priors, not forecasts&lt;/div&gt;
+&lt;div class=ans&gt;
+ &lt;div&gt;&lt;div class=anh&gt;&lt;b&gt;Lock long duration before an easing cycle&lt;/b&gt;&lt;span class=tag style=&#x27;background:#0D7680;color:#FFF1E5&#x27;&gt;AFFIRMS&lt;/span&gt;&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Investors who termed-out into high fixed coupons just before easing have repeatedly captured both the carry and a mark-to-market gain as new-issue yields fell beneath them.&lt;/div&gt;&lt;div style=&#x27;font-size:11.5px;margin-top:5px&#x27;&gt;Strong fit. Your 15.49% lock as TZ yields compress toward 9–12% is this pattern — scored +115.7m/yr. The only warning is reinvestment at the 2027 maturities.&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=anh&gt;&lt;b&gt;Concentrated single-bank equity into a policy shock&lt;/b&gt;&lt;span class=tag style=&#x27;background:#B05F00;color:#FFF1E5&#x27;&gt;WARNS&lt;/span&gt;&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Holders concentrated in one banking name have been blindsided by sector-specific policy — the clearest example being Kenya&#x27;s 2016 rate-cap law, which de-rated bank earnings regardless of quality.&lt;/div&gt;&lt;div style=&#x27;font-size:11.5px;margin-top:5px&#x27;&gt;Direct fit to your ~30% CRDB net-PC. The lesson isn&#x27;t &#x27;sell&#x27; but that concentration converts a policy surprise into a portfolio event — why diversifying the bank factor (NMB, NBC) is the answer.&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=anh&gt;&lt;b&gt;Leverage-funded equity adds late in a rally&lt;/b&gt;&lt;span class=tag style=&#x27;background:#990F3D;color:#FFF1E5&#x27;&gt;WARNS&lt;/span&gt;&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;Buying more of a risen asset with borrowed money is, across cycles, the sleeve that most often turns a good thesis into a forced sale — the carry runs whether or not the trade works.&lt;/div&gt;&lt;div style=&#x27;font-size:11.5px;margin-top:5px&#x27;&gt;Fits the OD-funded tactical lot and the 2026 CRDB adds at 2,600–2,746 (underwater). Retiring the OD is the historically-supported move.&lt;/div&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;div class=anh&gt;&lt;b&gt;Holding idle &#x27;dry powder&#x27; through a thin tape&lt;/b&gt;&lt;span class=tag style=&#x27;background:#897F76;color:#FFF1E5&#x27;&gt;MIXED&lt;/span&gt;&lt;/div&gt;&lt;div class=&#x27;dim sm&#x27;&gt;In illiquid frontier markets, a dry-powder sleeve earns its keep by letting you buy air-pockets others are forced to sell into — but it drags returns in long sideways stretches.&lt;/div&gt;&lt;div style=&#x27;font-size:11.5px;margin-top:5px&#x27;&gt;Bears on the iIncome→iGrowth switch, which emptied dry powder: it buys beta now but forfeits the optionality to buy a future CRDB/NMB air-pocket.&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=src&gt;Illustrative patterns, not predictions. They say the Constitution&#x27;s caps and the OD-retirement priority are the historically-supported guardrails.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;The shadow trims banks and rebuilds dry powder — but agrees on the lock&lt;/h2&gt;&lt;div class=cat&gt;AI Shadow Portfolio · shadow − actual weight · diverging, pp of gross PC&lt;/div&gt;
+&lt;svg id=shadow viewBox=&quot;0 0 760 250&quot; preserveAspectRatio=&quot;xMidYMid meet&quot; role=img&gt;&lt;/svg&gt;
+&lt;div class=kbar&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Biggest agreement&lt;/div&gt;&lt;div class=v style=&quot;color:#0D7680&quot;&gt;Duration-lock&lt;/div&gt;&lt;div class=s&gt;both hold 58% bonds — validated&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Biggest divergence&lt;/div&gt;&lt;div class=v style=&quot;color:#593380&quot;&gt;Dry powder&lt;/div&gt;&lt;div class=s&gt;shadow keeps 8% iIncome vs your 0%&lt;/div&gt;&lt;/div&gt;
+ &lt;div class=kpi&gt;&lt;div class=l&gt;Shared priority&lt;/div&gt;&lt;div class=v style=&quot;color:#B05F00&quot;&gt;Retire the OD&lt;/div&gt;&lt;div class=s&gt;shadow &amp;amp; your rules both rank it first&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=src&gt;A hypothesis to argue with — not a target to trade toward. Where a cold rules engine and your conviction diverge is where to examine your thesis hardest.&lt;/div&gt;
+
+&lt;h2 class=serif&gt;One human win, one tie, two too fresh — the sample is far too small&lt;/h2&gt;&lt;div class=cat&gt;Human-vs-AI Scoreboard · confidence LOW&lt;/div&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Decision&lt;/th&gt;&lt;th&gt;Human vs shadow&lt;/th&gt;&lt;th&gt;Verdict&lt;/th&gt;&lt;th&gt;Notes&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;Duration-lock&lt;/b&gt;&lt;/td&gt;&lt;td class=dim&gt;Both lock the 15.49% coupon&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#897F76;color:#FFF1E5&#x27;&gt;TIE&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;+115.7m/yr accrues to both. The shadow validates rather than beats.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;CRDB deep-value accumulation (2025)&lt;/b&gt;&lt;/td&gt;&lt;td class=dim&gt;Conviction vs a cap-bound engine&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#0D7680;color:#FFF1E5&#x27;&gt;HUMAN AHEAD&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;The 2025 lots at ~1,110–1,240 drove +312.4m. A cap-bound shadow would have sized smaller — conviction beat the rule. (Retrospective.)&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;iIncome → iGrowth switch&lt;/b&gt;&lt;/td&gt;&lt;td class=dim&gt;Human deploys; shadow keeps ~8% dry powder&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#593380;color:#FFF1E5&#x27;&gt;TOO FRESH&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;Days old. Matures in the Decision Monitor; the analogue engine flags forfeited optionality.&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;&lt;td&gt;&lt;b&gt;CRDB OD-funded tactical&lt;/b&gt;&lt;/td&gt;&lt;td class=dim&gt;Human buys on leverage; shadow holds zero&lt;/td&gt;&lt;td&gt;&lt;span class=tag style=&#x27;background:#593380;color:#FFF1E5&#x27;&gt;TOO FRESH&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;dim sm&#x27;&gt;Must clear the ~16% carry hurdle. The shadow&#x27;s prior is that this sleeve underperforms.&lt;/td&gt;&lt;/tr&gt;
+&lt;/tbody&gt;&lt;/table&gt;
+&lt;div class=note&gt;&lt;b&gt;Record: 1 human win · 1 tie · 2 too fresh — n far too small for confidence.&lt;/b&gt; The clear win is real: your 2025 deep-value CRDB conviction beat what a cap-bound engine would have done (+312.4m). The decisions that will actually test human-vs-machine haven&#x27;t matured. The scoreboard will never claim skill it hasn&#x27;t earned.&lt;/div&gt;
+
+&lt;div class=banner style=&quot;margin-top:18px&quot;&gt;&lt;b&gt;Boundary, restated.&lt;/b&gt; This layer exists to make you a better allocator by disagreeing transparently — not to allocate. Nothing here is a recommendation to buy, sell, or switch. Final judgment, and execution, are yours (§3.5).&lt;/div&gt;
+
+&lt;script&gt;
+var POS=&#x27;#0D7680&#x27;,NEG=&#x27;#990F3D&#x27;,SLATE=&#x27;#33302E&#x27;,GRID=&#x27;#EADBC8&#x27;,TXT=&#x27;#6B6259&#x27;;
+(function(){
+ var items=[{l:&#x27;iIncome (dry powder)&#x27;,v:8.0},{l:&#x27;iCash&#x27;,v:0.8},{l:&#x27;Sovereign bonds&#x27;,v:0.0},{l:&#x27;OD-funded tactical&#x27;,v:0.0},{l:&#x27;VODA&#x27;,v:-0.2},{l:&#x27;Bank equity (CRDB)&#x27;,v:-2.8},{l:&#x27;iGrowth&#x27;,v:-5.7}];
+ var labW=164,x0=labW,x1=712,yt=14,rowH=28,lo=-7,hi=9;
+ function X(v){return x0+(v-lo)/(hi-lo)*(x1-x0);}
+ var s=&#x27;&#x27;;
+ [-6,-4,-2,0,2,4,6,8].forEach(function(g){var x=X(g);s+=&quot;&lt;line x1=&#x27;&quot;+x.toFixed(1)+&quot;&#x27; y1=&#x27;&quot;+yt+&quot;&#x27; x2=&#x27;&quot;+x.toFixed(1)+&quot;&#x27; y2=&#x27;&quot;+(yt+items.length*rowH)+&quot;&#x27; stroke=&#x27;&quot;+(g===0?SLATE:GRID)+&quot;&#x27; stroke-width=&#x27;&quot;+(g===0?1.2:1)+&quot;&#x27;/&gt;&quot;;s+=&quot;&lt;text x=&#x27;&quot;+x.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(yt+items.length*rowH+13)+&quot;&#x27; text-anchor=&#x27;middle&#x27; font-size=&#x27;9.5&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;&quot;+(g&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+g+&quot;&lt;/text&gt;&quot;;});
+ var xz=X(0);
+ items.forEach(function(it,i){var y=yt+i*rowH,cy=y+rowH/2,xv=X(it.v),col=it.v&gt;0?POS:(it.v&lt;0?NEG:&#x27;#B6AA99&#x27;);
+  var bx=Math.min(xv,xz),bw=Math.max(Math.abs(xv-xz),it.v===0?2:1);
+  s+=&quot;&lt;text x=&#x27;&quot;+(labW-8)+&quot;&#x27; y=&#x27;&quot;+(cy+4)+&quot;&#x27; text-anchor=&#x27;end&#x27; font-size=&#x27;11&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+SLATE+&quot;&#x27;&gt;&quot;+it.l+&quot;&lt;/text&gt;&quot;;
+  s+=&quot;&lt;rect x=&#x27;&quot;+bx.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(cy-7)+&quot;&#x27; width=&#x27;&quot;+bw.toFixed(1)+&quot;&#x27; height=&#x27;14&#x27; fill=&#x27;&quot;+col+&quot;&#x27;/&gt;&quot;;
+  var lab=(it.v&gt;0?&#x27;+&#x27;:&#x27;&#x27;)+it.v.toFixed(1)+&#x27;pp&#x27;;if(it.v===0)lab=&#x27;0&#x27;;
+  var tx=it.v&gt;=0?xv+5:xv-5,anc=it.v&gt;=0?&#x27;start&#x27;:&#x27;end&#x27;;
+  s+=&quot;&lt;text x=&#x27;&quot;+tx.toFixed(1)+&quot;&#x27; y=&#x27;&quot;+(cy+4)+&quot;&#x27; text-anchor=&#x27;&quot;+anc+&quot;&#x27; font-size=&#x27;10.5&#x27; font-weight=&#x27;600&#x27; fill=&#x27;&quot;+col+&quot;&#x27;&gt;&quot;+lab+&quot;&lt;/text&gt;&quot;;
+ });
+ s+=&quot;&lt;text x=&#x27;&quot;+x0+&quot;&#x27; y=&#x27;&quot;+(yt+items.length*rowH+30)+&quot;&#x27; font-size=&#x27;10&#x27; fill=&#x27;&quot;+TXT+&quot;&#x27;&gt;Shadow − actual weight (pp). Positive = the shadow holds more. Source: PCC rules engine.&lt;/text&gt;&quot;;
+ document.getElementById(&#x27;shadow&#x27;).innerHTML=s;
+})();
+&lt;/script&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe></div><!--/F:research--></div>
+<script>
+function show(k){
+  document.querySelectorAll('.fwrap').forEach(function(f){f.classList.toggle('on',f.dataset.k===k);});
+  document.getElementById('ov').classList.toggle('on',k==='ov');
+  document.querySelectorAll('.nv').forEach(function(b){b.classList.toggle('on',b.dataset.k===k);});
+}
+function fit(f){function m(){try{var d=f.contentDocument;if(d&&d.body){var h=Math.max(d.body.scrollHeight,d.documentElement?d.documentElement.scrollHeight:0);if(h>200){f.style.height=(h+24)+'px';}}}catch(e){/* sandboxed: keep the 88vh fallback */}}m();setTimeout(m,400);setTimeout(m,1200);}
+</script>
+<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('./sw.js').catch(function(){});});}</script>
+</body></html>
